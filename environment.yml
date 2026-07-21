@@ -1,0 +1,53 @@
+name: nldm
+channels:
+  - pytorch
+  - conda-forge
+
+dependencies:
+  # === Python 版本 ===
+  - python=3.11
+
+  # === 核心科學運算 ===
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+
+  # === 機器學習 ===
+  - scikit-learn
+
+  # === 深度學習 (筆電: CPU 版) ===
+  # 桌電使用時把下面兩行換成：
+  #   - pytorch-cuda=12.1   # 或你桌電 CUDA 對應版本
+  # 並移除 cpuonly
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  - pytorch::cpuonly
+
+  # === 互動式開發 ===
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+
+  # === 訓練監控 ===
+  - tensorboard
+  - tqdm
+
+  # === 資料處理輔助 ===
+  - pyarrow          # parquet 檔案支援
+  - h5py             # HDF5 格式
+
+  # === 開發工具 ===
+  - black            # 程式碼格式化
+  - ruff             # linter
+  - pytest           # 測試框架
+
+  # === pip 專屬套件 ===
+  - pip
+  - pip:
+      - liberty-parser        # 解析 Liberty (.lib) 標準單元庫檔案
+      - rich                  # 漂亮的終端輸出
+      - wandb                 # Weights & Biases 實驗追蹤 (選配)
+      # - torch-geometric     # GNN 進階研究用 (之後手動安裝，因為要對齊 torch 版本)

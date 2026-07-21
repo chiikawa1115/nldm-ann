@@ -1,0 +1,48 @@
+# requirements.txt
+# ------------------------------------------------------------
+# 建議使用 environment.yml + conda 建立環境（跨平台、含 CUDA）
+# 本檔案是給不用 conda 的人的備援選項（pip only）
+#
+# 若你只想快速在既有 Python 環境試用，可以：
+#   pip install -r requirements.txt
+# ------------------------------------------------------------
+
+# 深度學習
+torch
+torchvision
+torchaudio
+
+# 科學運算
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+scikit-learn
+
+# EDA / Liberty 檔案解析
+liberty-parser
+
+# 互動式開發
+jupyterlab
+ipykernel
+ipywidgets
+
+# 訓練監控
+tensorboard
+tqdm
+
+# 資料格式
+pyarrow
+h5py
+
+# 開發工具
+black
+ruff
+pytest
+
+# 終端輸出
+rich
+
+# 實驗追蹤（選配）
+# wandb
