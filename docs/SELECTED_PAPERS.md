@@ -17,11 +17,16 @@ Tang 論文 Crossref 正式出版年份為 2025，Semantic Scholar 為 2024；�
 
 ## 本機閱讀檔案
 
-下載位置為 workspace 的 `papers/cross_cell_vt/`（在本 repository 外）：
+LIBMixer 論文已依使用者要求加入 repository：[LIBMixer_2025.pdf](../papers/LIBMixer_2025.pdf)。来源與 hash 見 [papers/README.md](../papers/README.md)。
+
+其餘本機下載位置為 workspace 的 `papers/cross_cell_vt/`（在本 repository 外）：
 
 - `LIBMixer_2025.pdf`：7 頁，1,601,522 bytes。
 - `LIBMixer_2025_slides.pdf`：21 頁，1,892,981 bytes。作者簡報，不算另一篇論文。
 - `download_validation.json`：檔案大小、頁數、SHA-256 與首頁文字，用於確認下載完整性與論文身分；不是精讀結果。
+- `PreRoutGNN_2024.pdf`：本輪新增的 AAAI 2024 論文（9 頁），作 timing GNN 背景閱讀；不是跨 VT characterization 的直接證據。
+
+額外 11 篇的下載嘗試與狀態見 [擴充下載紀錄](PAPER_DOWNLOAD_STATUS.md)。
 
 公開來源：[POSTECH CSDL 作者出版頁](https://csdl.postech.ac.kr/bbs/board.php?bo_table=sub5_1&wr_id=246)。使用頁面提供的 Paper / Slide 正常 session 下載連結；ACM 直接 PDF 請求遇到驗證頁。
 
