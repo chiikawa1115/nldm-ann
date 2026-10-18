@@ -1,7 +1,7 @@
 # 研究計畫 v4：階層式模型合併 + Sign-off 安全的 NLDM Delay 預測
 
-日期：2026-10-17。修訂：2026-10-18（納入獨立審查 14 點，見第 12 節）。
-狀態：**LOCKED v4.1**（Rudy 2026-10-18 確認流程）。時程不在本次鎖定範圍內。
+日期：2026-10-17。修訂：2026-10-18（v4.1 納入獨立審查 14 點；v4.2 納入 W1 結果與 Rudy 決策，見第 12 節）。
+狀態：**LOCKED v4.2**（Rudy 2026-10-18 確認流程與 W1 決策）。時程不在本次鎖定範圍內。
 取代 `PLAN_v3_CELLTYPE_MERGE_2026-10-06.md` 第 1–8 節的規劃內容；v3 第 9 節的約束實測保留為依據。
 不覆寫 `RESEARCH_CONTRACT.md`、`CROSS_CELL_VT_RESEARCH_PLAN.md` 與既有 28 份 manifests。
 
@@ -61,6 +61,10 @@ LIBMixer 的 timing MAPE 0.11% 來自自建 BSIM-CMG/SiliconSmart library 與不
 - Function type = `cell_base` 去除 `_ASAP7_75t` 與 drive-strength 後綴（如 `x1`、`xp33`）；
   此 regex 實際得到的是 topology type：`BUFx4f/6f/12f/16f`、`HB1–4` 等會各自成為單一 size 的
   type。W1 產出對照表時人工決定是否合併，並記錄決策。
+- **W1 決策（Rudy 2026-10-18）**：`BUFx4f/6f/12f/16f` 各自為獨立 type（不併入 BUF，
+  同 drive pin cap 約 2 倍、delay 較低）；`HB1–HB4` 各自獨立（編號為 delay 等級而非 drive）；
+  `CKINVDC` 自成一個多 size type（不併入 INV）。結果：主線 86 types（39 多 size、47 單 size），
+  對照表 `experiments/plan_v4/w1/cell_type_catalog.csv`，10 筆抽查經 Rudy 確認無誤。
 - **資料不平衡**：AO/OA 佔主線 delay rows 95.06%，主因是 state-dependent（`when`）tables
   （例如 AO333 每個 cell/corner 有 630 張 delay tables＝315 arcs × rise/fall，其中 612 張帶 `when`）。
   INVBUF 僅 888 張 table。
@@ -121,6 +125,9 @@ Gate 失敗不代表研究失敗；「哪些 cell 不宜合併」是 RQ1 的答�
     不得用 pin 名稱字串或 ID embedding；
   - 加入 timing_sense one-hot。
   W1 以 script 重現 95.5% 衝突比例並寫入報告，作為此需求的證據。
+  **W1 結果**：5,707,315 / 5,978,980（95.46%）重現；只加 `when` 剩 196 rows 衝突，
+  `when`+`related_pin` 降為 0；`timing_sense` 單獨加入幾乎無效，但仍依物理意義保留。
+  （`experiments/plan_v4/w1/conflict_report.json`）
 - L2 另加 Boolean 結構特徵（沿用 `boolean_function_features`）與 function type 描述
   （輸入數、AND/OR 階層），**不使用 cell ID 或 type ID embedding**。
 - **Pin capacitance 洩漏規則**：同一 (cell_base, pin) 的 pin cap 在 4 VT 間 100% 不同、
@@ -179,16 +186,21 @@ micro 與 per-cell macro；mean ± SD 與 95% CI；模型比較用 paired seed d
 | 規則 | Golden 遵守率 | 用法 |
 |---|---|---|
 | delay 對 load 單調遞增 | 100%（主線 delay 重算：0 違反） | 硬約束 |
-| delay 對 slew 單調遞增 | 主線 delay 98.36% | soft penalty；違反點先分析 |
+| delay 對 slew 單調遞增 | 主線 delay 98.36% | soft penalty；違反集中於大 slew 端（見下） |
 | Corner：FF ≤ TT ≤ SS（delay） | 主線 delay 99.9993% | 硬約束（對 corner ordinal 單調，非對 process_code 單獨單調） |
 | VT：SLVT ≤ LVT ≤ RVT ≤ SRAM（TT delay） | 99.56% | 強 penalty |
-| 同 type 大 size delay 不大於小 size | 78.9% | 不約束 |
-| 同 type 大 size pin cap 不小於小 size | 70.1% | 不約束 |
-| 同 type+pin rise/fall 大小方向一致 | 中位數 83%、P10 55% | 不約束；評估是否保留 golden 方向 |
+| 同 type 大 size delay 不大於小 size | 主線 delay 79.26%（相鄰 size） | 不約束 |
+| 同 type 大 size pin cap 不小於小 size | 主線 70.67%（相鄰 size） | 不約束 |
+| 同 type+pin rise/fall 大小方向一致 | 主線中位數 84.2%、P10 55.7% | 不約束；評估是否保留 golden 方向 |
 
 約束原則：只有 golden 遵守率 ≥ 99.9% 的規則可做硬約束；其餘為 soft penalty 或只報告。
-前三列已由審查以主線 delay 重算；size／pin cap／rise-fall 三列仍為全 library 數字（UNVERIFIED），
-W1 的約束檢查 script 重算後鎖定。
+全部七列已由 W1 script（`scripts/plan_v4_w1.py`，`src/constraint_check.py`）以主線 delay 重算並鎖定
+（VERIFIED-DATA，2026-10-18）；分母定義寫在輸出的 `unit` 欄位，結果見 `experiments/plan_v4/w1/`。
+
+**Slew 違反分布（W1 新發現，修正 v3 第 9.2 節「小 slew 區」的描述）**：違反集中於大 slew 端。
+相鄰 slew 段（ps）的違反數：5→10：1,657；10→20：1,006；20→40：1,704；40→80：7,123；
+80→160：22,880；160→320：49,852（佔 59%）。整張 table 完全單調的比例為 89.9%。
+Slew soft penalty 的設計與「有效操作區」分層評估須依此分布處理，不得假設違反只在小 slew。
 
 ### 6.2 實作
 
@@ -314,3 +326,13 @@ Hold 違例無法以降頻修復，hold 側 coverage 目標設得比 setup 高�
 | 14 | Minor | Early/late tables 亦需單調、q_low 下限 | 7.3 |
 
 時程（第 10 節）未依審查調整，依 Rudy 指示另行處理。
+
+### v4.2（2026-10-18）— 納入 W1 結果與 Rudy 決策
+
+| # | 修正 | 位置 |
+|---|---|---|
+| 1 | 主線範圍確認做到 L2；L3 維持選做（Rudy 2026-10-18） | 4.1、8 |
+| 2 | BUFx*f、HB1–4 各自獨立 type；CKINVDC 自成 type 不併 INV；86 types 確認 | 2 |
+| 3 | 6.1 表後三列改為主線 delay 重算值（79.26%／70.67%／84.2%、55.7%），全表 VERIFIED-DATA | 6.1 |
+| 4 | Slew 違反集中於大 slew 端（160→320 ps 佔 59%），修正 v3 的「小 slew 區」描述 | 6.1 |
+| 5 | `when` 衝突 95.46% 重現；只加 `when` 剩 196 rows，加 `when`+`related_pin` 為 0 | 4.3 |
