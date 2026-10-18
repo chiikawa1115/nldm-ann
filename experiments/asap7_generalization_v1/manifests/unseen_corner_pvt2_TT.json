@@ -1,0 +1,17 @@
+{
+  "assignment_rule": "leave-one-PVT-condition-out",
+  "dataset": "data\\processed\\asap7_nldm.parquet",
+  "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+  "eligible_cell_bases": 200,
+  "fold": 2,
+  "group_key": "cell_base",
+  "heldout_pvt": {
+    "corner": "TT",
+    "nom_process": 1.0,
+    "nom_temperature_c": 25.0,
+    "nom_voltage_v": 0.7
+  },
+  "mode": "unseen_corner",
+  "schema_version": 1,
+  "source_commit": "da37dce1cef69bb75efbc2dc18ed95a29651295b"
+}

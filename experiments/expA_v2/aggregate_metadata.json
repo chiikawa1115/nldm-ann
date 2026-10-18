@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "confidence": 0.95,
+  "ci_method": "two-sided Student t interval across fixed seeds",
+  "paired_difference": "MLP minus LUT; negative error-metric values favor MLP",
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ]
+}

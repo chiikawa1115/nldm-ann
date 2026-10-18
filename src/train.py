@@ -46,14 +46,13 @@ import torch.nn as nn
 from tqdm import tqdm
 
 from models.mlp_nldm import MLPNldm
-
-# 對於 3,540 個微型 MLP，PyTorch 預設多執行緒反而拖慢（同步 overhead 大於計算）。
-# 鎖到 2 執行緒，讓系統其他行程有 CPU 可用，總體時間反而縮短。
-torch.set_num_threads(2)
-
-
-ARC_COLS = ["cell", "output_pin", "related_pin", "when", "table_type"]
-
+from experiment import (
+    ARC_COLS,
+    dataframe_sha256,
+    file_sha256,
+    split_by_regular_subgrid,
+    write_manifest,
+)
 
 # ============================================================
 # 1. Grid holdout 切分
@@ -220,6 +219,102 @@ def train_all_tables(
     return arcs, ckpts
 
 
+class _BatchedMLP(nn.Module):
+    """Independent MLP parameters evaluated in parallel across timing tables."""
+
+    def __init__(self, tables: int, dims: tuple[int, ...]) -> None:
+        super().__init__()
+        self.weights = nn.ParameterList()
+        self.biases = nn.ParameterList()
+        for fan_in, fan_out in zip(dims[:-1], dims[1:]):
+            weight = torch.empty(tables, fan_out, fan_in)
+            bias = torch.empty(tables, fan_out)
+            for i in range(tables):
+                nn.init.kaiming_uniform_(weight[i], a=np.sqrt(5))
+                bound = 1 / np.sqrt(fan_in)
+                nn.init.uniform_(bias[i], -bound, bound)
+            self.weights.append(nn.Parameter(weight))
+            self.biases.append(nn.Parameter(bias))
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        for layer, (weight, bias) in enumerate(zip(self.weights, self.biases)):
+            x = torch.bmm(x, weight.transpose(1, 2)) + bias[:, None, :]
+            if layer + 1 < len(self.weights):
+                x = torch.relu(x)
+        return x
+
+
+def _train_equal_size_batch(
+    groups: list[tuple[tuple, pd.DataFrame]], hidden_dims: tuple[int, ...],
+    n_epochs: int, patience: int, lr: float, weight_decay: float,
+) -> dict[tuple, dict]:
+    x = np.stack([g[["log_slew", "log_load"]].to_numpy(np.float32) for _, g in groups])
+    y = np.stack([g["value"].to_numpy(np.float32)[:, None] for _, g in groups])
+    x_mean, x_std = x.mean(1), x.std(1) + 1e-8
+    y_mean, y_std = y.mean(1), y.std(1) + 1e-8
+    xn = torch.from_numpy((x - x_mean[:, None, :]) / x_std[:, None, :])
+    yn = torch.from_numpy((y - y_mean[:, None, :]) / y_std[:, None, :])
+    model = _BatchedMLP(len(groups), (2, *hidden_dims, 1))
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
+    best_loss, best_state, stale = float("inf"), None, 0
+    for _ in range(n_epochs):
+        optimizer.zero_grad()
+        loss = nn.functional.mse_loss(model(xn), yn)
+        loss.backward()
+        optimizer.step()
+        current = float(loss.detach())
+        if current < best_loss - 1e-6:
+            best_loss = current
+            best_state = {k: v.detach().clone() for k, v in model.state_dict().items()}
+            stale = 0
+        else:
+            stale += 1
+            if stale >= patience:
+                break
+    if best_state:
+        model.load_state_dict(best_state)
+    with torch.no_grad():
+        per_table_loss = ((model(xn) - yn) ** 2).mean(dim=(1, 2)).numpy()
+    checkpoints = {}
+    linear_positions = list(range(0, 2 * len(model.weights), 2))
+    for table_index, (key, group) in enumerate(groups):
+        state = {}
+        for layer, position in enumerate(linear_positions):
+            state[f"net.{position}.weight"] = model.weights[layer][table_index].detach().clone()
+            state[f"net.{position}.bias"] = model.biases[layer][table_index].detach().clone()
+        checkpoints[key] = {
+            "state_dict": state,
+            "stats": {"x_mean": x_mean[table_index], "x_std": x_std[table_index],
+                      "y_mean": y_mean[table_index, 0], "y_std": y_std[table_index, 0]},
+            "n_train": len(group), "train_loss": float(per_table_loss[table_index]),
+        }
+    return checkpoints
+
+
+def train_all_tables_batched(
+    train_df: pd.DataFrame, hidden_dims: tuple[int, ...], n_epochs: int,
+    patience: int, lr: float, weight_decay: float, min_points: int = 6,
+    chunk_size: int = 256, limit: int | None = None,
+) -> tuple[list[tuple], dict[tuple, dict]]:
+    groups = [(key, group) for key, group in train_df.groupby(ARC_COLS, sort=False)
+              if len(group) >= min_points]
+    if limit is not None:
+        groups = groups[:limit]
+    by_size: dict[int, list] = {}
+    for item in groups:
+        by_size.setdefault(len(item[1]), []).append(item)
+    checkpoints = {}
+    chunks = [items[i:i + chunk_size] for items in by_size.values()
+              for i in range(0, len(items), chunk_size)]
+    for chunk in tqdm(chunks, desc="batched training", ncols=80):
+        checkpoints.update(_train_equal_size_batch(
+            chunk, hidden_dims, n_epochs, patience, lr, weight_decay
+        ))
+    arcs = [key for key, _ in groups]
+    print(f"batched 訓練 {len(arcs):,} 張表；chunks={len(chunks)}")
+    return arcs, checkpoints
+
+
 # ============================================================
 # 4. 主流程 + CLI
 # ============================================================
@@ -228,6 +323,8 @@ def main() -> None:
     p.add_argument("--parquet", required=True, help="輸入 parquet 路徑")
     p.add_argument("--holdout", type=float, required=True, help="holdout 比例（0-1）")
     p.add_argument("--seed", type=int, default=42, help="切分隨機種子")
+    p.add_argument("--split-manifest", default=None,
+                   help="split manifest CSV（預設為輸出 checkpoint 同名 .split.csv）")
     p.add_argument("--hidden-dims", type=int, nargs="+", default=[64, 64],
                    help="MLP 隱藏層大小，例：--hidden-dims 64 64")
     p.add_argument("--n-epochs", type=int, default=200)
@@ -235,8 +332,16 @@ def main() -> None:
     p.add_argument("--lr", type=float, default=3e-3)
     p.add_argument("--weight-decay", type=float, default=1e-4)
     p.add_argument("--limit", type=int, default=None, help="只訓前 N 張表（開發用）")
+    p.add_argument("--engine", choices=["batched", "serial"], default="batched")
+    p.add_argument("--chunk-size", type=int, default=256)
+    p.add_argument("--threads", type=int, default=0, help="0 使用 PyTorch 預設值")
     p.add_argument("--out", required=True, help="輸出 .pt 檔路徑")
     args = p.parse_args()
+
+    np.random.seed(args.seed)
+    torch.manual_seed(args.seed)
+    if args.threads > 0:
+        torch.set_num_threads(args.threads)
 
     print("=" * 60)
     print(" Per-table MLP 訓練")
@@ -251,12 +356,26 @@ def main() -> None:
     df = pd.read_parquet(args.parquet)
     print(f"\n總樣本數    : {len(df):,}")
 
-    train_df, test_df = split_by_grid_holdout(df, args.holdout, seed=args.seed)
+    train_df, test_df, manifest = split_by_regular_subgrid(
+        df, train_ratio=1.0 - args.holdout, seed=args.seed
+    )
+    manifest_path = Path(args.split_manifest) if args.split_manifest else Path(args.out).with_suffix(".split.csv")
+    write_manifest(manifest, manifest_path, {
+        "schema_version": 1,
+        "strategy": "regular_subgrid_v1",
+        "source": str(Path(args.parquet)),
+        "source_sha256": dataframe_sha256(df),
+        "seed": args.seed,
+        "requested_holdout": args.holdout,
+        "actual_holdout": len(test_df) / (len(train_df) + len(test_df)),
+    })
     print(f"訓練集      : {len(train_df):,}")
     print(f"測試集      : {len(test_df):,}")
 
     t0 = time.time()
-    arcs, ckpts = train_all_tables(
+    trainer = train_all_tables_batched if args.engine == "batched" else train_all_tables
+    extra = {"chunk_size": args.chunk_size} if args.engine == "batched" else {}
+    arcs, ckpts = trainer(
         train_df,
         hidden_dims=tuple(args.hidden_dims),
         n_epochs=args.n_epochs,
@@ -264,6 +383,7 @@ def main() -> None:
         lr=args.lr,
         weight_decay=args.weight_decay,
         limit=args.limit,
+        **extra,
     )
     elapsed = time.time() - t0
     print(f"\n訓練耗時    : {elapsed:.1f} 秒")
@@ -275,12 +395,21 @@ def main() -> None:
         "config": {
             "parquet": args.parquet,
             "holdout": args.holdout,
+            "actual_holdout": len(test_df) / (len(train_df) + len(test_df)),
+            "n_train": len(train_df),
+            "n_test": len(test_df),
             "seed": args.seed,
             "hidden_dims": list(args.hidden_dims),
             "n_epochs": args.n_epochs,
             "patience": args.patience,
             "lr": args.lr,
             "weight_decay": args.weight_decay,
+            "engine": args.engine,
+            "chunk_size": args.chunk_size,
+            "split_strategy": "regular_subgrid_v1",
+            "split_manifest": str(manifest_path),
+            "split_manifest_sha256": file_sha256(manifest_path),
+            "source_sha256": dataframe_sha256(df),
         },
         "arcs": arcs,
         "checkpoints": ckpts,

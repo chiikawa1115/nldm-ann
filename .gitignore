@@ -69,6 +69,7 @@ data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/*.metadata.json
 data/external/*
 !data/external/.gitkeep
 *.lib
@@ -78,6 +79,12 @@ data/external/*
 *.parquet
 *.npy
 *.npz
+*.pt
+*.split.csv
+*.split.csv.json
+experiments/expA_v2/holdout_*/
+.mplconfig/
+experiments/smoke/
 
 # ========================================
 # 環境變數與密碼
@@ -91,6 +98,9 @@ data/external/*
 # 測試與覆蓋率
 # ========================================
 .pytest_cache/
+pytest-cache-files-*/
+tests/runtime/*
+!tests/runtime/.gitkeep
 .coverage
 htmlcov/
 .tox/

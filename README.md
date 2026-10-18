@@ -1,7 +1,8 @@
-# NLDM + ANN 論文專案
+# Feature-Conditioned NLDM + ANN 論文專案
 
-> 使用人工神經網路（ANN）建模非線性延遲模型（Non-Linear Delay Model, NLDM），
-> 用於 VLSI 標準單元庫的時序特徵化（Cell Library Characterization）。
+> 使用 cell 結構與連續 PVT 特徵的 ANN 建模 NLDM，研究 unseen cell、
+> unseen corner 與 joint-unseen 泛化。ASAP7 為主資料集，GF180MCU 為
+> external validation；完整契約見 [`docs/RESEARCH_CONTRACT.md`](docs/RESEARCH_CONTRACT.md)。
 
 ---
 
@@ -179,6 +180,10 @@ python src/sanity_check.py
 
 ## 6. 下一步實作方向
 
+> 新實驗一律依 [`docs/GOAL_DRIVEN_PLAN.md`](docs/GOAL_DRIVEN_PLAN.md) 的 gate
+> 驗收。既有 `experiments/expA` 使用 random-point holdout 與 scattered
+> interpolation，保留作歷史結果，不可當作標準 NLDM bilinear baseline 的論文證據。
+
 按建議實作順序：
 
 ### 階段 1：資料 pipeline（先做這個！）
@@ -193,10 +198,26 @@ python src/sanity_check.py
 2. 用 hold-out 網格點測試（訓練時遮住某些 slew/load 點）
 3. 對比雙線性插值的誤差 → 這是論文的第一個實驗結果
 
+訓練 CLI 會在 checkpoint 旁建立 `*.split.csv` 與 metadata JSON，記錄完整
+Liberty table identity、dataset/manifest SHA-256、seed、套件版本與 git commit。
+評估只接受 hash 驗證通過的新版 manifest，避免重切資料或跨 PVT 洩漏。
+
+Experiment A v2 以單一設定檔執行 5 個固定 seeds、彙整 95% confidence
+interval，並產生論文圖表：
+
+```powershell
+python src/run_experiment.py --config experiments/configs/expA_v2.json
+```
+
+程序可續跑：已存在的 `result.json` 不會重算。只重新彙整現有結果可加
+`--aggregate-only`。輸出包含逐 seed metrics、平均與 CI、paired
+`MLP - LUT` 差值及 `accuracy_ci.png`。
+
 ### 階段 3：泛化與參數化
-1. 加入 PVT 參數當輸入 → 一個模型跨多個 PVT corner
-2. 加入 embedding layer 處理離散的 process corner
-3. 探討外推能力（訓練 5×5 網格，測 7×7）
+1. 加入 process、voltage、temperature 數值與 cell 結構特徵
+2. 執行 random-point、unseen-cell、unseen-corner、joint-unseen split
+3. 報告 micro-average 與 per-cell macro-average，多 seeds mean ± SD/CI
+4. cell/corner ID embedding 僅可作 transductive baseline，不可支持 unseen claim
 
 ### 階段 4：進階（選做）
 1. GNN 加入 cell 內部電晶體拓樸
@@ -230,3 +251,10 @@ python src/sanity_check.py
 ---
 
 _最後更新：2026-07-12_
+# GPU formal training
+
+The main unseen-cell/PVT experiment uses the streaming global trainer, not the legacy
+per-table Experiment A CLI. Follow [`docs/GPU_TRAINING_RUNBOOK.md`](docs/GPU_TRAINING_RUNBOOK.md).
+The repository contains 28 immutable split contracts that expand to 40 formal model runs.
+The ASAP7 Parquet is excluded from Git and must be copied or rebuilt and hash-verified on
+the GPU host. Run `scripts/gpu_preflight.py` before any long job.

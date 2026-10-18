@@ -28,10 +28,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import torch
-from scipy.interpolate import LinearNDInterpolator, NearestNDInterpolator
-
 from models.mlp_nldm import MLPNldm
-from train import ARC_COLS, split_by_grid_holdout
+from baseline import bilinear_predict
+from experiment import ARC_COLS, add_point_ids, dataframe_sha256, file_sha256
+from metrics import regression_metrics
 
 
 # ============================================================
@@ -40,9 +40,27 @@ from train import ARC_COLS, split_by_grid_holdout
 def reconstruct_split(
     df: pd.DataFrame, ckpt: dict
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """用 checkpoint 中的 seed 與 holdout 比例重現訓練切分。"""
+    """Load and verify the immutable split manifest recorded by training."""
     cfg = ckpt["config"]
-    return split_by_grid_holdout(df, cfg["holdout"], seed=cfg["seed"])
+    if cfg.get("split_strategy") != "regular_subgrid_v1":
+        raise ValueError("legacy random-point checkpoints are not valid for bilinear evaluation")
+    manifest_path = Path(cfg["split_manifest"])
+    if file_sha256(manifest_path) != cfg["split_manifest_sha256"]:
+        raise ValueError("split manifest hash does not match checkpoint")
+    manifest = pd.read_csv(manifest_path, keep_default_na=False)
+    if dataframe_sha256(df) != cfg["source_sha256"]:
+        raise ValueError("dataset hash does not match checkpoint")
+    if "point_id" not in manifest:
+        raise ValueError("split manifest lacks exact point IDs")
+    keyed = add_point_ids(df).merge(
+        manifest[["point_id", "split"]], on="point_id", how="inner", validate="one_to_one"
+    )
+    if len(keyed) != len(manifest):
+        raise ValueError("split manifest does not cover the evaluated dataset")
+    return (
+        keyed[keyed["split"] == "train"].drop(columns="split").reset_index(drop=True),
+        keyed[keyed["split"] == "test"].drop(columns="split").reset_index(drop=True),
+    )
 
 
 # ============================================================
@@ -77,50 +95,18 @@ def lut_predict_arc(train_arc: pd.DataFrame, test_arc: pd.DataFrame) -> np.ndarr
     重要：LUT baseline 只能用「train 點」建插值器，不能偷看 holdout 點。
     這才是實驗 A 的公平比較。
     """
-    if len(train_arc) < 3:
-        return np.full(len(test_arc), np.nan)
-
-    pts = train_arc[["slew", "load"]].to_numpy()
-    vals = train_arc["value"].to_numpy()
     try:
-        f_lin = LinearNDInterpolator(pts, vals)
-        f_near = NearestNDInterpolator(pts, vals)
-    except Exception:
+        return bilinear_predict(train_arc, test_arc)
+    except ValueError:
         return np.full(len(test_arc), np.nan)
-
-    q = test_arc[["slew", "load"]].to_numpy()
-    p = f_lin(q)
-    mask = np.isnan(p)
-    if mask.any():
-        p[mask] = f_near(q[mask])
-    return p
 
 
 # ============================================================
 # 4. 指標
 # ============================================================
 def compute_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> dict:
-    """計算 MAE / MaxE / MAPE / MaxRE / R²。
-
-    MAPE 用 |y_true| 為分母時，若 y_true 極小會爆炸；此處加 epsilon。
-    """
-    err = y_pred - y_true
-    abs_err = np.abs(err)
-    denom = np.maximum(np.abs(y_true), 1e-6)
-    rel_err = abs_err / denom
-    ss_res = float(np.sum(err**2))
-    ss_tot = float(np.sum((y_true - y_true.mean()) ** 2)) or 1e-12
-    return {
-        "n": int(len(y_true)),
-        "MAE": float(abs_err.mean()),
-        "MaxE": float(abs_err.max()),
-        "MAPE_pct": float(rel_err.mean() * 100),
-        "P50RE_pct": float(np.median(rel_err) * 100),
-        "P90RE_pct": float(np.percentile(rel_err, 90) * 100),
-        "P99RE_pct": float(np.percentile(rel_err, 99) * 100),
-        "MaxRE_pct": float(rel_err.max() * 100),
-        "R2": float(1 - ss_res / ss_tot),
-    }
+    """Backward-compatible wrapper around the paper metric definitions."""
+    return regression_metrics(y_true, y_pred)
 
 
 # ============================================================
@@ -213,7 +199,8 @@ def evaluate(parquet_path: Path, ckpt_path: Path, out_prefix: Path) -> dict:
         }
 
     summary = {
-        "holdout_ratio": cfg["holdout"],
+        "requested_holdout_ratio": cfg["holdout"],
+        "holdout_ratio": len(test_df) / (len(train_df) + len(test_df)),
         "n_train": int(len(train_df)),
         "n_test_evaluated": int(valid.sum()),
         "overall": {"MLP": mlp_metrics, "LUT": lut_metrics},
@@ -238,18 +225,18 @@ def evaluate(parquet_path: Path, ckpt_path: Path, out_prefix: Path) -> dict:
 
 def _print_summary(s: dict) -> None:
     print("\n" + "=" * 76)
-    print(f" 實驗 A 結果  (holdout = {s['holdout_ratio']*100:.0f}%)")
+    print(f" 實驗 A 結果  (actual holdout = {s['holdout_ratio']*100:.2f}%)")
     print("=" * 76)
 
     def _row(name: str, m: dict) -> str:
         return (
-            f"{name:<6} {m['MAE']:>10.4f} {m['MaxE']:>10.4f} "
-            f"{m['MAPE_pct']:>9.3f} {m['P90RE_pct']:>10.3f} "
-            f"{m['MaxRE_pct']:>10.3f} {m['R2']:>10.6f}"
+            f"{name:<6} {m['MAE']:>10.4f} {m['RMSE']:>10.4f} "
+            f"{m['sMAPE_pct']:>9.3f} {m['P90RE_pct']:>10.3f} "
+            f"{m['P99RE_pct']:>10.3f} {m['R2']:>10.6f}"
         )
 
-    print(f"{'Method':<6} {'MAE':>10} {'MaxE':>10} {'MAPE%':>9} "
-          f"{'P90RE%':>10} {'MaxRE%':>10} {'R²':>10}")
+    print(f"{'Method':<6} {'MAE':>10} {'RMSE':>10} {'sMAPE%':>9} "
+          f"{'P90RE%':>10} {'P99RE%':>10} {'R2':>10}")
     print("-" * 76)
     print(_row("LUT", s["overall"]["LUT"]))
     print(_row("MLP", s["overall"]["MLP"]))

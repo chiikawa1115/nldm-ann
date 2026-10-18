@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "research_contract": "docs/RESEARCH_CONTRACT.md",
+  "dataset": "data/processed/asap7_nldm.parquet",
+  "output_dir": "experiments/asap7_generalization_v1",
+  "seeds": [11, 23, 37, 53, 71],
+  "split_modes": [
+    "random_point",
+    "unseen_cell",
+    "unseen_corner",
+    "joint_unseen"
+  ],
+  "pvt_folds": "leave_one_pvt_condition_out",
+  "test_cell_ratio": 0.2,
+  "point_test_ratio": 0.2,
+  "features": {
+    "cell_id": false,
+    "corner_id": false,
+    "cell_structural": true,
+    "process_proxy": "data/process_mappings.json",
+    "voltage": true,
+    "temperature": true
+  },
+  "reporting": {
+    "averages": ["micro", "per_cell_macro"],
+    "metrics": ["MAE", "RMSE", "sMAPE_pct", "P90RE_pct", "P99RE_pct", "R2"],
+    "dispersion": ["standard_deviation", "confidence_interval_95"],
+    "paired_seed_comparisons": true
+  }
+}

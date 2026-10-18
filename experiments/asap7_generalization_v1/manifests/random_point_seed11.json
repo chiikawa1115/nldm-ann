@@ -1,0 +1,12 @@
+{
+  "assignment_rule": "within each full Liberty table, sort points by deterministic uint64 hash(seed,full_table_identity,slew,load) and hold out round(n*ratio)",
+  "dataset": "data\\processed\\asap7_nldm.parquet",
+  "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+  "eligible_cell_bases": 200,
+  "group_key": "cell_base",
+  "mode": "random_point",
+  "point_test_ratio": 0.2,
+  "schema_version": 1,
+  "source_commit": "da37dce1cef69bb75efbc2dc18ed95a29651295b",
+  "split_seed": 11
+}

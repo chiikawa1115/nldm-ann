@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asap7_ordered_process_proxy": {
+    "SS": -1.0,
+    "TT": 0.0,
+    "FF": 1.0
+  },
+  "interpretation": "Ordinal proxy, not a measured physical process parameter",
+  "required_reporting": "Report this assumption and include a process-feature ablation",
+  "prohibited_use": "Do not describe this proxy as a foundry process measurement"
+}

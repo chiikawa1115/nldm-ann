@@ -29,6 +29,7 @@ CLI 用法：
 from __future__ import annotations
 
 import argparse
+import gzip
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -39,6 +40,8 @@ import pandas as pd
 import torch
 from liberty.parser import parse_liberty
 from torch.utils.data import Dataset
+
+from features import infer_cell_base, infer_drive_strength, infer_logic_class, infer_vt_class
 
 
 # ============================================================
@@ -52,7 +55,30 @@ _CORNER_RE = re.compile(r"(?:^|[_\W])(FF|SS|TT|ff|ss|tt)(?:$|[_\W])")
 def _infer_corner(name: str) -> str:
     """從 lib 名稱推斷 process corner (FF/SS/TT)，找不到就回傳 'unknown'。"""
     m = _CORNER_RE.search(name)
-    return m.group(1).upper() if m else "unknown"
+    if m:
+        return m.group(1).upper()
+    return "TT" if re.search(r"(?:^|[_\W])typical(?:$|[_\W])", name, re.I) else "unknown"
+
+
+_TIME_TO_PS = {"s": 1e12, "ms": 1e9, "us": 1e6, "ns": 1e3, "ps": 1.0, "fs": 1e-3}
+_CAP_TO_FF = {"f": 1e15, "mf": 1e12, "uf": 1e9, "nf": 1e6,
+              "pf": 1e3, "ff": 1.0, "af": 1e-3}
+
+
+def _scaled_unit(value, conversions: dict[str, float]) -> tuple[str, float]:
+    """Return the Liberty spelling and multiplier to the canonical paper unit."""
+    if isinstance(value, list) and len(value) == 2:
+        magnitude, unit = float(value[0]), str(value[1]).lower()
+        spelling = f"{magnitude:g}{unit}"
+    else:
+        spelling = _clean_str(value).lower()
+        match = re.fullmatch(r"([0-9.eE+-]+)\s*([a-zA-Z]+)", spelling)
+        if not match:
+            raise ValueError(f"unsupported Liberty unit: {value!r}")
+        magnitude, unit = float(match.group(1)), match.group(2).lower()
+    if unit not in conversions:
+        raise ValueError(f"unsupported Liberty unit: {value!r}")
+    return spelling, magnitude * conversions[unit]
 
 
 # 我們關心的四種 NLDM 表格。每個 timing arc 都可能有這些子表。
@@ -65,7 +91,20 @@ class Sample:
     lib_file: str
     library_name: str
     corner: str
+    nom_process: float
+    nom_voltage_v: float
+    nom_temperature_c: float
+    source_time_unit: str
+    source_cap_unit: str
     cell: str
+    cell_base: str
+    logic_function: str
+    logic_class: str
+    drive_strength: float
+    vt_class: str
+    related_pin_cap_ff: float
+    n_input_pins: int
+    n_output_pins: int
     output_pin: str
     related_pin: str
     timing_sense: str
@@ -73,11 +112,11 @@ class Sample:
     when: str            # conditional arc 的條件（例："!B" 表示 B=0 時此 arc 生效）
     table_type: str
     template: str
-    slew: float          # index_1 (ps)
-    load: float          # index_2 (fF)
+    slew: float          # index_1, canonical ps
+    load: float          # index_2, canonical fF
     log_slew: float      # ln(slew)  —— 因 LUT index 是幾何級數，log 尺度更均勻
     log_load: float      # ln(load)
-    value: float         # delay 或 transition 值
+    value: float         # delay 或 transition，canonical ps
 
 
 def _clean_str(v) -> str:
@@ -90,22 +129,65 @@ def _clean_str(v) -> str:
 
 def iter_cell_samples(lib_path: Path) -> Iterator[Sample]:
     """走訪一個 .lib 檔的所有 cell / 所有 timing arc / 所有格點，逐筆 yield Sample。"""
-    text = lib_path.read_text(encoding="utf-8", errors="replace")
+    if lib_path.suffix == ".gz":
+        text = gzip.open(lib_path, "rt", encoding="utf-8", errors="replace").read()
+    else:
+        text = lib_path.read_text(encoding="utf-8", errors="replace")
     library = parse_liberty(text)
 
     library_name = _clean_str(library.args[0]) if library.args else lib_path.stem
     corner = _infer_corner(library_name) or _infer_corner(lib_path.name)
+    if corner == "unknown":
+        corner = _infer_corner(lib_path.name)
+    source_time_unit, time_to_ps = _scaled_unit(library.get_attribute("time_unit"), _TIME_TO_PS)
+    source_cap_unit, cap_to_ff = _scaled_unit(
+        library.get_attribute("capacitive_load_unit"), _CAP_TO_FF
+    )
+    process_attr = library.get_attribute("nom_process")
+    voltage_attr = library.get_attribute("nom_voltage")
+    temperature_attr = library.get_attribute("nom_temperature")
+    nom_process = float(process_attr) if process_attr is not None else float("nan")
+    nom_voltage = float(voltage_attr) if voltage_attr is not None else float("nan")
+    nom_temperature = float(temperature_attr) if temperature_attr is not None else float("nan")
 
     for cell in library.get_groups("cell"):
         cell_name = _clean_str(cell.args[0])
-        for pin in cell.get_groups("pin"):
+        cell_base = infer_cell_base(cell_name)
+        pins = list(cell.get_groups("pin"))
+        pin_by_name = {_clean_str(p.args[0]): p for p in pins}
+        n_input_pins = sum(_clean_str(p.get_attribute("direction")) == "input" for p in pins)
+        n_output_pins = sum(_clean_str(p.get_attribute("direction")) == "output" for p in pins)
+        logic_class = infer_logic_class(cell_name)
+        drive_strength = infer_drive_strength(cell_name)
+        vt_class = infer_vt_class(library_name, lib_path.name, cell_name)
+        for pin in pins:
             direction = _clean_str(pin.get_attribute("direction"))
             if direction != "output":
                 continue
             pin_name = _clean_str(pin.args[0])
+            logic_function = _clean_str(pin.get_attribute("function"))
 
             for timing in pin.get_groups("timing"):
                 related_pin = _clean_str(timing.get_attribute("related_pin"))
+                related_names = related_pin.split()
+                related_caps = []
+                related_are_inputs = True
+                for related_name in related_names:
+                    related_group = pin_by_name.get(related_name)
+                    if related_group is None:
+                        related_are_inputs = False
+                        continue
+                    if _clean_str(related_group.get_attribute("direction")) != "input":
+                        related_are_inputs = False
+                        continue
+                    cap = related_group.get_attribute("capacitance")
+                    if cap is not None:
+                        related_caps.append(float(cap) * cap_to_ff)
+                # NLDM index_1 is input transition. Output-to-output or unresolved
+                # related_pin arcs cannot provide an inference-time input pin cap.
+                if not related_names or not related_are_inputs or not related_caps:
+                    continue
+                related_pin_cap_ff = float(np.mean(related_caps)) if related_caps else float("nan")
                 timing_sense = _clean_str(timing.get_attribute("timing_sense"))
                 timing_type = _clean_str(timing.get_attribute("timing_type"))
                 # when：條件式 arc 的觸發條件，例如 "!B" 表示 B=0 時本 arc 生效
@@ -141,14 +223,29 @@ def iter_cell_samples(lib_path: Path) -> Iterator[Sample]:
                     # log-scale：LUT index 通常是幾何級數（每格 ×2），log 後接近等距，
                     # 讓 MLP 較好學。加 1e-9 避免 log(0)。
                     for i, s in enumerate(idx1):
-                        log_s = float(np.log(max(float(s), 1e-9)))
+                        slew_ps = float(s) * time_to_ps
+                        log_s = float(np.log(max(slew_ps, 1e-9)))
                         for j, ell in enumerate(idx2):
-                            log_l = float(np.log(max(float(ell), 1e-9)))
+                            load_ff = float(ell) * cap_to_ff
+                            log_l = float(np.log(max(load_ff, 1e-9)))
                             yield Sample(
                                 lib_file=lib_path.name,
                                 library_name=library_name,
                                 corner=corner,
+                                nom_process=nom_process,
+                                nom_voltage_v=nom_voltage,
+                                nom_temperature_c=nom_temperature,
+                                source_time_unit=source_time_unit,
+                                source_cap_unit=source_cap_unit,
                                 cell=cell_name,
+                                cell_base=cell_base,
+                                logic_function=logic_function,
+                                logic_class=logic_class,
+                                drive_strength=drive_strength,
+                                vt_class=vt_class,
+                                related_pin_cap_ff=related_pin_cap_ff,
+                                n_input_pins=n_input_pins,
+                                n_output_pins=n_output_pins,
                                 output_pin=pin_name,
                                 related_pin=related_pin,
                                 timing_sense=timing_sense,
@@ -156,11 +253,11 @@ def iter_cell_samples(lib_path: Path) -> Iterator[Sample]:
                                 when=when,
                                 table_type=table_type,
                                 template=template,
-                                slew=float(s),
-                                load=float(ell),
+                                slew=slew_ps,
+                                load=load_ff,
                                 log_slew=log_s,
                                 log_load=log_l,
-                                value=float(vals[i, j]),
+                                value=float(vals[i, j]) * time_to_ps,
                             )
 
 
@@ -199,16 +296,20 @@ def summarize(df: pd.DataFrame) -> None:
     if "when" in df.columns:
         n_cond = (df["when"] != "").sum()
         print(f"conditional  : {n_cond:,} 筆帶 when（{100*n_cond/len(df):.1f}%）")
-    print(f"slew 範圍    : {df['slew'].min():.4f} ~ {df['slew'].max():.4f}")
-    print(f"load 範圍    : {df['load'].min():.6f} ~ {df['load'].max():.6f}")
-    print(f"value 範圍   : {df['value'].min():.4f} ~ {df['value'].max():.4f}")
-    # arc = (cell, output_pin, related_pin, when, table_type)
-    # 這個 tuple 就是「一張 LUT 表」的唯一識別，per-table 訓練會用它
-    arc_cols = ["cell", "output_pin", "related_pin", "when", "table_type"]
+    print(f"slew 範圍 ps : {df['slew'].min():.4f} ~ {df['slew'].max():.4f}")
+    print(f"load 範圍 fF : {df['load'].min():.6f} ~ {df['load'].max():.6f}")
+    print(f"value 範圍 ps: {df['value'].min():.4f} ~ {df['value'].max():.4f}")
+    # 完整 table identity 必須包含 library/corner/timing metadata；否則多 PVT
+    # 資料中同名 cell/arc 會被誤併，形成資料洩漏。
+    arc_cols = [
+        "lib_file", "library_name", "corner", "cell", "output_pin",
+        "related_pin", "timing_sense", "timing_type", "when",
+        "table_type", "template",
+    ]
     if all(c in df.columns for c in arc_cols):
         n_arcs = df.groupby(arc_cols, sort=False).ngroups
         pts_per_arc = df.groupby(arc_cols, sort=False).size()
-        print(f"\n唯一 (cell,pin,related,when,table) 表格數: {n_arcs:,}")
+        print(f"\n唯一 Liberty timing tables: {n_arcs:,}")
         print(f"每張表的格點數     : min={pts_per_arc.min()} / "
               f"median={int(pts_per_arc.median())} / max={pts_per_arc.max()}")
 

@@ -5,7 +5,7 @@
 
 這是取代傳統 7x7 LUT 的最簡單基準。之後可擴充：
   - 多輸出頭（同時預測 rise/fall delay、rise/fall transition）
-  - 加入 embedding layer 處理離散的 PVT corner
+  - 使用顯式 cell 結構與連續 PVT 特徵進行 inductive generalization
   - 加入 physics-informed loss（例如強制單調性）
 """
 
@@ -54,7 +54,7 @@ class MLPNldm(nn.Module):
 
 
 class MLPNldmMultiCell(nn.Module):
-    """跨多 cell 的 MLP，用 embedding 表示 cell 身份。
+    """Transductive baseline using cell IDs; invalid for unseen-cell claims.
 
     一個模型負責所有 cell —— 每個 cell 的差異由 embedding 學到。
     這比「每個 cell 一個獨立 MLP」更省參數、更容易泛化，也是
@@ -102,6 +102,27 @@ class MLPNldmMultiCell(nn.Module):
         emb = self.cell_embed(cell_id)        # (B, embedding_dim)
         h = torch.cat([emb, x], dim=-1)       # (B, embedding_dim + 2)
         return self.mlp(h)
+
+
+class FeatureConditionedNldm(nn.Module):
+    """Inductive MLP using only inference-available numeric/one-hot features.
+
+    Cell and corner IDs are intentionally absent. Feature normalization must be
+    fit on the training partition and persisted with the checkpoint.
+    """
+
+    def __init__(
+        self, in_features: int, hidden_dims: tuple[int, ...] = (128, 128, 64),
+        out_features: int = 1, dropout: float = 0.0,
+    ) -> None:
+        super().__init__()
+        self.mlp = MLPNldm(
+            in_features=in_features, hidden_dims=hidden_dims,
+            out_features=out_features, dropout=dropout,
+        )
+
+    def forward(self, features: torch.Tensor) -> torch.Tensor:
+        return self.mlp(features)
 
 
 if __name__ == "__main__":

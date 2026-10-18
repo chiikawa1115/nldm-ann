@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "nangate45_typical_openroad_flow_scripts_master_2026-08-13",
+      "path": "data/external/nangate45/NangateOpenCellLibrary_typical.lib",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/master/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib",
+      "retrieved_at": "2026-08-13",
+      "sha256": "8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1",
+      "library": "NangateOpenCellLibrary",
+      "corner": "TT",
+      "nom_process": 1.0,
+      "nom_voltage_v": 1.1,
+      "nom_temperature_c": 25.0,
+      "source_time_unit": "1ns",
+      "source_capacitance_unit": "1ff",
+      "canonical_time_unit": "ps",
+      "canonical_capacitance_unit": "fF"
+    }
+  ]
+}
