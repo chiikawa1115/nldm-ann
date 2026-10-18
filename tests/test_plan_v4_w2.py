@@ -185,3 +185,14 @@ def test_l0_sample_is_stratified_and_deterministic():
     counts = sample.groupby("topology_type").size().to_dict()
     assert counts["INV"] == 3                        # small type fully taken
     assert counts["NAND2"] >= 20 and counts["AO333"] >= 20
+
+
+def test_written_artifacts_use_lf_only(tmp_path):
+    from plan_v4_data import write_json
+    write_json(tmp_path / "a.json", {"k": [1, 2]})
+    assert b"\r" not in (tmp_path / "a.json").read_bytes()
+    from cell_type_catalog import build_catalog
+    from test_plan_v4_w1 import catalog_inputs
+    cells, counts = catalog_inputs([("INVx1", "INVBUF"), ("INVx2", "INVBUF")])
+    build_catalog(cells, counts).to_csv(tmp_path / "c.csv", index=False, lineterminator="\n")
+    assert b"\r" not in (tmp_path / "c.csv").read_bytes()

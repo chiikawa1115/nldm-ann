@@ -35,12 +35,12 @@ FEATURE_INPUTS = [
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--parquet", type=Path, default=REPO / "data/processed/asap7_nldm.parquet")
-    parser.add_argument("--metadata", type=Path,
-                        default=REPO / "data/processed/asap7_nldm.metadata.json")
+    parser.add_argument("--reference", type=Path, default=REPO / "data/asap7_nldm.reference.json",
+                        help="committed dataset reference (file + content hash)")
     parser.add_argument("--out-dir", type=Path, default=REPO / "experiments/plan_v4/w1")
     args = parser.parse_args()
     start = time.time()
-    metadata = verify_parquet(args.parquet, args.metadata)
+    metadata = verify_parquet(args.parquet, args.reference)
     prov = provenance(args.parquet, metadata, REPO)
 
     everything = load_delay_rows(args.parquet, FEATURE_INPUTS + ["lib_file"], mainline_only=False)

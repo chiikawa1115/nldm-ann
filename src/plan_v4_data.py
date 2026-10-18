@@ -62,15 +62,63 @@ def file_sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def verify_parquet(parquet: Path, metadata_path: Path) -> dict:
-    """Fail fast when the copied parquet differs from the recorded dataset."""
-    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+# Rows are uniquely identified by these columns (one point of one table).
+ROW_IDENTITY = ["lib_file", "cell", "output_pin", "related_pin", "timing_type",
+                "timing_sense", "when", "table_type", "slew", "load"]
+CONTENT_FLOAT_DECIMALS = 9
+
+
+def _column_bytes(values: pd.Series) -> bytes:
+    if pd.api.types.is_float_dtype(values):
+        arr = np.round(values.to_numpy(dtype="<f8"), CONTENT_FLOAT_DECIMALS)
+        arr = np.where(np.isnan(arr), np.nan, arr) + 0.0   # canonical NaN, -0.0 -> 0.0
+        return arr.astype("<f8").tobytes()
+    if pd.api.types.is_integer_dtype(values):
+        return values.to_numpy(dtype="<i8").tobytes()
+    return "\x00".join(values.astype(str).tolist()).encode("utf-8")
+
+
+def content_fingerprint(df: pd.DataFrame) -> dict:
+    """Hash of the table content, independent of row order and parquet encoding.
+
+    The parquet file hash changes with pyarrow version or compression even when
+    the data are identical, so a rebuilt dataset is checked by content instead:
+    rows are put in ROW_IDENTITY order, floats rounded to CONTENT_FLOAT_DECIMALS.
+    """
+    if df.duplicated(ROW_IDENTITY).any():
+        raise ValueError("ROW_IDENTITY does not uniquely identify rows")
+    codes = [pd.factorize(df[c], sort=True)[0] for c in reversed(ROW_IDENTITY)]
+    ordered = df.iloc[np.lexsort(codes)]
+    columns = {c: hashlib.sha256(_column_bytes(ordered[c])).hexdigest()
+               for c in sorted(df.columns)}
+    overall = hashlib.sha256(
+        "\n".join(f"{c}:{h}" for c, h in columns.items()).encode())
+    return {"content_sha256": overall.hexdigest(), "rows": int(len(df)),
+            "column_sha256": columns, "float_decimals": CONTENT_FLOAT_DECIMALS}
+
+
+def verify_parquet(parquet: Path, reference_path: Path) -> dict:
+    """Fail fast unless the parquet matches the reference dataset.
+
+    Same file hash: accepted directly. Different file hash (e.g. rebuilt on
+    another machine): accepted only if the content fingerprint matches. The
+    returned dict keeps `parquet_sha256` as the canonical dataset ID that all
+    manifests and caches refer to.
+    """
+    reference = json.loads(reference_path.read_text(encoding="utf-8"))
     actual = file_sha256(parquet)
-    if actual != metadata["parquet_sha256"]:
+    if actual == reference["parquet_sha256"]:
+        return {**reference, "verified_by": "file_sha256", "local_parquet_sha256": actual}
+    if "content_sha256" not in reference:
         raise ValueError(
-            f"parquet sha256 mismatch: {actual} != {metadata['parquet_sha256']} ({parquet})"
-        )
-    return metadata
+            f"parquet sha256 mismatch: {actual} != {reference['parquet_sha256']} ({parquet}); "
+            "reference has no content hash to fall back on")
+    found = content_fingerprint(pd.read_parquet(parquet))
+    if found["content_sha256"] != reference["content_sha256"]:
+        bad = sorted(c for c, h in reference["column_sha256"].items()
+                     if found["column_sha256"].get(c) != h)
+        raise ValueError(f"parquet content mismatch in columns {bad} ({parquet})")
+    return {**reference, "verified_by": "content_sha256", "local_parquet_sha256": actual}
 
 
 def load_delay_rows(parquet: Path, columns: list[str] | None = None,
@@ -103,6 +151,8 @@ def provenance(parquet: Path, metadata: dict, repo: Path) -> dict:
     return {
         "dataset": parquet.name,
         "dataset_sha256": metadata["parquet_sha256"],
+        "dataset_verified_by": metadata.get("verified_by"),
+        "local_parquet_sha256": metadata.get("local_parquet_sha256"),
         "source_commit": metadata.get("source_commit"),
         "git_commit": commit,
         "git_dirty_src": dirty,
@@ -114,5 +164,7 @@ def provenance(parquet: Path, metadata: dict, repo: Path) -> dict:
 
 def write_json(path: Path, payload: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
-                    encoding="utf-8")
+    # Always LF: write_text emits CRLF on Windows, which would change the hashes
+    # that other machines compare against.
+    text = json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
+    path.write_bytes(text.encode("utf-8"))

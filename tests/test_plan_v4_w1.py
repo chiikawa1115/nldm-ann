@@ -204,3 +204,37 @@ def test_verify_parquet_rejects_mismatch(tmp_path):
         "parquet_sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
     }), encoding="utf-8")
     assert verify_parquet(data, meta)["parquet_sha256"].startswith("ba7816")
+
+
+def _write_reference(tmp_path, frame):
+    from plan_v4_data import content_fingerprint, file_sha256
+    original = tmp_path / "orig.parquet"
+    frame.to_parquet(original, index=False)
+    reference = tmp_path / "ref.json"
+    reference.write_text(json.dumps({
+        "parquet_sha256": file_sha256(original), **content_fingerprint(frame)}), encoding="utf-8")
+    return original, reference
+
+
+def test_content_fingerprint_accepts_reencoded_rejects_changed(tmp_path):
+    frame = golden_rows(cells=("INVx1",)).assign(lib_file=lambda d: d["lib_file"] + d["table_type"])
+    original, reference = _write_reference(tmp_path, frame)
+    assert verify_parquet(original, reference)["verified_by"] == "file_sha256"
+    shuffled = tmp_path / "shuffled.parquet"
+    frame.sample(frac=1.0, random_state=0).to_parquet(shuffled, compression="snappy", index=False)
+    result = verify_parquet(shuffled, reference)
+    assert result["verified_by"] == "content_sha256"
+    assert result["local_parquet_sha256"] != result["parquet_sha256"]
+    tiny = tmp_path / "rounding.parquet"
+    frame.assign(value=frame["value"] + 1e-12).to_parquet(tiny, index=False)
+    assert verify_parquet(tiny, reference)["verified_by"] == "content_sha256"
+    changed = frame.copy()
+    changed.loc[0, "value"] += 1e-3
+    bad = tmp_path / "bad.parquet"
+    changed.to_parquet(bad, index=False)
+    with pytest.raises(ValueError, match=r"content mismatch in columns \['value'\]"):
+        verify_parquet(bad, reference)
+    short = tmp_path / "short.parquet"
+    frame.iloc[1:].to_parquet(short, index=False)
+    with pytest.raises(ValueError):
+        verify_parquet(short, reference)

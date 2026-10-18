@@ -1,0 +1,4 @@
+# Hash-checked artifacts must keep identical bytes on every OS (no CRLF conversion).
+experiments/plan_v4/** -text
+data/asap7_nldm.reference.json -text
+data/asap7_sources.json -text

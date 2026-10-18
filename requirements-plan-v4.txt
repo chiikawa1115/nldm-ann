@@ -1,0 +1,10 @@
+# PLAN v4 environment (dev machine versions, 2026-10-18). Install PyTorch separately
+# with the CUDA wheel that supports your GPU -- see docs/PLAN_v4_GPU_HOST_RUNBOOK.md.
+# Pinned so the feature cache matrix hash can match across machines.
+numpy==2.5.2
+pandas==3.0.5
+pyarrow==25.0.1
+scipy==1.18.0
+liberty-parser==0.0.29
+pytest==9.1.1
+tqdm
