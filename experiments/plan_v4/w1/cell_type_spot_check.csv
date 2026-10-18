@@ -1,0 +1,11 @@
+cell_base,family,in_mainline,logic_class,topology_type,size_label,size,name_suffix,n_sizes_in_type,size_rank_in_type,vts,delay_tables,needs_review,review_reason,merge_proposal
+AO211x2_ASAP7_75t,AO,True,AO,AO211,2,2.0,,1,1.0,SLVT|LVT|RVT|SRAM,240,False,,auto
+AO22x1_ASAP7_75t,AO,True,AO,AO22,1,1.0,,2,1.0,SLVT|LVT|RVT|SRAM,384,False,,auto
+AOI321xp33_ASAP7_75t,AO,True,AOI,AOI321,p33,0.33,,1,1.0,SLVT|LVT|RVT|SRAM,1080,False,,auto
+CKINVDCx8_ASAP7_75t,INVBUF,True,CLOCK,CKINVDC,8,8.0,,10,3.0,SLVT|LVT|RVT|SRAM,24,True,與 INV 同為 !A，但為 clock 專用 inverter（DC 結構）,keep_separate
+OAI21xp33_ASAP7_75t,OA,True,OAI,OAI21,p33,0.33,,3,1.0,SLVT|LVT|RVT|SRAM,144,False,,auto
+OAI321xp33_ASAP7_75t,OA,True,OAI,OAI321,p33,0.33,,1,1.0,SLVT|LVT|RVT|SRAM,1080,False,,auto
+AND2x6_ASAP7_75t,SIMPLE,True,AND,AND2,6,6.0,,3,3.0,SLVT|LVT|RVT|SRAM,48,False,,auto
+AND5x1_ASAP7_75t,SIMPLE,True,AND,AND5,1,1.0,,2,1.0,SLVT|LVT|RVT|SRAM,120,False,,auto
+NOR2x1p5_ASAP7_75t,SIMPLE,True,NOR,NOR2,1p5,1.5,,5,4.0,SLVT|LVT|RVT|SRAM,48,False,,auto
+NOR5xp2_ASAP7_75t,SIMPLE,True,NOR,NOR5,p2,0.2,,1,1.0,SLVT|LVT|RVT|SRAM,120,False,,auto

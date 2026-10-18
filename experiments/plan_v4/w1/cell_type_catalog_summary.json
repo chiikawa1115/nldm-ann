@@ -1,0 +1,64 @@
+{
+  "by_family": {
+    "AO": {
+      "cell_base": 42,
+      "delay_tables": 60936,
+      "function_types": 28,
+      "multi_size_types": 12
+    },
+    "INVBUF": {
+      "cell_base": 37,
+      "delay_tables": 888,
+      "function_types": 11,
+      "multi_size_types": 3
+    },
+    "OA": {
+      "cell_base": 34,
+      "delay_tables": 55056,
+      "function_types": 25,
+      "multi_size_types": 7
+    },
+    "SIMPLE": {
+      "cell_base": 54,
+      "delay_tables": 5140,
+      "function_types": 22,
+      "multi_size_types": 17
+    }
+  },
+  "excluded_seq_cell_base": 33,
+  "mainline_cell_base": 167,
+  "mainline_delay_tables": 122020,
+  "mainline_function_types": 86,
+  "mainline_multi_size_types": 39,
+  "mainline_single_size_types": 47,
+  "needs_review_cell_base": [
+    "BUFx12f_ASAP7_75t",
+    "BUFx16f_ASAP7_75t",
+    "BUFx4f_ASAP7_75t",
+    "BUFx6f_ASAP7_75t",
+    "CKINVDCx5p33_ASAP7_75t",
+    "CKINVDCx6p67_ASAP7_75t",
+    "CKINVDCx8_ASAP7_75t",
+    "CKINVDCx9p33_ASAP7_75t",
+    "CKINVDCx10_ASAP7_75t",
+    "CKINVDCx11_ASAP7_75t",
+    "CKINVDCx12_ASAP7_75t",
+    "CKINVDCx14_ASAP7_75t",
+    "CKINVDCx16_ASAP7_75t",
+    "CKINVDCx20_ASAP7_75t",
+    "HB1xp67_ASAP7_75t",
+    "HB2xp67_ASAP7_75t",
+    "HB3xp67_ASAP7_75t",
+    "HB4xp67_ASAP7_75t"
+  ],
+  "provenance": {
+    "dataset": "asap7_nldm.parquet",
+    "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+    "git_commit": "4f064467ce584f67bfdaa8dafe35f6d2e344b13c",
+    "git_dirty_src": true,
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.12.10",
+    "source_commit": "da37dce1cef69bb75efbc2dc18ed95a29651295b"
+  }
+}

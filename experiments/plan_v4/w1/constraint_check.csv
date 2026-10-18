@@ -1,0 +1,9 @@
+rule,unit,rate,recommendation
+load_monotonic,adjacent load pairs,1.0,hard
+slew_monotonic,adjacent slew pairs,0.9835659259606153,penalty
+corner_order,grid points with FF<=TT<=SS,0.99999297377814,hard
+vt_order_tt,grid points with SLVT<=LVT<=RVT<=SRAM (TT),0.9956015851156517,penalty
+vt_order_all_corners,grid points with SLVT<=LVT<=RVT<=SRAM (all corners),0.9928580127703255,penalty
+size_delay,"adjacent-size point pairs, same arc/slew/load",0.7925670212597302,report_only
+size_pin_cap,"adjacent-size (pin, vt, corner) pairs",0.7066813509544787,report_only
+rise_fall_consistency,"(topology type, related pin) groups; per-group majority agreement",0.8421768707482993,report_only

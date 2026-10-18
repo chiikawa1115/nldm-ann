@@ -1,0 +1,93 @@
+{
+  "_meta": {
+    "grid": [
+      7,
+      7
+    ],
+    "hard_threshold": 0.999,
+    "penalty_threshold": 0.95,
+    "tables": 122020
+  },
+  "corner_order": {
+    "compared": 1992536,
+    "ff_le_ss_rate": 1.0,
+    "ok": 1992522,
+    "rate": 0.99999297377814,
+    "recommendation": "hard",
+    "table_triples": 40664,
+    "unit": "grid points with FF<=TT<=SS"
+  },
+  "load_monotonic": {
+    "compared": 5124840,
+    "ok": 5124840,
+    "rate": 1.0,
+    "recommendation": "hard",
+    "unit": "adjacent load pairs"
+  },
+  "provenance": {
+    "dataset": "asap7_nldm.parquet",
+    "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+    "git_commit": "4f064467ce584f67bfdaa8dafe35f6d2e344b13c",
+    "git_dirty_src": true,
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.12.10",
+    "source_commit": "da37dce1cef69bb75efbc2dc18ed95a29651295b"
+  },
+  "rise_fall_consistency": {
+    "groups": 377,
+    "median": 0.8421768707482993,
+    "p10": 0.5569101324740423,
+    "rate": 0.8421768707482993,
+    "recommendation": "report_only",
+    "unit": "(topology type, related pin) groups; per-group majority agreement"
+  },
+  "size_delay": {
+    "compared": 1513848,
+    "ok": 1199826,
+    "rate": 0.7925670212597302,
+    "recommendation": "report_only",
+    "unit": "adjacent-size point pairs, same arc/slew/load"
+  },
+  "size_pin_cap": {
+    "compared": 2724,
+    "ok": 1925,
+    "rate": 0.7066813509544787,
+    "recommendation": "report_only",
+    "unit": "adjacent-size (pin, vt, corner) pairs"
+  },
+  "slew_monotonic": {
+    "compared": 5124840,
+    "ok": 5040618,
+    "rate": 0.9835659259606153,
+    "recommendation": "penalty",
+    "tables_fully_ok": 0.8989673823963285,
+    "unit": "adjacent slew pairs",
+    "violations_by_slew_step": [
+      1657,
+      1006,
+      1704,
+      7123,
+      22880,
+      49852
+    ]
+  },
+  "vt_order_all_corners": {
+    "adjacent_pair_rate": 0.9974743520596644,
+    "compared": 1494402,
+    "ok": 1483729,
+    "rate": 0.9928580127703255,
+    "recommendation": "penalty",
+    "table_quads": 30498,
+    "unit": "grid points with SLVT<=LVT<=RVT<=SRAM (all corners)"
+  },
+  "vt_order_tt": {
+    "adjacent_pair_rate": 0.9985271700653505,
+    "compared": 498134,
+    "ok": 495943,
+    "rate": 0.9956015851156517,
+    "recommendation": "penalty",
+    "table_quads": 10166,
+    "unit": "grid points with SLVT<=LVT<=RVT<=SRAM (TT)"
+  }
+}

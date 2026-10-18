@@ -1,0 +1,62 @@
+{
+  "baseline_conflict_ratio": 0.954563320164978,
+  "baseline_conflict_rows": 5707315,
+  "baseline_distinct_feature_vectors": 716086,
+  "by_family": {
+    "AO": {
+      "conflict_ratio": 0.9873966128397007,
+      "conflict_rows": 2948232,
+      "rows": 2985864
+    },
+    "INVBUF": {
+      "conflict_ratio": 0.0,
+      "conflict_rows": 0,
+      "rows": 43512
+    },
+    "OA": {
+      "conflict_ratio": 0.987794245858762,
+      "conflict_rows": 2664816,
+      "rows": 2697744
+    },
+    "SIMPLE": {
+      "conflict_ratio": 0.37428333200984676,
+      "conflict_rows": 94267,
+      "rows": 251860
+    }
+  },
+  "by_has_when": {
+    "False": {
+      "conflict_ratio": 0.6125201828005454,
+      "conflict_rows": 429433,
+      "rows": 701092
+    },
+    "True": {
+      "conflict_ratio": 0.9999988631816363,
+      "conflict_rows": 5277882,
+      "rows": 5277888
+    }
+  },
+  "conflict_rows_if_add_cumulative": {
+    "when": 196,
+    "when+related_pin": 0,
+    "when+related_pin+timing_sense": 0,
+    "when+related_pin+timing_sense+output_pin": 0
+  },
+  "conflict_rows_if_add_one": {
+    "output_pin": 5707315,
+    "related_pin": 5707315,
+    "timing_sense": 5669487,
+    "when": 196
+  },
+  "provenance": {
+    "dataset": "asap7_nldm.parquet",
+    "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+    "git_commit": "4f064467ce584f67bfdaa8dafe35f6d2e344b13c",
+    "git_dirty_src": true,
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.12.10",
+    "source_commit": "da37dce1cef69bb75efbc2dc18ed95a29651295b"
+  },
+  "rows": 5978980
+}
