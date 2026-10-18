@@ -134,6 +134,9 @@ python src/sanity_check.py
 
 ## 4. 從筆電遷移到桌電（GPU）
 
+> **PLAN v4（`plan-v4` branch）請改看 [`docs/PLAN_v4_GPU_HOST_RUNBOOK.md`](docs/PLAN_v4_GPU_HOST_RUNBOOK.md)。**
+> GPU 主機只靠 git 與公開 ORFS 重建資料，不從開發筆電複製任何資料檔。以下為舊流程。
+
 這是本專案設計時**特別注意**的：`environment.yml` 讓桌電只要一行指令就能重建環境。
 
 ### 4.1 桌電操作步驟
