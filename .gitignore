@@ -71,6 +71,7 @@ data/processed/*
 !data/processed/.gitkeep
 !data/processed/*.metadata.json
 data/external/*
+data/cache/
 !data/external/.gitkeep
 *.lib
 *.spef
