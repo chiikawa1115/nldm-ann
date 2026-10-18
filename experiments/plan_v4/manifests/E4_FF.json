@@ -1,0 +1,21 @@
+{
+  "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+  "experiment": "E4",
+  "exploratory": true,
+  "fold": 0,
+  "heldout_corner": "FF",
+  "mode": "leave_one_corner_out",
+  "note": "P/V/T are collinear across the three corners; FF/SS held out is 2-point extrapolation (PLAN 5)",
+  "pin_cap_feature": "pin_cap_ref_tt",
+  "primary_claim": false,
+  "schema_version": 1,
+  "test_rows": 1993908,
+  "train_rows": 3985072,
+  "train_seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ]
+}

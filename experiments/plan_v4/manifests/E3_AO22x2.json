@@ -1,0 +1,24 @@
+{
+  "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+  "experiment": "E3",
+  "family": "AO",
+  "heldout_cell_base": "AO22x2_ASAP7_75t",
+  "heldout_size": 2.0,
+  "mode": "leave_one_size_out",
+  "regime": "extrapolation",
+  "schema_version": 1,
+  "test_rows": 18816,
+  "topology_type": "AO22",
+  "train_rows": 5960164,
+  "train_seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "type_sizes": [
+    1.0,
+    2.0
+  ]
+}

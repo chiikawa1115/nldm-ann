@@ -1,0 +1,20 @@
+{
+  "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+  "experiment": "E2",
+  "fold": 0,
+  "heldout_vt": "SLVT",
+  "mode": "leave_one_vt_out",
+  "pin_cap_feature": "pin_cap_ref_vt",
+  "reference_vt": "RVT",
+  "schema_version": 1,
+  "test_rows": 1494402,
+  "train_rows": 4484578,
+  "train_seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "vt_encoding": "vt_ordinal (one-hot only as negative-control ablation)"
+}

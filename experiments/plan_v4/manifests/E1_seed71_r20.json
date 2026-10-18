@@ -1,0 +1,22 @@
+{
+  "assignment_rule": "per table, rank points by mix64(hash(table key, slew, load) ^ seed); lowest round(n*ratio) clipped to [1, n-1] are test",
+  "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+  "experiment": "E1",
+  "group_key": [
+    "cell_base",
+    "vt_class",
+    "corner",
+    "output_pin",
+    "related_pin",
+    "timing_sense",
+    "timing_type",
+    "when",
+    "table_type"
+  ],
+  "mode": "random_point",
+  "point_test_ratio": 0.2,
+  "schema_version": 1,
+  "split_seed": 71,
+  "test_rows": 1220200,
+  "train_rows": 4758780
+}

@@ -1,0 +1,32 @@
+{
+  "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+  "experiment": "E3",
+  "family": "INVBUF",
+  "heldout_cell_base": "CKINVDCx11_ASAP7_75t",
+  "heldout_size": 11.0,
+  "mode": "leave_one_size_out",
+  "regime": "interpolation",
+  "schema_version": 1,
+  "test_rows": 1176,
+  "topology_type": "CKINVDC",
+  "train_rows": 5977804,
+  "train_seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "type_sizes": [
+    5.33,
+    6.67,
+    8.0,
+    9.33,
+    10.0,
+    11.0,
+    12.0,
+    14.0,
+    16.0,
+    20.0
+  ]
+}

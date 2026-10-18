@@ -1,0 +1,25 @@
+{
+  "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+  "experiment": "E3",
+  "family": "SIMPLE",
+  "heldout_cell_base": "NAND3x1_ASAP7_75t",
+  "heldout_size": 1.0,
+  "mode": "leave_one_size_out",
+  "regime": "interpolation",
+  "schema_version": 1,
+  "test_rows": 3528,
+  "topology_type": "NAND3",
+  "train_rows": 5975452,
+  "train_seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "type_sizes": [
+    0.33,
+    1.0,
+    2.0
+  ]
+}

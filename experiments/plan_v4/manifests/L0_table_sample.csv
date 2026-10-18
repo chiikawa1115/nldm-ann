@@ -1,0 +1,2001 @@
+cell_base,vt_class,corner,output_pin,related_pin,timing_sense,timing_type,when,table_type,family,topology_type
+A2O1A1Ixp33_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,(!A1 * !A2 * C),cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,LVT,SS,Y,A2,negative_unate,combinational,,cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,LVT,SS,Y,C,negative_unate,combinational,(A1 * A2 * B),cell_rise,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,,cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,RVT,FF,Y,C,negative_unate,combinational,(!A1 * B),cell_rise,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,,cell_rise,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,RVT,TT,Y,A2,negative_unate,combinational,,cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,RVT,TT,Y,A2,negative_unate,combinational,,cell_rise,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,(!A1 * B),cell_rise,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,(A1 * !A2 * B),cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,(A1 * A2 * !B),cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,(A1 * A2 * B),cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(!A1 * !A2 * C),cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,(!A1 * B),cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,(A1 * A2 * !B),cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,(!A1 * A2 * C),cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SLVT,SS,Y,C,negative_unate,combinational,,cell_rise,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SLVT,TT,Y,A2,negative_unate,combinational,,cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SLVT,TT,Y,A2,negative_unate,combinational,,cell_rise,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SLVT,TT,Y,C,negative_unate,combinational,,cell_rise,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SLVT,TT,Y,C,negative_unate,combinational,(A1 * A2 * B),cell_rise,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,(!A1 * A2 * C),cell_rise,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SRAM,SS,Y,C,negative_unate,combinational,(A1 * A2 * B),cell_fall,AO,A2O1A1I
+A2O1A1Ixp33_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,(!A1 * !A2 * C),cell_rise,AO,A2O1A1I
+A2O1A1O1Ixp25_ASAP7_75t,LVT,FF,Y,A2,negative_unate,combinational,,cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,LVT,FF,Y,D,negative_unate,combinational,,cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,LVT,FF,Y,D,negative_unate,combinational,(!A1 * !A2 * !B * !C),cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,LVT,FF,Y,D,negative_unate,combinational,(A1 * !A2 * !B * !C) + (!A1 * A2 * !B * !C),cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,LVT,SS,Y,A2,negative_unate,combinational,,cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,LVT,SS,Y,D,negative_unate,combinational,(!A1 * A2 * !B * C),cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,(!A1 * A2 * C * !D),cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,RVT,FF,Y,D,negative_unate,combinational,(A1 * !A2 * !B * C),cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,RVT,SS,Y,C,negative_unate,combinational,(A1 * A2 * !B * !D),cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,RVT,SS,Y,D,negative_unate,combinational,(A1 * !A2 * !B * C),cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,(A1 * A2 * !B * !D),cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,RVT,TT,Y,D,negative_unate,combinational,(!A1 * !A2 * !B * !C),cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,RVT,TT,Y,D,negative_unate,combinational,(B * !C),cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SLVT,FF,Y,D,negative_unate,combinational,(A1 * !A2 * !B * !C) + (!A1 * A2 * !B * !C),cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SLVT,FF,Y,D,negative_unate,combinational,(A1 * !A2 * !B * C),cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SLVT,SS,Y,C,negative_unate,combinational,(!A1 * A2 * B * !D),cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SLVT,TT,Y,A2,negative_unate,combinational,,cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,,cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SRAM,SS,Y,A1,negative_unate,combinational,,cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SRAM,SS,Y,C,negative_unate,combinational,(!A1 * A2 * B * !D),cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SRAM,SS,Y,D,negative_unate,combinational,,cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SRAM,SS,Y,D,negative_unate,combinational,(A1 * !A2 * !B * !C) + (!A1 * A2 * !B * !C),cell_rise,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SRAM,SS,Y,D,negative_unate,combinational,(A1 * A2 * !B * !C),cell_fall,AO,A2O1A1O1I
+A2O1A1O1Ixp25_ASAP7_75t,SRAM,TT,Y,D,negative_unate,combinational,(B * !C),cell_fall,AO,A2O1A1O1I
+AND2x2_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x2_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND2x2_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND2x2_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x2_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND2x2_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x4_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x4_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND2x4_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND2x4_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND2x4_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x4_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x4_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x6_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x6_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND2x6_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x6_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND2x6_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x6_ASAP7_75t,SLVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x6_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND2
+AND2x6_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND2x6_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND2x6_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND2
+AND3x1_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x1_ASAP7_75t,RVT,FF,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x1_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND3
+AND3x1_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x1_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND3
+AND3x1_ASAP7_75t,SRAM,SS,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x2_ASAP7_75t,LVT,FF,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,AND3
+AND3x2_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x2_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND3
+AND3x2_ASAP7_75t,SLVT,SS,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x2_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x4_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x4_ASAP7_75t,LVT,FF,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,AND3
+AND3x4_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND3
+AND3x4_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND3
+AND3x4_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x4_ASAP7_75t,RVT,FF,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x4_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x4_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x4_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND3
+AND3x4_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x4_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND3
+AND3x4_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,AND3
+AND4x1_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x1_ASAP7_75t,LVT,SS,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x1_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x1_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x1_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x1_ASAP7_75t,RVT,FF,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x1_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x1_ASAP7_75t,SLVT,TT,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x1_ASAP7_75t,SRAM,FF,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x1_ASAP7_75t,SRAM,FF,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x1_ASAP7_75t,SRAM,FF,Y,D,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x1_ASAP7_75t,SRAM,FF,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x2_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x2_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x2_ASAP7_75t,RVT,FF,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x2_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x2_ASAP7_75t,RVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x2_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND4x2_ASAP7_75t,SLVT,FF,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x2_ASAP7_75t,SLVT,SS,Y,D,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x2_ASAP7_75t,SLVT,TT,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND4
+AND4x2_ASAP7_75t,SRAM,TT,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,AND4
+AND5x1_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND5
+AND5x1_ASAP7_75t,LVT,FF,Y,E,positive_unate,combinational,,cell_fall,SIMPLE,AND5
+AND5x1_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND5
+AND5x1_ASAP7_75t,LVT,SS,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x1_ASAP7_75t,LVT,TT,Y,D,positive_unate,combinational,,cell_fall,SIMPLE,AND5
+AND5x1_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x1_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND5
+AND5x1_ASAP7_75t,SLVT,FF,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x1_ASAP7_75t,SLVT,SS,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x1_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,AND5
+AND5x1_ASAP7_75t,SLVT,TT,Y,E,positive_unate,combinational,,cell_fall,SIMPLE,AND5
+AND5x1_ASAP7_75t,SRAM,FF,Y,E,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x1_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x1_ASAP7_75t,SRAM,TT,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x2_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x2_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x2_ASAP7_75t,SLVT,SS,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x2_ASAP7_75t,SLVT,TT,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x2_ASAP7_75t,SRAM,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,AND5
+AND5x2_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x2_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,AND5
+AND5x2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,AND5
+AND5x2_ASAP7_75t,SRAM,TT,Y,E,positive_unate,combinational,,cell_fall,SIMPLE,AND5
+AO211x2_ASAP7_75t,LVT,FF,Y,A2,positive_unate,combinational,,cell_fall,AO,AO211
+AO211x2_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_fall,AO,AO211
+AO211x2_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,(!A1 * A2 * !B),cell_fall,AO,AO211
+AO211x2_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_fall,AO,AO211
+AO211x2_ASAP7_75t,LVT,TT,Y,C,positive_unate,combinational,(A1 * !A2 * !B),cell_rise,AO,AO211
+AO211x2_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,(!A1 * A2 * !C),cell_rise,AO,AO211
+AO211x2_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,(!A1 * A2 * !C),cell_rise,AO,AO211
+AO211x2_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,(!A1 * !A2 * !B),cell_fall,AO,AO211
+AO211x2_ASAP7_75t,SLVT,FF,Y,B,positive_unate,combinational,(A1 * !A2 * !C),cell_fall,AO,AO211
+AO211x2_ASAP7_75t,SLVT,FF,Y,C,positive_unate,combinational,,cell_rise,AO,AO211
+AO211x2_ASAP7_75t,SLVT,FF,Y,C,positive_unate,combinational,(!A1 * A2 * !B),cell_rise,AO,AO211
+AO211x2_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,(!A1 * A2 * !C),cell_fall,AO,AO211
+AO211x2_ASAP7_75t,SLVT,TT,Y,A1,positive_unate,combinational,,cell_fall,AO,AO211
+AO211x2_ASAP7_75t,SLVT,TT,Y,B,positive_unate,combinational,(A1 * !A2 * !C),cell_fall,AO,AO211
+AO211x2_ASAP7_75t,SRAM,FF,Y,A2,positive_unate,combinational,,cell_rise,AO,AO211
+AO211x2_ASAP7_75t,SRAM,FF,Y,C,positive_unate,combinational,(!A1 * !A2 * !B),cell_fall,AO,AO211
+AO211x2_ASAP7_75t,SRAM,SS,Y,A2,positive_unate,combinational,,cell_rise,AO,AO211
+AO211x2_ASAP7_75t,SRAM,SS,Y,C,positive_unate,combinational,(!A1 * A2 * !B),cell_fall,AO,AO211
+AO211x2_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,(!A1 * !A2 * !C),cell_fall,AO,AO211
+AO211x2_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,(!A1 * !A2 * !C),cell_rise,AO,AO211
+AO211x2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,(!A1 * !A2 * !B),cell_fall,AO,AO211
+AO211x2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,(!A1 * A2 * !B),cell_fall,AO,AO211
+AO211x2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,(!A1 * A2 * !B),cell_rise,AO,AO211
+AO211x2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,(A1 * !A2 * !B),cell_rise,AO,AO211
+AO21x1_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,(!A1 * A2),cell_fall,AO,AO21
+AO21x1_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x1_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,(!A1 * A2),cell_fall,AO,AO21
+AO21x1_ASAP7_75t,RVT,FF,Y,A1,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x1_ASAP7_75t,RVT,SS,Y,A2,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x1_ASAP7_75t,RVT,SS,Y,A2,positive_unate,combinational,,cell_rise,AO,AO21
+AO21x1_ASAP7_75t,RVT,TT,Y,B,positive_unate,combinational,,cell_rise,AO,AO21
+AO21x1_ASAP7_75t,SLVT,FF,Y,B,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x1_ASAP7_75t,SLVT,SS,Y,A1,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x2_ASAP7_75t,LVT,FF,Y,A2,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x2_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x2_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,(A1 * !A2),cell_fall,AO,AO21
+AO21x2_ASAP7_75t,LVT,SS,Y,A2,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x2_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,(!A1 * A2),cell_fall,AO,AO21
+AO21x2_ASAP7_75t,LVT,TT,Y,A2,positive_unate,combinational,,cell_rise,AO,AO21
+AO21x2_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x2_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,(!A1 * !A2),cell_fall,AO,AO21
+AO21x2_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,(!A1 * A2),cell_rise,AO,AO21
+AO21x2_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,(!A1 * !A2),cell_fall,AO,AO21
+AO21x2_ASAP7_75t,RVT,TT,Y,A1,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x2_ASAP7_75t,RVT,TT,Y,B,positive_unate,combinational,,cell_fall,AO,AO21
+AO21x2_ASAP7_75t,SRAM,SS,Y,A1,positive_unate,combinational,,cell_rise,AO,AO21
+AO21x2_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,,cell_rise,AO,AO21
+AO21x2_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,(!A1 * !A2),cell_fall,AO,AO21
+AO221x1_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,(!A1 * !A2 * !B1 * B2),cell_fall,AO,AO221
+AO221x1_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,(A1 * !A2 * !B1 * !B2),cell_fall,AO,AO221
+AO221x1_ASAP7_75t,LVT,TT,Y,A2,positive_unate,combinational,(A1 * B1 * !B2 * !C),cell_rise,AO,AO221
+AO221x1_ASAP7_75t,LVT,TT,Y,B2,positive_unate,combinational,(!A1 * A2 * B1 * !C),cell_fall,AO,AO221
+AO221x1_ASAP7_75t,LVT,TT,Y,C,positive_unate,combinational,(A1 * !A2 * !B1 * !B2),cell_fall,AO,AO221
+AO221x1_ASAP7_75t,RVT,TT,Y,A1,positive_unate,combinational,(A2 * !B1 * B2 * !C),cell_rise,AO,AO221
+AO221x1_ASAP7_75t,SLVT,SS,Y,A2,positive_unate,combinational,,cell_rise,AO,AO221
+AO221x1_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,(!A1 * !A2 * B2 * !C),cell_rise,AO,AO221
+AO221x1_ASAP7_75t,SLVT,TT,Y,B2,positive_unate,combinational,(!A1 * !A2 * B1 * !C),cell_fall,AO,AO221
+AO221x1_ASAP7_75t,SRAM,SS,Y,A2,positive_unate,combinational,(A1 * !B1 * !B2 * !C),cell_rise,AO,AO221
+AO221x2_ASAP7_75t,LVT,FF,Y,A2,positive_unate,combinational,(A1 * !B1 * !B2 * !C),cell_fall,AO,AO221
+AO221x2_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,(!A1 * A2 * B1 * !B2),cell_fall,AO,AO221
+AO221x2_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,(!A1 * A2 * B1 * !B2),cell_rise,AO,AO221
+AO221x2_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,(A1 * !A2 * !B1 * !B2),cell_fall,AO,AO221
+AO221x2_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(!A1 * !A2 * B2 * !C),cell_rise,AO,AO221
+AO221x2_ASAP7_75t,SLVT,SS,Y,A1,positive_unate,combinational,(A2 * B1 * !B2 * !C),cell_fall,AO,AO221
+AO221x2_ASAP7_75t,SLVT,SS,Y,C,positive_unate,combinational,,cell_fall,AO,AO221
+AO221x2_ASAP7_75t,SLVT,SS,Y,C,positive_unate,combinational,(!A1 * A2 * !B1 * B2),cell_fall,AO,AO221
+AO221x2_ASAP7_75t,SLVT,TT,Y,A1,positive_unate,combinational,(A2 * !B1 * B2 * !C),cell_fall,AO,AO221
+AO221x2_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,,cell_rise,AO,AO221
+AO221x2_ASAP7_75t,SLVT,TT,Y,B2,positive_unate,combinational,,cell_rise,AO,AO221
+AO221x2_ASAP7_75t,SRAM,FF,Y,A1,positive_unate,combinational,(A2 * !B1 * B2 * !C),cell_fall,AO,AO221
+AO221x2_ASAP7_75t,SRAM,FF,Y,C,positive_unate,combinational,(A1 * !A2 * !B1 * !B2),cell_fall,AO,AO221
+AO221x2_ASAP7_75t,SRAM,TT,Y,B1,positive_unate,combinational,(!A1 * !A2 * B2 * !C),cell_rise,AO,AO221
+AO222x2_ASAP7_75t,LVT,FF,Y,A1,positive_unate,combinational,(A2 * !B1 * !B2 * !C1 * C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,LVT,SS,Y,A1,positive_unate,combinational,(A2 * !B1 * !B2 * !C1 * !C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,LVT,SS,Y,A2,positive_unate,combinational,(A1 * B1 * !B2 * !C1 * C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,LVT,SS,Y,C1,positive_unate,combinational,(A1 * !A2 * !B1 * !B2 * C2),cell_fall,AO,AO222
+AO222x2_ASAP7_75t,LVT,SS,Y,C2,positive_unate,combinational,(A1 * !A2 * !B1 * B2 * C1),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,LVT,TT,Y,A2,positive_unate,combinational,(A1 * !B1 * B2 * C1 * !C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,RVT,FF,Y,A2,positive_unate,combinational,(A1 * B1 * !B2 * !C1 * C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,RVT,TT,Y,A2,positive_unate,combinational,(A1 * !B1 * B2 * !C1 * !C2),cell_fall,AO,AO222
+AO222x2_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(!A1 * A2 * B2 * C1 * !C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,RVT,TT,Y,C2,positive_unate,combinational,(!A1 * !A2 * !B1 * !B2 * C1),cell_fall,AO,AO222
+AO222x2_ASAP7_75t,SLVT,FF,Y,A1,positive_unate,combinational,(A2 * B1 * !B2 * !C1 * !C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,SLVT,FF,Y,B1,positive_unate,combinational,(!A1 * !A2 * B2 * !C1 * C2),cell_fall,AO,AO222
+AO222x2_ASAP7_75t,SLVT,FF,Y,B2,positive_unate,combinational,,cell_rise,AO,AO222
+AO222x2_ASAP7_75t,SLVT,FF,Y,C1,positive_unate,combinational,(A1 * !A2 * !B1 * !B2 * C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,SLVT,FF,Y,C2,positive_unate,combinational,(!A1 * !A2 * B1 * !B2 * C1),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,SLVT,FF,Y,C2,positive_unate,combinational,(!A1 * A2 * !B1 * !B2 * C1) + (!A1 * !A2 * !B1 * B2 * C1),cell_fall,AO,AO222
+AO222x2_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,(!A1 * !A2 * B2 * !C1 * !C2),cell_fall,AO,AO222
+AO222x2_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,(!A1 * !A2 * B2 * !C1 * !C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,(A1 * !A2 * B2 * !C1 * C2),cell_fall,AO,AO222
+AO222x2_ASAP7_75t,SRAM,SS,Y,B2,positive_unate,combinational,(A1 * !A2 * B1 * !C1 * C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,SRAM,TT,Y,A1,positive_unate,combinational,(A2 * !B1 * !B2 * !C1 * C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,SRAM,TT,Y,C1,positive_unate,combinational,,cell_fall,AO,AO222
+AO222x2_ASAP7_75t,SRAM,TT,Y,C1,positive_unate,combinational,(!A1 * A2 * B1 * !B2 * C2),cell_rise,AO,AO222
+AO222x2_ASAP7_75t,SRAM,TT,Y,C2,positive_unate,combinational,(A1 * !A2 * !B1 * B2 * C1),cell_rise,AO,AO222
+AO22x1_ASAP7_75t,LVT,FF,Y,A1,positive_unate,combinational,(A2 * !B1 * !B2),cell_fall,AO,AO22
+AO22x1_ASAP7_75t,LVT,FF,Y,A2,positive_unate,combinational,(A1 * !B1 * !B2),cell_fall,AO,AO22
+AO22x1_ASAP7_75t,LVT,SS,Y,A2,positive_unate,combinational,(A1 * !B1 * B2),cell_fall,AO,AO22
+AO22x1_ASAP7_75t,RVT,FF,Y,A1,positive_unate,combinational,(A2 * !B1 * B2),cell_rise,AO,AO22
+AO22x1_ASAP7_75t,RVT,SS,Y,A2,positive_unate,combinational,,cell_rise,AO,AO22
+AO22x1_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,,cell_rise,AO,AO22
+AO22x1_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(!A1 * A2 * B2),cell_rise,AO,AO22
+AO22x1_ASAP7_75t,SLVT,FF,Y,B1,positive_unate,combinational,(A1 * !A2 * B2),cell_fall,AO,AO22
+AO22x1_ASAP7_75t,SLVT,FF,Y,B2,positive_unate,combinational,(!A1 * A2 * B1),cell_fall,AO,AO22
+AO22x1_ASAP7_75t,SLVT,SS,Y,A2,positive_unate,combinational,,cell_rise,AO,AO22
+AO22x1_ASAP7_75t,SLVT,TT,Y,A1,positive_unate,combinational,(A2 * B1 * !B2),cell_rise,AO,AO22
+AO22x1_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,,cell_fall,AO,AO22
+AO22x1_ASAP7_75t,SLVT,TT,Y,B2,positive_unate,combinational,,cell_rise,AO,AO22
+AO22x1_ASAP7_75t,SRAM,FF,Y,B2,positive_unate,combinational,,cell_fall,AO,AO22
+AO22x1_ASAP7_75t,SRAM,SS,Y,A1,positive_unate,combinational,(A2 * B1 * !B2),cell_fall,AO,AO22
+AO22x1_ASAP7_75t,SRAM,SS,Y,B2,positive_unate,combinational,(A1 * !A2 * B1),cell_fall,AO,AO22
+AO22x1_ASAP7_75t,SRAM,TT,Y,A1,positive_unate,combinational,,cell_fall,AO,AO22
+AO22x2_ASAP7_75t,LVT,TT,Y,B1,positive_unate,combinational,(!A1 * A2 * B2),cell_fall,AO,AO22
+AO22x2_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,(!A1 * !A2 * B2),cell_rise,AO,AO22
+AO22x2_ASAP7_75t,SLVT,FF,Y,A1,positive_unate,combinational,,cell_fall,AO,AO22
+AO22x2_ASAP7_75t,SLVT,FF,Y,A2,positive_unate,combinational,,cell_fall,AO,AO22
+AO22x2_ASAP7_75t,SLVT,SS,Y,A1,positive_unate,combinational,(A2 * !B1 * B2),cell_fall,AO,AO22
+AO22x2_ASAP7_75t,SLVT,TT,Y,B2,positive_unate,combinational,(A1 * !A2 * B1),cell_fall,AO,AO22
+AO22x2_ASAP7_75t,SRAM,FF,Y,A2,positive_unate,combinational,(A1 * !B1 * !B2),cell_rise,AO,AO22
+AO31x2_ASAP7_75t,LVT,FF,Y,A3,positive_unate,combinational,,cell_fall,AO,AO31
+AO31x2_ASAP7_75t,LVT,FF,Y,A3,positive_unate,combinational,,cell_rise,AO,AO31
+AO31x2_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,(!A1 * A2 * A3),cell_rise,AO,AO31
+AO31x2_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,(A1 * !A2 * A3),cell_rise,AO,AO31
+AO31x2_ASAP7_75t,LVT,SS,Y,A2,positive_unate,combinational,,cell_rise,AO,AO31
+AO31x2_ASAP7_75t,LVT,SS,Y,A3,positive_unate,combinational,,cell_rise,AO,AO31
+AO31x2_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,(A1 * !A2 * A3),cell_rise,AO,AO31
+AO31x2_ASAP7_75t,LVT,TT,Y,A3,positive_unate,combinational,,cell_fall,AO,AO31
+AO31x2_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,(!A1 * A2 * A3),cell_rise,AO,AO31
+AO31x2_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,(!A1 * A2 * A3),cell_fall,AO,AO31
+AO31x2_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,,cell_fall,AO,AO31
+AO31x2_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,(!A1 * !A2 * !A3),cell_rise,AO,AO31
+AO31x2_ASAP7_75t,RVT,TT,Y,B,positive_unate,combinational,,cell_rise,AO,AO31
+AO31x2_ASAP7_75t,SLVT,SS,Y,A1,positive_unate,combinational,,cell_fall,AO,AO31
+AO31x2_ASAP7_75t,SLVT,SS,Y,A3,positive_unate,combinational,,cell_fall,AO,AO31
+AO31x2_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,(A1 * !A2 * A3),cell_rise,AO,AO31
+AO31x2_ASAP7_75t,SRAM,FF,Y,B,positive_unate,combinational,(!A1 * A2 * A3),cell_rise,AO,AO31
+AO31x2_ASAP7_75t,SRAM,SS,Y,A3,positive_unate,combinational,,cell_fall,AO,AO31
+AO31x2_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,(A1 * A2 * !A3),cell_fall,AO,AO31
+AO31x2_ASAP7_75t,SRAM,TT,Y,A1,positive_unate,combinational,,cell_fall,AO,AO31
+AO31x2_ASAP7_75t,SRAM,TT,Y,A1,positive_unate,combinational,,cell_rise,AO,AO31
+AO31x2_ASAP7_75t,SRAM,TT,Y,A3,positive_unate,combinational,,cell_fall,AO,AO31
+AO31x2_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,(!A1 * A2 * A3),cell_rise,AO,AO31
+AO31x2_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,(A1 * A2 * !A3),cell_fall,AO,AO31
+AO322x2_ASAP7_75t,LVT,FF,Y,A1,positive_unate,combinational,(A2 * A3 * !B1 * B2 * !C1 * !C2),cell_fall,AO,AO322
+AO322x2_ASAP7_75t,LVT,FF,Y,C2,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * B2 * C1),cell_fall,AO,AO322
+AO322x2_ASAP7_75t,LVT,SS,Y,A3,positive_unate,combinational,(A1 * A2 * B1 * !B2 * !C1 * !C2),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,LVT,TT,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * B2 * !C1 * C2),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,RVT,FF,Y,A3,positive_unate,combinational,(A1 * A2 * !B1 * !B2 * !C1 * C2),cell_fall,AO,AO322
+AO322x2_ASAP7_75t,RVT,FF,Y,C1,positive_unate,combinational,,cell_rise,AO,AO322
+AO322x2_ASAP7_75t,RVT,FF,Y,C2,positive_unate,combinational,(A1 * !A2 * A3 * !B1 * !B2 * C1) + (A1 * !A2 * !A3 * !B1 * B2 * C1),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,(!A1 * A2 * A3 * B2 * C1 * !C2),cell_fall,AO,AO322
+AO322x2_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,(!A1 * A2 * A3 * B2 * C1 * !C2),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,RVT,SS,Y,C1,positive_unate,combinational,(A1 * !A2 * !A3 * B1 * !B2 * C2),cell_fall,AO,AO322
+AO322x2_ASAP7_75t,RVT,SS,Y,C1,positive_unate,combinational,(A1 * !A2 * A3 * !B1 * B2 * C2),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,RVT,SS,Y,C2,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * C1) + (!A1 * A2 * !A3 * !B1 * B2 * C1) + (!A1 * !A2 * A3 * !B1 * B2 * C1),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(A1 * !A2 * A3 * B2 * C1 * !C2),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,RVT,TT,Y,C2,positive_unate,combinational,(!A1 * !A2 * !A3 * !B1 * B2 * C1),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,RVT,TT,Y,C2,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * !B2 * C1) + (!A1 * !A2 * A3 * !B1 * !B2 * C1),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,SLVT,FF,Y,B1,positive_unate,combinational,(!A1 * !A2 * !A3 * B2 * !C1 * !C2),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,SLVT,SS,Y,C2,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * C1) + (!A1 * A2 * !A3 * !B1 * B2 * C1) + (!A1 * !A2 * A3 * !B1 * B2 * C1),cell_fall,AO,AO322
+AO322x2_ASAP7_75t,SLVT,TT,Y,A1,positive_unate,combinational,(A2 * A3 * !B1 * B2 * !C1 * !C2),cell_fall,AO,AO322
+AO322x2_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,(!A1 * !A2 * !A3 * B2 * C1 * !C2),cell_fall,AO,AO322
+AO322x2_ASAP7_75t,SRAM,FF,Y,B1,positive_unate,combinational,(!A1 * !A2 * !A3 * B2 * !C1 * C2),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,SRAM,FF,Y,B1,positive_unate,combinational,(!A1 * A2 * A3 * B2 * !C1 * !C2),cell_fall,AO,AO322
+AO322x2_ASAP7_75t,SRAM,SS,Y,B1,positive_unate,combinational,(A1 * !A2 * A3 * B2 * C1 * !C2),cell_fall,AO,AO322
+AO322x2_ASAP7_75t,SRAM,TT,Y,C2,positive_unate,combinational,(!A1 * A2 * !A3 * B1 * !B2 * C1) + (!A1 * !A2 * A3 * B1 * !B2 * C1),cell_rise,AO,AO322
+AO322x2_ASAP7_75t,SRAM,TT,Y,C2,positive_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B2 * C1),cell_fall,AO,AO322
+AO32x1_ASAP7_75t,RVT,FF,Y,A1,positive_unate,combinational,(A2 * A3 * B1 * !B2),cell_rise,AO,AO32
+AO32x1_ASAP7_75t,RVT,FF,Y,A3,positive_unate,combinational,(A1 * A2 * B1 * !B2),cell_fall,AO,AO32
+AO32x1_ASAP7_75t,RVT,FF,Y,B1,positive_unate,combinational,,cell_fall,AO,AO32
+AO32x1_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,,cell_rise,AO,AO32
+AO32x1_ASAP7_75t,RVT,TT,Y,A1,positive_unate,combinational,,cell_fall,AO,AO32
+AO32x1_ASAP7_75t,RVT,TT,Y,B2,positive_unate,combinational,(!A1 * A2 * !A3 * B1) + (!A1 * !A2 * A3 * B1),cell_rise,AO,AO32
+AO32x1_ASAP7_75t,SLVT,FF,Y,A1,positive_unate,combinational,(A2 * A3 * !B1 * !B2),cell_fall,AO,AO32
+AO32x1_ASAP7_75t,SLVT,SS,Y,A3,positive_unate,combinational,(A1 * A2 * B1 * !B2),cell_rise,AO,AO32
+AO32x1_ASAP7_75t,SLVT,SS,Y,B2,positive_unate,combinational,(A1 * !A2 * A3 * B1),cell_rise,AO,AO32
+AO32x1_ASAP7_75t,SLVT,TT,Y,B2,positive_unate,combinational,(A1 * A2 * !A3 * B1),cell_fall,AO,AO32
+AO32x1_ASAP7_75t,SRAM,FF,Y,B1,positive_unate,combinational,,cell_fall,AO,AO32
+AO32x1_ASAP7_75t,SRAM,FF,Y,B2,positive_unate,combinational,(A1 * !A2 * !A3 * B1),cell_fall,AO,AO32
+AO32x1_ASAP7_75t,SRAM,SS,Y,B1,positive_unate,combinational,(A1 * !A2 * A3 * B2),cell_fall,AO,AO32
+AO32x1_ASAP7_75t,SRAM,TT,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * !B2),cell_rise,AO,AO32
+AO32x2_ASAP7_75t,RVT,FF,Y,A1,positive_unate,combinational,(A2 * A3 * !B1 * B2),cell_rise,AO,AO32
+AO32x2_ASAP7_75t,RVT,FF,Y,B2,positive_unate,combinational,(!A1 * !A2 * !A3 * B1),cell_rise,AO,AO32
+AO32x2_ASAP7_75t,RVT,SS,Y,A1,positive_unate,combinational,(A2 * A3 * !B1 * B2),cell_rise,AO,AO32
+AO32x2_ASAP7_75t,SLVT,SS,Y,A2,positive_unate,combinational,,cell_rise,AO,AO32
+AO32x2_ASAP7_75t,SLVT,SS,Y,B2,positive_unate,combinational,(!A1 * A2 * A3 * B1),cell_rise,AO,AO32
+AO32x2_ASAP7_75t,SLVT,TT,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * !B2),cell_rise,AO,AO32
+AO32x2_ASAP7_75t,SRAM,SS,Y,B2,positive_unate,combinational,(A1 * !A2 * !A3 * B1),cell_rise,AO,AO32
+AO32x2_ASAP7_75t,SRAM,SS,Y,B2,positive_unate,combinational,(A1 * !A2 * A3 * B1),cell_fall,AO,AO32
+AO32x2_ASAP7_75t,SRAM,TT,Y,B1,positive_unate,combinational,(!A1 * A2 * !A3 * B2) + (!A1 * !A2 * A3 * B2),cell_rise,AO,AO32
+AO32x2_ASAP7_75t,SRAM,TT,Y,B1,positive_unate,combinational,(!A1 * A2 * A3 * B2),cell_rise,AO,AO32
+AO331x1_ASAP7_75t,LVT,FF,Y,A2,positive_unate,combinational,,cell_fall,AO,AO331
+AO331x1_ASAP7_75t,LVT,FF,Y,C,positive_unate,combinational,(!A1 * !A2 * !A3 * B1 * !B2 * B3),cell_rise,AO,AO331
+AO331x1_ASAP7_75t,LVT,TT,Y,A3,positive_unate,combinational,(A1 * A2 * !B1 * B2 * B3 * !C),cell_fall,AO,AO331
+AO331x1_ASAP7_75t,RVT,FF,Y,C,positive_unate,combinational,(A1 * A2 * !A3 * !B1 * !B2 * !B3),cell_fall,AO,AO331
+AO331x1_ASAP7_75t,RVT,TT,Y,A3,positive_unate,combinational,(A1 * A2 * B1 * B2 * !B3 * !C),cell_rise,AO,AO331
+AO331x1_ASAP7_75t,RVT,TT,Y,B3,positive_unate,combinational,(!A1 * A2 * !A3 * B1 * B2 * !C) + (!A1 * !A2 * A3 * B1 * B2 * !C),cell_rise,AO,AO331
+AO331x1_ASAP7_75t,SLVT,FF,Y,A1,positive_unate,combinational,(A2 * A3 * !B1 * B2 * B3 * !C),cell_fall,AO,AO331
+AO331x1_ASAP7_75t,SLVT,TT,Y,B3,positive_unate,combinational,(A1 * !A2 * A3 * B1 * B2 * !C),cell_rise,AO,AO331
+AO331x1_ASAP7_75t,SLVT,TT,Y,C,positive_unate,combinational,,cell_rise,AO,AO331
+AO331x1_ASAP7_75t,SRAM,SS,Y,A2,positive_unate,combinational,(A1 * A3 * B1 * !B2 * B3 * !C),cell_fall,AO,AO331
+AO331x1_ASAP7_75t,SRAM,SS,Y,B2,positive_unate,combinational,(A1 * A2 * !A3 * B1 * B3 * !C),cell_fall,AO,AO331
+AO331x1_ASAP7_75t,SRAM,SS,Y,C,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * B2 * !B3) + (!A1 * A2 * !A3 * !B1 * !B2 * B3) + (!A1 * !A2 * A3 * !B1 * B2 * !B3) + (!A1 * !A2 * A3 * !B1 * !B2 * B3),cell_rise,AO,AO331
+AO331x1_ASAP7_75t,SRAM,TT,Y,A1,positive_unate,combinational,,cell_rise,AO,AO331
+AO331x2_ASAP7_75t,LVT,SS,Y,B1,positive_unate,combinational,(A1 * A2 * !A3 * B2 * B3 * !C),cell_fall,AO,AO331
+AO331x2_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * B2 * !B3) + (!A1 * A2 * A3 * !B1 * !B2 * B3) + (!A1 * A2 * !A3 * !B1 * B2 * B3) + (!A1 * !A2 * A3 * !B1 * B2 * B3),cell_rise,AO,AO331
+AO331x2_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,(A1 * A2 * !A3 * B1 * !B2 * !B3),cell_rise,AO,AO331
+AO331x2_ASAP7_75t,RVT,TT,Y,B2,positive_unate,combinational,(!A1 * !A2 * !A3 * B1 * B3 * !C),cell_fall,AO,AO331
+AO331x2_ASAP7_75t,SLVT,TT,Y,C,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * B2 * !B3) + (!A1 * A2 * !A3 * !B1 * !B2 * B3) + (!A1 * !A2 * A3 * !B1 * B2 * !B3) + (!A1 * !A2 * A3 * !B1 * !B2 * B3),cell_rise,AO,AO331
+AO331x2_ASAP7_75t,SRAM,FF,Y,C,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * !B3) + (!A1 * !A2 * !A3 * !B1 * B2 * B3),cell_rise,AO,AO331
+AO331x2_ASAP7_75t,SRAM,FF,Y,C,positive_unate,combinational,(A1 * A2 * !A3 * !B1 * !B2 * !B3),cell_rise,AO,AO331
+AO331x2_ASAP7_75t,SRAM,SS,Y,C,positive_unate,combinational,(A1 * A2 * !A3 * !B1 * B2 * !B3) + (A1 * A2 * !A3 * !B1 * !B2 * B3),cell_fall,AO,AO331
+AO331x2_ASAP7_75t,SRAM,SS,Y,C,positive_unate,combinational,(A1 * A2 * !A3 * B1 * !B2 * !B3),cell_fall,AO,AO331
+AO331x2_ASAP7_75t,SRAM,SS,Y,C,positive_unate,combinational,(A1 * A2 * !A3 * B1 * !B2 * B3),cell_rise,AO,AO331
+AO331x2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,(A1 * !A2 * !A3 * B1 * B2 * !B3),cell_fall,AO,AO331
+AO332x1_ASAP7_75t,LVT,FF,Y,C2,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * B2 * B3 * C1),cell_rise,AO,AO332
+AO332x1_ASAP7_75t,LVT,TT,Y,B2,positive_unate,combinational,(!A1 * !A2 * !A3 * B1 * B3 * C1 * !C2),cell_rise,AO,AO332
+AO332x1_ASAP7_75t,RVT,FF,Y,A1,positive_unate,combinational,(A2 * A3 * B1 * !B2 * !B3 * !C1 * C2),cell_fall,AO,AO332
+AO332x1_ASAP7_75t,RVT,TT,Y,A1,positive_unate,combinational,(A2 * A3 * B1 * B2 * !B3 * !C1 * C2),cell_fall,AO,AO332
+AO332x1_ASAP7_75t,SLVT,FF,Y,A2,positive_unate,combinational,(A1 * A3 * B1 * B2 * !B3 * C1 * !C2),cell_fall,AO,AO332
+AO332x1_ASAP7_75t,SLVT,FF,Y,B3,positive_unate,combinational,(!A1 * A2 * A3 * B1 * B2 * C1 * !C2),cell_fall,AO,AO332
+AO332x1_ASAP7_75t,SLVT,SS,Y,B2,positive_unate,combinational,(A1 * !A2 * !A3 * B1 * B3 * !C1 * C2),cell_fall,AO,AO332
+AO332x1_ASAP7_75t,SLVT,SS,Y,C2,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * !B3 * C1) + (!A1 * !A2 * !A3 * !B1 * B2 * B3 * C1),cell_rise,AO,AO332
+AO332x1_ASAP7_75t,SLVT,TT,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * B2 * !B3 * !C1 * !C2) + (A1 * A3 * !B1 * !B2 * B3 * !C1 * !C2),cell_fall,AO,AO332
+AO332x1_ASAP7_75t,SLVT,TT,Y,B3,positive_unate,combinational,(A1 * !A2 * !A3 * B1 * B2 * C1 * !C2),cell_rise,AO,AO332
+AO332x1_ASAP7_75t,SLVT,TT,Y,C1,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * !B2 * !B3 * C2) + (!A1 * !A2 * A3 * !B1 * !B2 * !B3 * C2) + (!A1 * !A2 * !A3 * !B1 * B2 * !B3 * C2) + (!A1 * !A2 * !A3 * !B1 * !B2 * B3 * C2),cell_fall,AO,AO332
+AO332x1_ASAP7_75t,SRAM,FF,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * B2 * !B3 * C1 * !C2) + (A1 * A3 * !B1 * !B2 * B3 * C1 * !C2),cell_rise,AO,AO332
+AO332x1_ASAP7_75t,SRAM,FF,Y,A3,positive_unate,combinational,(A1 * A2 * B1 * B2 * !B3 * !C1 * C2),cell_fall,AO,AO332
+AO332x1_ASAP7_75t,SRAM,SS,Y,B3,positive_unate,combinational,(A1 * A2 * !A3 * B1 * B2 * !C1 * !C2),cell_fall,AO,AO332
+AO332x2_ASAP7_75t,LVT,FF,Y,A3,positive_unate,combinational,(A1 * A2 * B1 * !B2 * !B3 * !C1 * !C2),cell_fall,AO,AO332
+AO332x2_ASAP7_75t,LVT,SS,Y,B1,positive_unate,combinational,(A1 * !A2 * !A3 * B2 * B3 * !C1 * C2),cell_fall,AO,AO332
+AO332x2_ASAP7_75t,LVT,SS,Y,B3,positive_unate,combinational,(!A1 * A2 * !A3 * B1 * B2 * !C1 * C2) + (!A1 * !A2 * A3 * B1 * B2 * !C1 * C2),cell_fall,AO,AO332
+AO332x2_ASAP7_75t,RVT,FF,Y,A2,positive_unate,combinational,(A1 * A3 * B1 * !B2 * B3 * !C1 * C2),cell_rise,AO,AO332
+AO332x2_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,(A1 * A2 * !A3 * B2 * B3 * !C1 * C2),cell_fall,AO,AO332
+AO332x2_ASAP7_75t,SLVT,FF,Y,C2,positive_unate,combinational,(!A1 * !A2 * !A3 * B1 * !B2 * B3 * C1),cell_rise,AO,AO332
+AO332x2_ASAP7_75t,SLVT,TT,Y,B2,positive_unate,combinational,(A1 * !A2 * A3 * B1 * B3 * !C1 * C2),cell_fall,AO,AO332
+AO332x2_ASAP7_75t,SRAM,FF,Y,C2,positive_unate,combinational,(!A1 * !A2 * !A3 * B1 * !B2 * !B3 * C1),cell_fall,AO,AO332
+AO332x2_ASAP7_75t,SRAM,SS,Y,B2,positive_unate,combinational,(!A1 * A2 * A3 * B1 * B3 * !C1 * C2),cell_fall,AO,AO332
+AO332x2_ASAP7_75t,SRAM,TT,Y,B2,positive_unate,combinational,(A1 * !A2 * A3 * B1 * B3 * C1 * !C2),cell_fall,AO,AO332
+AO333x1_ASAP7_75t,LVT,FF,Y,C1,positive_unate,combinational,(A1 * A2 * !A3 * !B1 * !B2 * B3 * C2 * C3),cell_rise,AO,AO333
+AO333x1_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(A1 * A2 * !A3 * B2 * B3 * !C1 * C2 * C3),cell_rise,AO,AO333
+AO333x1_ASAP7_75t,RVT,TT,Y,C3,positive_unate,combinational,(A1 * !A2 * A3 * !B1 * B2 * B3 * C1 * C2),cell_fall,AO,AO333
+AO333x1_ASAP7_75t,SLVT,FF,Y,A1,positive_unate,combinational,(A2 * A3 * !B1 * !B2 * !B3 * C1 * C2 * !C3),cell_fall,AO,AO333
+AO333x1_ASAP7_75t,SLVT,FF,Y,A3,positive_unate,combinational,(A1 * A2 * B1 * B2 * !B3 * C1 * !C2 * !C3),cell_fall,AO,AO333
+AO333x1_ASAP7_75t,SLVT,SS,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * !B2 * !B3 * C1 * C2 * !C3),cell_fall,AO,AO333
+AO333x1_ASAP7_75t,SLVT,TT,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * !B2 * B3 * !C1 * !C2 * !C3),cell_rise,AO,AO333
+AO333x1_ASAP7_75t,SLVT,TT,Y,C3,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * B2 * B3 * C1 * C2) + (!A1 * !A2 * A3 * !B1 * B2 * B3 * C1 * C2),cell_rise,AO,AO333
+AO333x1_ASAP7_75t,SRAM,SS,Y,B2,positive_unate,combinational,(!A1 * !A2 * !A3 * B1 * B3 * C1 * !C2 * C3),cell_fall,AO,AO333
+AO333x1_ASAP7_75t,SRAM,TT,Y,C3,positive_unate,combinational,(A1 * A2 * !A3 * B1 * !B2 * B3 * C1 * C2),cell_rise,AO,AO333
+AO333x2_ASAP7_75t,LVT,FF,Y,C1,positive_unate,combinational,(!A1 * A2 * A3 * B1 * B2 * !B3 * C2 * C3),cell_fall,AO,AO333
+AO333x2_ASAP7_75t,LVT,SS,Y,A3,positive_unate,combinational,(A1 * A2 * !B1 * B2 * B3 * !C1 * C2 * !C3) + (A1 * A2 * !B1 * B2 * B3 * !C1 * !C2 * C3),cell_rise,AO,AO333
+AO333x2_ASAP7_75t,LVT,SS,Y,C3,positive_unate,combinational,(A1 * !A2 * A3 * B1 * !B2 * !B3 * C1 * C2) + (A1 * !A2 * A3 * !B1 * B2 * !B3 * C1 * C2) + (A1 * !A2 * !A3 * B1 * B2 * !B3 * C1 * C2),cell_fall,AO,AO333
+AO333x2_ASAP7_75t,LVT,TT,Y,C3,positive_unate,combinational,(A1 * !A2 * !A3 * !B1 * B2 * B3 * C1 * C2),cell_fall,AO,AO333
+AO333x2_ASAP7_75t,RVT,SS,Y,A3,positive_unate,combinational,(A1 * A2 * !B1 * !B2 * B3 * !C1 * !C2 * !C3),cell_rise,AO,AO333
+AO333x2_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(A1 * !A2 * A3 * B2 * B3 * !C1 * C2 * C3),cell_rise,AO,AO333
+AO333x2_ASAP7_75t,SLVT,FF,Y,B1,positive_unate,combinational,(A1 * !A2 * A3 * B2 * B3 * C1 * !C2 * !C3),cell_fall,AO,AO333
+AO333x2_ASAP7_75t,SLVT,FF,Y,C1,positive_unate,combinational,(!A1 * A2 * !A3 * B1 * !B2 * !B3 * C2 * C3) + (!A1 * A2 * !A3 * !B1 * B2 * !B3 * C2 * C3) + (!A1 * !A2 * A3 * B1 * !B2 * !B3 * C2 * C3) + (!A1 * !A2 * A3 * !B1 * B2 * !B3 * C2 * C3),cell_fall,AO,AO333
+AO333x2_ASAP7_75t,SLVT,TT,Y,A3,positive_unate,combinational,(A1 * A2 * !B1 * !B2 * !B3 * C1 * !C2 * !C3),cell_rise,AO,AO333
+AO333x2_ASAP7_75t,SLVT,TT,Y,A3,positive_unate,combinational,(A1 * A2 * !B1 * B2 * B3 * !C1 * !C2 * !C3),cell_rise,AO,AO333
+AO333x2_ASAP7_75t,SRAM,FF,Y,A1,positive_unate,combinational,(A2 * A3 * !B1 * !B2 * !B3 * C1 * !C2 * !C3),cell_fall,AO,AO333
+AO333x2_ASAP7_75t,SRAM,FF,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * !B2 * !B3 * !C1 * C2 * C3),cell_fall,AO,AO333
+AO333x2_ASAP7_75t,SRAM,TT,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * !B2 * B3 * C1 * !C2 * !C3),cell_rise,AO,AO333
+AO333x2_ASAP7_75t,SRAM,TT,Y,C2,positive_unate,combinational,,cell_rise,AO,AO333
+AO33x2_ASAP7_75t,LVT,FF,Y,A3,positive_unate,combinational,(A1 * A2 * !B1 * B2 * B3),cell_fall,AO,AO33
+AO33x2_ASAP7_75t,LVT,SS,Y,B2,positive_unate,combinational,(!A1 * !A2 * !A3 * B1 * B3),cell_rise,AO,AO33
+AO33x2_ASAP7_75t,LVT,TT,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * B2 * B3),cell_fall,AO,AO33
+AO33x2_ASAP7_75t,LVT,TT,Y,A2,positive_unate,combinational,(A1 * A3 * B1 * !B2 * B3),cell_rise,AO,AO33
+AO33x2_ASAP7_75t,LVT,TT,Y,B1,positive_unate,combinational,(!A1 * A2 * A3 * B2 * B3),cell_fall,AO,AO33
+AO33x2_ASAP7_75t,RVT,FF,Y,B1,positive_unate,combinational,,cell_rise,AO,AO33
+AO33x2_ASAP7_75t,RVT,SS,Y,A1,positive_unate,combinational,(A2 * A3 * B1 * !B2 * !B3),cell_rise,AO,AO33
+AO33x2_ASAP7_75t,RVT,SS,Y,B2,positive_unate,combinational,(!A1 * A2 * A3 * B1 * B3),cell_fall,AO,AO33
+AO33x2_ASAP7_75t,RVT,TT,Y,A3,positive_unate,combinational,,cell_rise,AO,AO33
+AO33x2_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(!A1 * !A2 * !A3 * B2 * B3),cell_fall,AO,AO33
+AO33x2_ASAP7_75t,RVT,TT,Y,B2,positive_unate,combinational,,cell_fall,AO,AO33
+AO33x2_ASAP7_75t,RVT,TT,Y,B2,positive_unate,combinational,(A1 * !A2 * !A3 * B1 * B3),cell_rise,AO,AO33
+AO33x2_ASAP7_75t,SLVT,FF,Y,A3,positive_unate,combinational,(A1 * A2 * !B1 * !B2 * !B3),cell_rise,AO,AO33
+AO33x2_ASAP7_75t,SLVT,FF,Y,A3,positive_unate,combinational,(A1 * A2 * !B1 * B2 * B3),cell_rise,AO,AO33
+AO33x2_ASAP7_75t,SLVT,FF,Y,B3,positive_unate,combinational,,cell_fall,AO,AO33
+AO33x2_ASAP7_75t,SLVT,SS,Y,A3,positive_unate,combinational,,cell_rise,AO,AO33
+AO33x2_ASAP7_75t,SLVT,SS,Y,B1,positive_unate,combinational,(!A1 * A2 * A3 * B2 * B3),cell_rise,AO,AO33
+AO33x2_ASAP7_75t,SLVT,SS,Y,B1,positive_unate,combinational,(A1 * !A2 * A3 * B2 * B3),cell_fall,AO,AO33
+AO33x2_ASAP7_75t,SLVT,TT,Y,A1,positive_unate,combinational,(A2 * A3 * B1 * !B2 * B3),cell_fall,AO,AO33
+AO33x2_ASAP7_75t,SLVT,TT,Y,A2,positive_unate,combinational,,cell_rise,AO,AO33
+AO33x2_ASAP7_75t,SLVT,TT,Y,A2,positive_unate,combinational,(A1 * A3 * B1 * !B2 * B3),cell_rise,AO,AO33
+AO33x2_ASAP7_75t,SLVT,TT,Y,B2,positive_unate,combinational,,cell_rise,AO,AO33
+AO33x2_ASAP7_75t,SRAM,FF,Y,B1,positive_unate,combinational,(A1 * !A2 * !A3 * B2 * B3),cell_fall,AO,AO33
+AO33x2_ASAP7_75t,SRAM,SS,Y,A2,positive_unate,combinational,(A1 * A3 * !B1 * B2 * !B3) + (A1 * A3 * !B1 * !B2 * B3),cell_fall,AO,AO33
+AOI211x1_ASAP7_75t,LVT,FF,Y,A1,negative_unate,combinational,,cell_fall,AO,AOI211
+AOI211x1_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,(A1 * !A2 * !C),cell_rise,AO,AOI211
+AOI211x1_ASAP7_75t,LVT,SS,Y,C,negative_unate,combinational,(!A1 * A2 * !B),cell_rise,AO,AOI211
+AOI211x1_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,(!A1 * !A2 * !B),cell_rise,AO,AOI211
+AOI211x1_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,(!A1 * A2 * !B),cell_rise,AO,AOI211
+AOI211x1_ASAP7_75t,SLVT,FF,Y,A1,negative_unate,combinational,,cell_rise,AO,AOI211
+AOI211x1_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(!A1 * !A2 * !C),cell_fall,AO,AOI211
+AOI211x1_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(!A1 * A2 * !C),cell_fall,AO,AOI211
+AOI211x1_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,(A1 * !A2 * !C),cell_rise,AO,AOI211
+AOI211x1_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,(!A1 * !A2 * !B),cell_fall,AO,AOI211
+AOI211x1_ASAP7_75t,SRAM,TT,Y,C,negative_unate,combinational,(!A1 * A2 * !B),cell_rise,AO,AOI211
+AOI211xp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(!A1 * !A2 * !C),cell_fall,AO,AOI211
+AOI211xp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(A1 * !A2 * !C),cell_fall,AO,AOI211
+AOI211xp5_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,,cell_fall,AO,AOI211
+AOI211xp5_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(A1 * !A2 * !C),cell_fall,AO,AOI211
+AOI211xp5_ASAP7_75t,RVT,FF,Y,C,negative_unate,combinational,(A1 * !A2 * !B),cell_fall,AO,AOI211
+AOI211xp5_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,(!A1 * A2 * !C),cell_fall,AO,AOI211
+AOI211xp5_ASAP7_75t,RVT,SS,Y,C,negative_unate,combinational,(!A1 * !A2 * !B),cell_fall,AO,AOI211
+AOI211xp5_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,(!A1 * A2 * !C),cell_fall,AO,AOI211
+AOI211xp5_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,,cell_fall,AO,AOI211
+AOI211xp5_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,(A1 * !A2 * !B),cell_rise,AO,AOI211
+AOI211xp5_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_rise,AO,AOI211
+AOI211xp5_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,(!A1 * A2 * !C),cell_fall,AO,AOI211
+AOI211xp5_ASAP7_75t,SRAM,TT,Y,C,negative_unate,combinational,(A1 * !A2 * !B),cell_fall,AO,AOI211
+AOI21x1_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,(!A1 * A2),cell_fall,AO,AOI21
+AOI21x1_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,(A1 * !A2),cell_rise,AO,AOI21
+AOI21x1_ASAP7_75t,SLVT,FF,Y,A2,negative_unate,combinational,,cell_fall,AO,AOI21
+AOI21x1_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,,cell_fall,AO,AOI21
+AOI21x1_ASAP7_75t,SRAM,FF,Y,A2,negative_unate,combinational,,cell_fall,AO,AOI21
+AOI21x1_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,,cell_rise,AO,AOI21
+AOI21x1_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,(A1 * !A2),cell_fall,AO,AOI21
+AOI21xp33_ASAP7_75t,LVT,FF,Y,A1,negative_unate,combinational,,cell_fall,AO,AOI21
+AOI21xp33_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,(A1 * !A2),cell_rise,AO,AOI21
+AOI21xp33_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(!A1 * A2),cell_fall,AO,AOI21
+AOI21xp33_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,(!A1 * !A2),cell_fall,AO,AOI21
+AOI21xp33_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(!A1 * !A2),cell_fall,AO,AOI21
+AOI21xp33_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(!A1 * A2),cell_rise,AO,AOI21
+AOI21xp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,,cell_rise,AO,AOI21
+AOI21xp33_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,(!A1 * !A2),cell_rise,AO,AOI21
+AOI21xp33_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,(!A1 * !A2),cell_rise,AO,AOI21
+AOI21xp5_ASAP7_75t,LVT,SS,Y,A1,negative_unate,combinational,,cell_fall,AO,AOI21
+AOI21xp5_ASAP7_75t,LVT,SS,Y,A1,negative_unate,combinational,,cell_rise,AO,AOI21
+AOI21xp5_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_fall,AO,AOI21
+AOI21xp5_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,(A1 * !A2),cell_fall,AO,AOI21
+AOI21xp5_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,,cell_rise,AO,AOI21
+AOI21xp5_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,(!A1 * A2),cell_fall,AO,AOI21
+AOI21xp5_ASAP7_75t,SLVT,TT,Y,A2,negative_unate,combinational,,cell_rise,AO,AOI21
+AOI21xp5_ASAP7_75t,SRAM,FF,Y,A1,negative_unate,combinational,,cell_rise,AO,AOI21
+AOI221x1_ASAP7_75t,LVT,FF,Y,A1,negative_unate,combinational,,cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(A1 * !A2 * B1 * !C),cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,RVT,FF,Y,A2,negative_unate,combinational,(A1 * !B1 * !B2 * !C),cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,RVT,FF,Y,B2,negative_unate,combinational,(!A1 * !A2 * B1 * !C),cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,RVT,FF,Y,C,negative_unate,combinational,(!A1 * A2 * !B1 * !B2) + (!A1 * !A2 * !B1 * B2),cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,RVT,SS,Y,C,negative_unate,combinational,(!A1 * !A2 * B1 * !B2),cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,(A2 * !B1 * !B2 * !C),cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,(A2 * B1 * !B2 * !C),cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,RVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * B1 * !C),cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,SLVT,FF,Y,A2,negative_unate,combinational,(A1 * B1 * !B2 * !C),cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,SLVT,TT,Y,B1,negative_unate,combinational,,cell_fall,AO,AOI221
+AOI221x1_ASAP7_75t,SRAM,TT,Y,A2,negative_unate,combinational,(A1 * !B1 * !B2 * !C),cell_rise,AO,AOI221
+AOI221xp5_ASAP7_75t,LVT,FF,Y,B1,negative_unate,combinational,(A1 * !A2 * B2 * !C),cell_rise,AO,AOI221
+AOI221xp5_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,(!A1 * A2 * !B1 * B2),cell_fall,AO,AOI221
+AOI221xp5_ASAP7_75t,RVT,FF,Y,A2,negative_unate,combinational,(A1 * B1 * !B2 * !C),cell_rise,AO,AOI221
+AOI221xp5_ASAP7_75t,RVT,SS,Y,B2,negative_unate,combinational,(!A1 * A2 * B1 * !C),cell_fall,AO,AOI221
+AOI221xp5_ASAP7_75t,RVT,SS,Y,C,negative_unate,combinational,(!A1 * !A2 * B1 * !B2),cell_fall,AO,AOI221
+AOI221xp5_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,,cell_fall,AO,AOI221
+AOI221xp5_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,(!A1 * !A2 * !B1 * B2),cell_fall,AO,AOI221
+AOI221xp5_ASAP7_75t,SLVT,FF,Y,A1,negative_unate,combinational,,cell_rise,AO,AOI221
+AOI221xp5_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,(A2 * !B1 * !B2 * !C),cell_rise,AO,AOI221
+AOI221xp5_ASAP7_75t,SLVT,SS,Y,B1,negative_unate,combinational,,cell_fall,AO,AOI221
+AOI221xp5_ASAP7_75t,SRAM,FF,Y,B1,negative_unate,combinational,(!A1 * !A2 * B2 * !C),cell_rise,AO,AOI221
+AOI221xp5_ASAP7_75t,SRAM,TT,Y,B2,negative_unate,combinational,,cell_fall,AO,AOI221
+AOI222xp33_ASAP7_75t,LVT,SS,Y,A2,negative_unate,combinational,(A1 * B1 * !B2 * C1 * !C2),cell_rise,AO,AOI222
+AOI222xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(!A1 * A2 * B2 * !C1 * C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * B2 * C1 * !C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,LVT,TT,Y,A1,negative_unate,combinational,(A2 * B1 * !B2 * !C1 * C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(!A1 * !A2 * B1 * !C1 * !C2),cell_rise,AO,AOI222
+AOI222xp33_ASAP7_75t,LVT,TT,Y,C1,negative_unate,combinational,(!A1 * !A2 * B1 * !B2 * C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,LVT,TT,Y,C2,negative_unate,combinational,(A1 * !A2 * !B1 * B2 * C1),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,RVT,SS,Y,B1,negative_unate,combinational,(!A1 * A2 * B2 * C1 * !C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,RVT,TT,Y,C1,negative_unate,combinational,(A1 * !A2 * !B1 * !B2 * C2),cell_rise,AO,AOI222
+AOI222xp33_ASAP7_75t,SLVT,FF,Y,A2,negative_unate,combinational,(A1 * B1 * !B2 * C1 * !C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,SLVT,FF,Y,C1,negative_unate,combinational,(A1 * !A2 * !B1 * !B2 * C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,SLVT,FF,Y,C2,negative_unate,combinational,(!A1 * A2 * !B1 * !B2 * C1),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,SLVT,SS,Y,A2,negative_unate,combinational,(A1 * B1 * !B2 * !C1 * C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,SLVT,SS,Y,B1,negative_unate,combinational,(!A1 * A2 * B2 * C1 * !C2),cell_rise,AO,AOI222
+AOI222xp33_ASAP7_75t,SLVT,TT,Y,A1,negative_unate,combinational,(A2 * !B1 * B2 * !C1 * C2),cell_rise,AO,AOI222
+AOI222xp33_ASAP7_75t,SLVT,TT,Y,A1,negative_unate,combinational,(A2 * !B1 * B2 * C1 * !C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,SLVT,TT,Y,A2,negative_unate,combinational,(A1 * !B1 * B2 * !C1 * C2),cell_rise,AO,AOI222
+AOI222xp33_ASAP7_75t,SLVT,TT,Y,A2,negative_unate,combinational,(A1 * B1 * !B2 * !C1 * C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,SRAM,FF,Y,C1,negative_unate,combinational,(!A1 * !A2 * !B1 * !B2 * C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,SRAM,TT,Y,A1,negative_unate,combinational,(A2 * !B1 * !B2 * C1 * !C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,SRAM,TT,Y,B1,negative_unate,combinational,(A1 * !A2 * B2 * C1 * !C2),cell_rise,AO,AOI222
+AOI222xp33_ASAP7_75t,SRAM,TT,Y,C1,negative_unate,combinational,(!A1 * A2 * !B1 * B2 * C2),cell_fall,AO,AOI222
+AOI222xp33_ASAP7_75t,SRAM,TT,Y,C1,negative_unate,combinational,(!A1 * A2 * !B1 * B2 * C2),cell_rise,AO,AOI222
+AOI222xp33_ASAP7_75t,SRAM,TT,Y,C2,negative_unate,combinational,(A1 * !A2 * !B1 * !B2 * C1),cell_fall,AO,AOI222
+AOI22x1_ASAP7_75t,LVT,FF,Y,B1,negative_unate,combinational,(A1 * !A2 * B2),cell_fall,AO,AOI22
+AOI22x1_ASAP7_75t,LVT,TT,Y,A2,negative_unate,combinational,(A1 * B1 * !B2),cell_rise,AO,AOI22
+AOI22x1_ASAP7_75t,SLVT,FF,Y,A1,negative_unate,combinational,(A2 * !B1 * !B2),cell_fall,AO,AOI22
+AOI22x1_ASAP7_75t,SLVT,SS,Y,B2,negative_unate,combinational,(!A1 * !A2 * B1),cell_rise,AO,AOI22
+AOI22x1_ASAP7_75t,SRAM,FF,Y,A2,negative_unate,combinational,(A1 * !B1 * !B2),cell_fall,AO,AOI22
+AOI22x1_ASAP7_75t,SRAM,SS,Y,A1,negative_unate,combinational,(A2 * !B1 * B2),cell_rise,AO,AOI22
+AOI22x1_ASAP7_75t,SRAM,SS,Y,A1,negative_unate,combinational,(A2 * B1 * !B2),cell_rise,AO,AOI22
+AOI22x1_ASAP7_75t,SRAM,TT,Y,A1,negative_unate,combinational,(A2 * !B1 * B2),cell_rise,AO,AOI22
+AOI22xp33_ASAP7_75t,LVT,SS,Y,A1,negative_unate,combinational,,cell_fall,AO,AOI22
+AOI22xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,,cell_fall,AO,AOI22
+AOI22xp33_ASAP7_75t,RVT,TT,Y,B2,negative_unate,combinational,,cell_rise,AO,AOI22
+AOI22xp33_ASAP7_75t,SLVT,FF,Y,A2,negative_unate,combinational,(A1 * !B1 * !B2),cell_rise,AO,AOI22
+AOI22xp33_ASAP7_75t,SRAM,FF,Y,A1,negative_unate,combinational,(A2 * B1 * !B2),cell_fall,AO,AOI22
+AOI22xp33_ASAP7_75t,SRAM,SS,Y,A1,negative_unate,combinational,(A2 * !B1 * !B2),cell_rise,AO,AOI22
+AOI22xp33_ASAP7_75t,SRAM,TT,Y,A1,negative_unate,combinational,(A2 * !B1 * !B2),cell_fall,AO,AOI22
+AOI22xp33_ASAP7_75t,SRAM,TT,Y,B2,negative_unate,combinational,(!A1 * !A2 * B1),cell_rise,AO,AOI22
+AOI22xp5_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(!A1 * !A2 * B1),cell_rise,AO,AOI22
+AOI22xp5_ASAP7_75t,RVT,SS,Y,B2,negative_unate,combinational,(A1 * !A2 * B1),cell_fall,AO,AOI22
+AOI22xp5_ASAP7_75t,SLVT,SS,Y,B1,negative_unate,combinational,(!A1 * A2 * B2),cell_rise,AO,AOI22
+AOI22xp5_ASAP7_75t,SLVT,SS,Y,B2,negative_unate,combinational,(!A1 * A2 * B1),cell_fall,AO,AOI22
+AOI22xp5_ASAP7_75t,SRAM,FF,Y,A1,negative_unate,combinational,,cell_fall,AO,AOI22
+AOI22xp5_ASAP7_75t,SRAM,FF,Y,B2,negative_unate,combinational,(A1 * !A2 * B1),cell_rise,AO,AOI22
+AOI22xp5_ASAP7_75t,SRAM,SS,Y,A2,negative_unate,combinational,,cell_fall,AO,AOI22
+AOI22xp5_ASAP7_75t,SRAM,TT,Y,B1,negative_unate,combinational,(A1 * !A2 * B2),cell_fall,AO,AOI22
+AOI311xp33_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,(!A1 * A2 * !A3 * !C) + (!A1 * !A2 * A3 * !C),cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,(!A1 * A2 * A3 * !C),cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,(A1 * A2 * !A3 * !C),cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,(A1 * !A2 * !A3 * !B),cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,LVT,SS,Y,A2,negative_unate,combinational,,cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,(A1 * !A2 * !A3 * !B),cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(!A1 * !A2 * !A3 * !C),cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,RVT,TT,Y,A3,negative_unate,combinational,,cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,(A1 * !A2 * !A3 * !C),cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(!A1 * A2 * !A3 * !C) + (!A1 * !A2 * A3 * !C),cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(!A1 * A2 * A3 * !C),cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,(A1 * !A2 * !A3 * !C),cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,SLVT,SS,Y,C,negative_unate,combinational,(A1 * A2 * !A3 * !B),cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,SLVT,TT,Y,A2,negative_unate,combinational,,cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,,cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,(!A1 * A2 * A3 * !C),cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,SLVT,TT,Y,C,negative_unate,combinational,(!A1 * !A2 * !A3 * !B),cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,SLVT,TT,Y,C,negative_unate,combinational,(!A1 * A2 * A3 * !B),cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,SLVT,TT,Y,C,negative_unate,combinational,(!A1 * A2 * A3 * !B),cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,(A1 * A2 * !A3 * !C),cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,(A1 * !A2 * !A3 * !B),cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,(A1 * !A2 * A3 * !C),cell_rise,AO,AOI311
+AOI311xp33_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,(A1 * !A2 * !A3 * !C),cell_fall,AO,AOI311
+AOI311xp33_ASAP7_75t,SRAM,TT,Y,C,negative_unate,combinational,(A1 * !A2 * !A3 * !B),cell_fall,AO,AOI311
+AOI31xp33_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,,cell_rise,AO,AOI31
+AOI31xp33_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,(!A1 * A2 * !A3) + (!A1 * !A2 * A3),cell_fall,AO,AOI31
+AOI31xp33_ASAP7_75t,LVT,SS,Y,A2,negative_unate,combinational,,cell_fall,AO,AOI31
+AOI31xp33_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(!A1 * !A2 * !A3),cell_fall,AO,AOI31
+AOI31xp33_ASAP7_75t,LVT,TT,Y,A2,negative_unate,combinational,,cell_fall,AO,AOI31
+AOI31xp33_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,(!A1 * A2 * A3),cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,LVT,FF,Y,A1,negative_unate,combinational,,cell_fall,AO,AOI31
+AOI31xp67_ASAP7_75t,LVT,FF,Y,A2,negative_unate,combinational,,cell_fall,AO,AOI31
+AOI31xp67_ASAP7_75t,LVT,TT,Y,A1,negative_unate,combinational,,cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,(A1 * !A2 * A3),cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,(A1 * A2 * !A3),cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,RVT,FF,Y,A3,negative_unate,combinational,,cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(!A1 * !A2 * !A3),cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(A1 * !A2 * !A3),cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,(!A1 * A2 * !A3) + (!A1 * !A2 * A3),cell_fall,AO,AOI31
+AOI31xp67_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,(!A1 * A2 * !A3) + (!A1 * !A2 * A3),cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,(A1 * A2 * !A3),cell_fall,AO,AOI31
+AOI31xp67_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,(!A1 * A2 * !A3) + (!A1 * !A2 * A3),cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,SLVT,TT,Y,A2,negative_unate,combinational,,cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,SLVT,TT,Y,A3,negative_unate,combinational,,cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,(A1 * !A2 * !A3),cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,(!A1 * A2 * !A3) + (!A1 * !A2 * A3),cell_fall,AO,AOI31
+AOI31xp67_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,(A1 * !A2 * A3),cell_rise,AO,AOI31
+AOI31xp67_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,,cell_rise,AO,AOI31
+AOI321xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(!A1 * A2 * A3 * B2 * !C),cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,LVT,SS,Y,C,negative_unate,combinational,(A1 * !A2 * A3 * !B1 * !B2),cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,LVT,SS,Y,C,negative_unate,combinational,(A1 * !A2 * A3 * B1 * !B2),cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(!A1 * !A2 * !A3 * B1 * !C),cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * !C) + (!A1 * !A2 * A3 * B1 * !C),cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,RVT,FF,Y,C,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * !B2) + (!A1 * !A2 * A3 * B1 * !B2),cell_rise,AO,AOI321
+AOI321xp33_ASAP7_75t,RVT,SS,Y,A2,negative_unate,combinational,(A1 * A3 * B1 * !B2 * !C),cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,RVT,SS,Y,C,negative_unate,combinational,(!A1 * !A2 * !A3 * B1 * !B2),cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,RVT,TT,Y,B2,negative_unate,combinational,,cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * B2),cell_rise,AO,AOI321
+AOI321xp33_ASAP7_75t,SLVT,FF,Y,A3,negative_unate,combinational,,cell_rise,AO,AOI321
+AOI321xp33_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,(!A1 * A2 * !A3 * !B1 * B2) + (!A1 * !A2 * A3 * !B1 * B2),cell_rise,AO,AOI321
+AOI321xp33_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * B2),cell_rise,AO,AOI321
+AOI321xp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,(A2 * A3 * B1 * !B2 * !C),cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,SLVT,SS,Y,A3,negative_unate,combinational,,cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,SLVT,TT,Y,B1,negative_unate,combinational,,cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,SLVT,TT,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * B2 * !C),cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,SLVT,TT,Y,C,negative_unate,combinational,(!A1 * A2 * !A3 * !B1 * B2) + (!A1 * !A2 * A3 * !B1 * B2),cell_rise,AO,AOI321
+AOI321xp33_ASAP7_75t,SRAM,FF,Y,A3,negative_unate,combinational,(A1 * A2 * !B1 * B2 * !C),cell_rise,AO,AOI321
+AOI321xp33_ASAP7_75t,SRAM,SS,Y,A2,negative_unate,combinational,,cell_rise,AO,AOI321
+AOI321xp33_ASAP7_75t,SRAM,SS,Y,B2,negative_unate,combinational,(!A1 * !A2 * !A3 * B1 * !C),cell_rise,AO,AOI321
+AOI321xp33_ASAP7_75t,SRAM,SS,Y,C,negative_unate,combinational,(!A1 * !A2 * !A3 * !B1 * B2),cell_fall,AO,AOI321
+AOI321xp33_ASAP7_75t,SRAM,SS,Y,C,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * !B2) + (!A1 * !A2 * A3 * B1 * !B2),cell_fall,AO,AOI321
+AOI322xp5_ASAP7_75t,LVT,FF,Y,B2,negative_unate,combinational,(A1 * A2 * !A3 * B1 * !C1 * !C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,LVT,SS,Y,A2,negative_unate,combinational,(A1 * A3 * !B1 * !B2 * C1 * !C2),cell_rise,AO,AOI322
+AOI322xp5_ASAP7_75t,LVT,SS,Y,A3,negative_unate,combinational,(A1 * A2 * !B1 * B2 * !C1 * C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * A3 * B2 * !C1 * !C2),cell_rise,AO,AOI322
+AOI322xp5_ASAP7_75t,LVT,TT,Y,A1,negative_unate,combinational,(A2 * A3 * !B1 * B2 * !C1 * C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * !C1 * !C2) + (!A1 * !A2 * A3 * B1 * !C1 * !C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,RVT,FF,Y,A2,negative_unate,combinational,(A1 * A3 * B1 * !B2 * !C1 * !C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,RVT,SS,Y,B1,negative_unate,combinational,(!A1 * A2 * A3 * B2 * C1 * !C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,RVT,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * A3 * B2 * !C1 * !C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,RVT,SS,Y,C1,negative_unate,combinational,,cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,RVT,SS,Y,C2,negative_unate,combinational,,cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,(A2 * A3 * !B1 * !B2 * C1 * !C2),cell_rise,AO,AOI322
+AOI322xp5_ASAP7_75t,RVT,TT,Y,C2,negative_unate,combinational,(!A1 * !A2 * !A3 * !B1 * !B2 * C1),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,SLVT,FF,Y,A3,negative_unate,combinational,(A1 * A2 * !B1 * B2 * !C1 * !C2),cell_rise,AO,AOI322
+AOI322xp5_ASAP7_75t,SLVT,TT,Y,A1,negative_unate,combinational,(A2 * A3 * B1 * !B2 * !C1 * C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,SLVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * C1 * !C2) + (!A1 * !A2 * A3 * B1 * C1 * !C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,SLVT,TT,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * B1 * !B2 * C2),cell_rise,AO,AOI322
+AOI322xp5_ASAP7_75t,SLVT,TT,Y,C2,negative_unate,combinational,(!A1 * !A2 * !A3 * !B1 * B2 * C1),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,SRAM,SS,Y,A1,negative_unate,combinational,(A2 * A3 * B1 * !B2 * !C1 * C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,SRAM,TT,Y,A2,negative_unate,combinational,(A1 * A3 * !B1 * B2 * C1 * !C2),cell_rise,AO,AOI322
+AOI322xp5_ASAP7_75t,SRAM,TT,Y,C1,negative_unate,combinational,(A1 * !A2 * A3 * B1 * !B2 * C2),cell_fall,AO,AOI322
+AOI322xp5_ASAP7_75t,SRAM,TT,Y,C2,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * B2 * C1),cell_rise,AO,AOI322
+AOI322xp5_ASAP7_75t,SRAM,TT,Y,C2,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * !B2 * C1),cell_fall,AO,AOI322
+AOI32xp33_ASAP7_75t,LVT,FF,Y,A2,negative_unate,combinational,(A1 * A3 * !B1 * !B2),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,LVT,FF,Y,A3,negative_unate,combinational,(A1 * A2 * !B1 * !B2),cell_rise,AO,AOI32
+AOI32xp33_ASAP7_75t,LVT,SS,Y,A2,negative_unate,combinational,,cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,LVT,SS,Y,A2,negative_unate,combinational,(A1 * A3 * !B1 * B2),cell_rise,AO,AOI32
+AOI32xp33_ASAP7_75t,LVT,SS,Y,A3,negative_unate,combinational,(A1 * A2 * !B1 * !B2),cell_rise,AO,AOI32
+AOI32xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(!A1 * !A2 * !A3 * B2),cell_rise,AO,AOI32
+AOI32xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(!A1 * A2 * A3 * B2),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,LVT,SS,Y,B2,negative_unate,combinational,(!A1 * A2 * A3 * B1),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,,cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,RVT,FF,Y,A2,negative_unate,combinational,(A1 * A3 * B1 * !B2),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,RVT,FF,Y,A3,negative_unate,combinational,(A1 * A2 * !B1 * !B2),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,RVT,FF,Y,B2,negative_unate,combinational,(!A1 * !A2 * !A3 * B1),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,RVT,TT,Y,A2,negative_unate,combinational,(A1 * A3 * !B1 * !B2),cell_rise,AO,AOI32
+AOI32xp33_ASAP7_75t,RVT,TT,Y,B1,negative_unate,combinational,(!A1 * A2 * A3 * B2),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,RVT,TT,Y,B2,negative_unate,combinational,(A1 * !A2 * A3 * B1),cell_rise,AO,AOI32
+AOI32xp33_ASAP7_75t,SLVT,FF,Y,A3,negative_unate,combinational,(A1 * A2 * !B1 * !B2),cell_rise,AO,AOI32
+AOI32xp33_ASAP7_75t,SLVT,FF,Y,A3,negative_unate,combinational,(A1 * A2 * B1 * !B2),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,SLVT,FF,Y,B1,negative_unate,combinational,(!A1 * A2 * !A3 * B2) + (!A1 * !A2 * A3 * B2),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,SLVT,FF,Y,B1,negative_unate,combinational,(A1 * !A2 * A3 * B2),cell_rise,AO,AOI32
+AOI32xp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,(A2 * A3 * !B1 * !B2),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,SLVT,SS,Y,B2,negative_unate,combinational,(A1 * !A2 * A3 * B1),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,SLVT,TT,Y,A1,negative_unate,combinational,(A2 * A3 * B1 * !B2),cell_fall,AO,AOI32
+AOI32xp33_ASAP7_75t,SLVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * A3 * B1),cell_rise,AO,AOI32
+AOI32xp33_ASAP7_75t,SLVT,TT,Y,B2,negative_unate,combinational,(A1 * !A2 * A3 * B1),cell_fall,AO,AOI32
+AOI331xp33_ASAP7_75t,LVT,FF,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * !B3) + (!A1 * !A2 * !A3 * !B1 * B2 * B3),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,LVT,FF,Y,C1,negative_unate,combinational,(A1 * !A2 * A3 * !B1 * !B2 * !B3),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,LVT,SS,Y,A1,negative_unate,combinational,(A2 * A3 * !B1 * !B2 * !B3 * !C1),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,LVT,SS,Y,B3,negative_unate,combinational,(A1 * !A2 * A3 * B1 * B2 * !C1),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,LVT,SS,Y,B3,negative_unate,combinational,(A1 * A2 * !A3 * B1 * B2 * !C1),cell_fall,AO,AOI331
+AOI331xp33_ASAP7_75t,LVT,SS,Y,C1,negative_unate,combinational,(A1 * !A2 * A3 * !B1 * B2 * B3),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,LVT,TT,Y,B3,negative_unate,combinational,(A1 * A2 * !A3 * B1 * B2 * !C1),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,LVT,TT,Y,C1,negative_unate,combinational,(A1 * !A2 * A3 * B1 * !B2 * !B3) + (A1 * !A2 * !A3 * B1 * !B2 * B3),cell_fall,AO,AOI331
+AOI331xp33_ASAP7_75t,RVT,FF,Y,B3,negative_unate,combinational,(A1 * !A2 * !A3 * B1 * B2 * !C1),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,RVT,SS,Y,B1,negative_unate,combinational,(!A1 * !A2 * !A3 * B2 * B3 * !C1),cell_fall,AO,AOI331
+AOI331xp33_ASAP7_75t,RVT,SS,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * B2 * B3 * !C1),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,RVT,TT,Y,B1,negative_unate,combinational,,cell_fall,AO,AOI331
+AOI331xp33_ASAP7_75t,RVT,TT,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * B1 * !B2 * !B3) + (!A1 * A2 * !A3 * B1 * !B2 * B3) + (!A1 * !A2 * A3 * B1 * !B2 * B3),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,SLVT,FF,Y,A1,negative_unate,combinational,(A2 * A3 * B1 * !B2 * !B3 * !C1),cell_fall,AO,AOI331
+AOI331xp33_ASAP7_75t,SLVT,FF,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * B1 * !B2 * B3),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,SLVT,FF,Y,C1,negative_unate,combinational,(A1 * !A2 * !A3 * B1 * B2 * !B3),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,(A2 * A3 * !B1 * B2 * B3 * !C1),cell_fall,AO,AOI331
+AOI331xp33_ASAP7_75t,SLVT,SS,Y,A2,negative_unate,combinational,(A1 * A3 * B1 * B2 * !B3 * !C1),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,SLVT,TT,Y,C1,negative_unate,combinational,(!A1 * A2 * !A3 * !B1 * B2 * !B3) + (!A1 * A2 * !A3 * !B1 * !B2 * B3) + (!A1 * !A2 * A3 * !B1 * B2 * !B3) + (!A1 * !A2 * A3 * !B1 * !B2 * B3),cell_fall,AO,AOI331
+AOI331xp33_ASAP7_75t,SRAM,FF,Y,C1,negative_unate,combinational,(!A1 * !A2 * !A3 * B1 * !B2 * !B3),cell_fall,AO,AOI331
+AOI331xp33_ASAP7_75t,SRAM,FF,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * B2 * B3),cell_fall,AO,AOI331
+AOI331xp33_ASAP7_75t,SRAM,SS,Y,C1,negative_unate,combinational,(!A1 * !A2 * !A3 * B1 * B2 * !B3),cell_rise,AO,AOI331
+AOI331xp33_ASAP7_75t,SRAM,TT,Y,B2,negative_unate,combinational,(A1 * !A2 * !A3 * B1 * B3 * !C1),cell_fall,AO,AOI331
+AOI332xp33_ASAP7_75t,LVT,FF,Y,A2,negative_unate,combinational,(A1 * A3 * !B1 * B2 * B3 * !C1 * C2),cell_rise,AO,AOI332
+AOI332xp33_ASAP7_75t,LVT,TT,Y,A2,negative_unate,combinational,(A1 * A3 * B1 * !B2 * !B3 * C1 * !C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,LVT,TT,Y,A3,negative_unate,combinational,(A1 * A2 * B1 * B2 * !B3 * !C1 * C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,LVT,TT,Y,B3,negative_unate,combinational,(!A1 * !A2 * !A3 * B1 * B2 * !C1 * C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,LVT,TT,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * !B3 * C2) + (!A1 * !A2 * !A3 * !B1 * B2 * B3 * C2),cell_rise,AO,AOI332
+AOI332xp33_ASAP7_75t,RVT,FF,Y,C2,negative_unate,combinational,(!A1 * !A2 * !A3 * B1 * B2 * !B3 * C1),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,RVT,TT,Y,C2,negative_unate,combinational,(!A1 * A2 * !A3 * !B1 * B2 * !B3 * C1) + (!A1 * A2 * !A3 * !B1 * !B2 * B3 * C1) + (!A1 * !A2 * A3 * !B1 * B2 * !B3 * C1) + (!A1 * !A2 * A3 * !B1 * !B2 * B3 * C1),cell_rise,AO,AOI332
+AOI332xp33_ASAP7_75t,SLVT,FF,Y,A3,negative_unate,combinational,(A1 * A2 * B1 * B2 * !B3 * !C1 * !C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,SLVT,FF,Y,B1,negative_unate,combinational,(!A1 * A2 * !A3 * B2 * B3 * C1 * !C2) + (!A1 * !A2 * A3 * B2 * B3 * C1 * !C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,SLVT,FF,Y,C1,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B2 * !B3 * C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,SLVT,FF,Y,C2,negative_unate,combinational,(!A1 * !A2 * !A3 * !B1 * !B2 * !B3 * C1),cell_rise,AO,AOI332
+AOI332xp33_ASAP7_75t,SLVT,SS,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * B1 * !B2 * !B3 * C2) + (!A1 * A2 * !A3 * B1 * !B2 * B3 * C2) + (!A1 * !A2 * A3 * B1 * !B2 * B3 * C2),cell_rise,AO,AOI332
+AOI332xp33_ASAP7_75t,SLVT,SS,Y,C1,negative_unate,combinational,(A1 * A2 * !A3 * B1 * !B2 * !B3 * C2),cell_rise,AO,AOI332
+AOI332xp33_ASAP7_75t,SLVT,TT,Y,A1,negative_unate,combinational,(A2 * A3 * B1 * !B2 * !B3 * !C1 * !C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,SLVT,TT,Y,B1,negative_unate,combinational,(!A1 * A2 * A3 * B2 * B3 * C1 * !C2),cell_rise,AO,AOI332
+AOI332xp33_ASAP7_75t,SLVT,TT,Y,B3,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * B2 * !C1 * C2) + (!A1 * !A2 * A3 * B1 * B2 * !C1 * C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,SLVT,TT,Y,C1,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * B2 * B3 * C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,SRAM,FF,Y,A1,negative_unate,combinational,(A2 * A3 * !B1 * B2 * !B3 * !C1 * C2) + (A2 * A3 * !B1 * !B2 * B3 * !C1 * C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,SRAM,FF,Y,A1,negative_unate,combinational,(A2 * A3 * B1 * !B2 * B3 * !C1 * C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,SRAM,FF,Y,A1,negative_unate,combinational,(A2 * A3 * B1 * B2 * !B3 * C1 * !C2),cell_fall,AO,AOI332
+AOI332xp33_ASAP7_75t,SRAM,SS,Y,A2,negative_unate,combinational,(A1 * A3 * B1 * B2 * !B3 * C1 * !C2),cell_rise,AO,AOI332
+AOI332xp33_ASAP7_75t,SRAM,TT,Y,C1,negative_unate,combinational,(A1 * !A2 * A3 * B1 * B2 * !B3 * C2),cell_rise,AO,AOI332
+AOI332xp33_ASAP7_75t,SRAM,TT,Y,C2,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B2 * !B3 * C1),cell_rise,AO,AOI332
+AOI333xp33_ASAP7_75t,LVT,FF,Y,A2,negative_unate,combinational,(A1 * A3 * !B1 * B2 * B3 * !C1 * C2 * !C3) + (A1 * A3 * !B1 * B2 * B3 * !C1 * !C2 * C3) + (A1 * A3 * !B1 * B2 * !B3 * !C1 * C2 * C3) + (A1 * A3 * !B1 * !B2 * B3 * !C1 * C2 * C3),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,LVT,FF,Y,B3,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * B2 * C1 * !C2 * !C3) + (!A1 * !A2 * A3 * B1 * B2 * C1 * !C2 * !C3),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,LVT,FF,Y,C2,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * B2 * !B3 * C1 * C3) + (A1 * A2 * !A3 * !B1 * !B2 * B3 * C1 * C3),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,LVT,SS,Y,A3,negative_unate,combinational,(A1 * A2 * B1 * !B2 * B3 * C1 * C2 * !C3),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * B2 * B3 * !C1 * C2 * !C3) + (A1 * A2 * !A3 * B2 * B3 * !C1 * !C2 * C3),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,LVT,SS,Y,B3,negative_unate,combinational,(A1 * !A2 * A3 * B1 * B2 * C1 * !C2 * !C3),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,LVT,SS,Y,C1,negative_unate,combinational,(!A1 * !A2 * !A3 * B1 * !B2 * !B3 * C2 * C3),cell_rise,AO,AOI333
+AOI333xp33_ASAP7_75t,LVT,SS,Y,C1,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * !B2 * !B3 * C2 * C3) + (!A1 * !A2 * A3 * B1 * !B2 * !B3 * C2 * C3),cell_rise,AO,AOI333
+AOI333xp33_ASAP7_75t,LVT,SS,Y,C2,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * B2 * !B3 * C1 * C3) + (A1 * A2 * !A3 * !B1 * !B2 * B3 * C1 * C3),cell_rise,AO,AOI333
+AOI333xp33_ASAP7_75t,LVT,SS,Y,C3,negative_unate,combinational,(A1 * !A2 * A3 * B1 * B2 * !B3 * C1 * C2),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * B3 * C1 * C2 * !C3) + (!A1 * !A2 * A3 * B1 * B3 * C1 * C2 * !C3),cell_rise,AO,AOI333
+AOI333xp33_ASAP7_75t,RVT,FF,Y,C1,negative_unate,combinational,(!A1 * !A2 * !A3 * !B1 * !B2 * !B3 * C2 * C3),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,RVT,SS,Y,C3,negative_unate,combinational,(!A1 * !A2 * !A3 * !B1 * B2 * B3 * C1 * C2),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,RVT,TT,Y,B1,negative_unate,combinational,(!A1 * A2 * A3 * B2 * B3 * C1 * C2 * !C3),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,RVT,TT,Y,C2,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * B2 * B3 * C1 * C3),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,SLVT,FF,Y,A3,negative_unate,combinational,(A1 * A2 * !B1 * B2 * !B3 * C1 * C2 * !C3) + (A1 * A2 * !B1 * !B2 * B3 * C1 * C2 * !C3),cell_rise,AO,AOI333
+AOI333xp33_ASAP7_75t,SLVT,SS,Y,A3,negative_unate,combinational,(A1 * A2 * !B1 * B2 * B3 * !C1 * C2 * !C3) + (A1 * A2 * !B1 * B2 * B3 * !C1 * !C2 * C3) + (A1 * A2 * !B1 * B2 * !B3 * !C1 * C2 * C3) + (A1 * A2 * !B1 * !B2 * B3 * !C1 * C2 * C3),cell_fall,AO,AOI333
+AOI333xp33_ASAP7_75t,SLVT,SS,Y,B3,negative_unate,combinational,(A1 * !A2 * !A3 * B1 * B2 * C1 * !C2 * C3),cell_rise,AO,AOI333
+AOI333xp33_ASAP7_75t,SLVT,TT,Y,C1,negative_unate,combinational,(A1 * !A2 * !A3 * B1 * !B2 * !B3 * C2 * C3),cell_rise,AO,AOI333
+AOI333xp33_ASAP7_75t,SRAM,FF,Y,A2,negative_unate,combinational,(A1 * A3 * B1 * B2 * !B3 * C1 * !C2 * C3),cell_rise,AO,AOI333
+AOI333xp33_ASAP7_75t,SRAM,FF,Y,B2,negative_unate,combinational,(A1 * !A2 * A3 * B1 * B3 * !C1 * !C2 * !C3),cell_rise,AO,AOI333
+AOI333xp33_ASAP7_75t,SRAM,FF,Y,B3,negative_unate,combinational,(!A1 * !A2 * !A3 * B1 * B2 * C1 * !C2 * C3),cell_rise,AO,AOI333
+AOI333xp33_ASAP7_75t,SRAM,TT,Y,A3,negative_unate,combinational,(A1 * A2 * B1 * !B2 * !B3 * !C1 * C2 * !C3) + (A1 * A2 * B1 * !B2 * !B3 * !C1 * !C2 * C3),cell_fall,AO,AOI333
+AOI33xp33_ASAP7_75t,LVT,FF,Y,A1,negative_unate,combinational,(A2 * A3 * !B1 * B2 * !B3) + (A2 * A3 * !B1 * !B2 * B3),cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,LVT,FF,Y,A2,negative_unate,combinational,(A1 * A3 * !B1 * B2 * B3),cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,LVT,FF,Y,B2,negative_unate,combinational,(!A1 * A2 * A3 * B1 * B3),cell_rise,AO,AOI33
+AOI33xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * B2 * B3),cell_rise,AO,AOI33
+AOI33xp33_ASAP7_75t,LVT,SS,Y,B3,negative_unate,combinational,,cell_rise,AO,AOI33
+AOI33xp33_ASAP7_75t,LVT,TT,Y,A3,negative_unate,combinational,,cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(!A1 * !A2 * !A3 * B1 * B3),cell_rise,AO,AOI33
+AOI33xp33_ASAP7_75t,LVT,TT,Y,B3,negative_unate,combinational,(!A1 * A2 * A3 * B1 * B2),cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,RVT,FF,Y,A3,negative_unate,combinational,(A1 * A2 * !B1 * B2 * B3),cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,RVT,SS,Y,A1,negative_unate,combinational,(A2 * A3 * !B1 * B2 * !B3) + (A2 * A3 * !B1 * !B2 * B3),cell_rise,AO,AOI33
+AOI33xp33_ASAP7_75t,RVT,SS,Y,A2,negative_unate,combinational,,cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,RVT,TT,Y,A2,negative_unate,combinational,(A1 * A3 * !B1 * B2 * B3),cell_rise,AO,AOI33
+AOI33xp33_ASAP7_75t,RVT,TT,Y,B3,negative_unate,combinational,(A1 * A2 * !A3 * B1 * B2),cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,SLVT,FF,Y,A2,negative_unate,combinational,(A1 * A3 * B1 * B2 * !B3),cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,(A2 * A3 * B1 * !B2 * B3),cell_rise,AO,AOI33
+AOI33xp33_ASAP7_75t,SLVT,SS,Y,A2,negative_unate,combinational,(A1 * A3 * !B1 * B2 * B3),cell_rise,AO,AOI33
+AOI33xp33_ASAP7_75t,SLVT,SS,Y,B3,negative_unate,combinational,,cell_rise,AO,AOI33
+AOI33xp33_ASAP7_75t,SRAM,FF,Y,B3,negative_unate,combinational,(!A1 * !A2 * A3 * B1 * B2),cell_rise,AO,AOI33
+AOI33xp33_ASAP7_75t,SRAM,SS,Y,A3,negative_unate,combinational,,cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,SRAM,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * !A3 * B2 * B3) + (!A1 * A2 * !A3 * B2 * B3),cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,SRAM,SS,Y,B2,negative_unate,combinational,(!A1 * !A2 * A3 * B1 * B3),cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,SRAM,TT,Y,B2,negative_unate,combinational,(A1 * A2 * !A3 * B1 * B3),cell_fall,AO,AOI33
+AOI33xp33_ASAP7_75t,SRAM,TT,Y,B3,negative_unate,combinational,(A1 * !A2 * A3 * B1 * B2),cell_rise,AO,AOI33
+BUFx10_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUF
+BUFx10_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx12_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUF
+BUFx12_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx12_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx12_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUF
+BUFx12f_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx12f
+BUFx12f_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx12f
+BUFx16f_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx16f
+BUFx16f_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx16f
+BUFx24_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx24_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx24_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx2_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx2_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUF
+BUFx3_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUF
+BUFx3_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUF
+BUFx3_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx3_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx4f_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx4f
+BUFx4f_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx4f
+BUFx5_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx5_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx5_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUF
+BUFx5_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx6f_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUFx6f
+BUFx6f_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUFx6f
+BUFx8_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx8_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,BUF
+BUFx8_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+BUFx8_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,BUF
+CKINVDCx10_ASAP7_75t,RVT,FF,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx10_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx10_ASAP7_75t,SRAM,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx11_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx11_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx11_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx12_ASAP7_75t,SLVT,TT,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx14_ASAP7_75t,SRAM,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx16_ASAP7_75t,LVT,FF,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx16_ASAP7_75t,SLVT,FF,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx16_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx16_ASAP7_75t,SRAM,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx20_ASAP7_75t,SLVT,TT,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx5p33_ASAP7_75t,LVT,FF,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx5p33_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx6p67_ASAP7_75t,RVT,FF,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx6p67_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx6p67_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+CKINVDCx8_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx8_ASAP7_75t,SLVT,FF,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx9p33_ASAP7_75t,LVT,TT,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx9p33_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,,cell_fall,INVBUF,CKINVDC
+CKINVDCx9p33_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,,cell_rise,INVBUF,CKINVDC
+FAx1_ASAP7_75t,LVT,FF,CON,A,negative_unate,combinational,(!B * CI),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,LVT,FF,CON,A,negative_unate,combinational,(B * !CI),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,LVT,SS,SN,A,negative_unate,combinational,(!B * !CI),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,LVT,SS,SN,B,non_unate,combinational,,cell_fall,SIMPLE,FA
+FAx1_ASAP7_75t,LVT,TT,CON,B,negative_unate,combinational,(!A * CI),cell_fall,SIMPLE,FA
+FAx1_ASAP7_75t,LVT,TT,SN,B,positive_unate,combinational,(!A * CI),cell_fall,SIMPLE,FA
+FAx1_ASAP7_75t,RVT,FF,CON,B,negative_unate,combinational,,cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,RVT,FF,SN,B,non_unate,combinational,,cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,RVT,SS,CON,CI,negative_unate,combinational,(A * !B),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,RVT,SS,SN,CI,negative_unate,combinational,(!A * !B),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,RVT,SS,SN,CI,positive_unate,combinational,(!A * B),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,SLVT,FF,SN,A,negative_unate,combinational,(!B * !CI),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,SLVT,FF,SN,A,positive_unate,combinational,(!B * CI),cell_fall,SIMPLE,FA
+FAx1_ASAP7_75t,SLVT,FF,SN,B,positive_unate,combinational,(!A * CI),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,SLVT,FF,SN,CI,negative_unate,combinational,(A * B),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,SLVT,SS,SN,CI,positive_unate,combinational,(A * !B),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,SLVT,TT,CON,A,negative_unate,combinational,(!B * CI),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,SLVT,TT,CON,CI,negative_unate,combinational,,cell_fall,SIMPLE,FA
+FAx1_ASAP7_75t,SRAM,FF,CON,CI,negative_unate,combinational,(A * !B),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,SRAM,FF,SN,A,non_unate,combinational,,cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,SRAM,FF,SN,CI,non_unate,combinational,,cell_fall,SIMPLE,FA
+FAx1_ASAP7_75t,SRAM,TT,SN,A,positive_unate,combinational,(B * !CI),cell_rise,SIMPLE,FA
+FAx1_ASAP7_75t,SRAM,TT,SN,CI,positive_unate,combinational,(A * !B),cell_fall,SIMPLE,FA
+HAxp5_ASAP7_75t,LVT,FF,SN,A,negative_unate,combinational,!B,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,LVT,FF,SN,A,positive_unate,combinational,B,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,LVT,FF,SN,B,positive_unate,combinational,A,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,LVT,SS,CON,B,negative_unate,combinational,,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,LVT,SS,CON,B,negative_unate,combinational,,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,LVT,SS,SN,A,positive_unate,combinational,B,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,RVT,FF,CON,B,negative_unate,combinational,,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,RVT,FF,CON,B,negative_unate,combinational,,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,RVT,FF,SN,A,non_unate,combinational,,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,RVT,FF,SN,A,positive_unate,combinational,B,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,RVT,FF,SN,B,non_unate,combinational,,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,RVT,SS,SN,A,positive_unate,combinational,B,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,RVT,TT,SN,B,negative_unate,combinational,!A,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,SLVT,FF,CON,A,negative_unate,combinational,,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,SLVT,FF,SN,B,positive_unate,combinational,A,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,SLVT,FF,SN,B,positive_unate,combinational,A,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,SLVT,TT,SN,A,positive_unate,combinational,B,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,SLVT,TT,SN,B,negative_unate,combinational,!A,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,SRAM,FF,SN,A,negative_unate,combinational,!B,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,SRAM,FF,SN,A,positive_unate,combinational,B,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,SRAM,TT,CON,A,negative_unate,combinational,,cell_rise,SIMPLE,HA
+HAxp5_ASAP7_75t,SRAM,TT,SN,B,negative_unate,combinational,!A,cell_fall,SIMPLE,HA
+HAxp5_ASAP7_75t,SRAM,TT,SN,B,positive_unate,combinational,A,cell_fall,SIMPLE,HA
+HB1xp67_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB1xp67_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB1
+HB1xp67_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB1
+HB2xp67_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB2xp67_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB2xp67_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB2xp67_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB2xp67_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB2xp67_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB2xp67_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB2xp67_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB2xp67_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB2xp67_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB2xp67_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB2
+HB2xp67_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB2
+HB3xp67_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB3xp67_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB3xp67_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB3xp67_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB3xp67_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB3xp67_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB3xp67_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB3xp67_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB3xp67_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB3xp67_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB3xp67_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB3
+HB3xp67_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB3
+HB4xp67_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+HB4xp67_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_fall,INVBUF,HB4
+HB4xp67_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_rise,INVBUF,HB4
+INVx11_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_fall,INVBUF,INV
+INVx13_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_fall,INVBUF,INV
+INVx13_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_fall,INVBUF,INV
+INVx13_ASAP7_75t,SRAM,TT,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVx1_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,,cell_fall,INVBUF,INV
+INVx1_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVx1_ASAP7_75t,SRAM,TT,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVx2_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_fall,INVBUF,INV
+INVx2_ASAP7_75t,SLVT,FF,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVx3_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVx3_ASAP7_75t,LVT,TT,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVx3_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_fall,INVBUF,INV
+INVx3_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVx4_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVx5_ASAP7_75t,LVT,FF,Y,A,negative_unate,combinational,,cell_fall,INVBUF,INV
+INVx6_ASAP7_75t,LVT,TT,Y,A,negative_unate,combinational,,cell_fall,INVBUF,INV
+INVx6_ASAP7_75t,SRAM,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVx8_ASAP7_75t,SLVT,TT,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVxp33_ASAP7_75t,LVT,FF,Y,A,negative_unate,combinational,,cell_fall,INVBUF,INV
+INVxp67_ASAP7_75t,LVT,TT,Y,A,negative_unate,combinational,,cell_fall,INVBUF,INV
+INVxp67_ASAP7_75t,LVT,TT,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVxp67_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+INVxp67_ASAP7_75t,SRAM,SS,Y,A,negative_unate,combinational,,cell_rise,INVBUF,INV
+MAJIxp5_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,(!A * B),cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(!A * C),cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,LVT,TT,Y,A,negative_unate,combinational,(!B * C),cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(!A * C),cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(!A * C),cell_rise,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,(!B * C),cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SLVT,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SLVT,FF,Y,A,negative_unate,combinational,(B * !C),cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(A * !C),cell_rise,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,(A * !C),cell_rise,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SLVT,SS,Y,C,negative_unate,combinational,(A * !B),cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SLVT,SS,Y,C,negative_unate,combinational,(A * !B),cell_rise,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,(!A * C),cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SLVT,TT,Y,C,negative_unate,combinational,(A * !B),cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,(!B * C),cell_rise,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SRAM,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,MAJI
+MAJIxp5_ASAP7_75t,SRAM,TT,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,MAJI
+MAJx2_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,MAJ
+MAJx2_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,(B * !C),cell_rise,SIMPLE,MAJ
+MAJx2_ASAP7_75t,LVT,FF,Y,C,positive_unate,combinational,(A * !B),cell_fall,SIMPLE,MAJ
+MAJx2_ASAP7_75t,LVT,FF,Y,C,positive_unate,combinational,(A * !B),cell_rise,SIMPLE,MAJ
+MAJx2_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,(A * !B),cell_rise,SIMPLE,MAJ
+MAJx2_ASAP7_75t,LVT,TT,Y,C,positive_unate,combinational,(!A * B),cell_fall,SIMPLE,MAJ
+MAJx2_ASAP7_75t,RVT,FF,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,MAJ
+MAJx2_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,(A * !B),cell_fall,SIMPLE,MAJ
+MAJx2_ASAP7_75t,RVT,TT,Y,B,positive_unate,combinational,(!A * C),cell_fall,SIMPLE,MAJ
+MAJx2_ASAP7_75t,RVT,TT,Y,B,positive_unate,combinational,(A * !C),cell_fall,SIMPLE,MAJ
+MAJx2_ASAP7_75t,SLVT,SS,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,MAJ
+MAJx2_ASAP7_75t,SLVT,TT,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,MAJ
+MAJx2_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,MAJ
+MAJx2_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,(A * !C),cell_fall,SIMPLE,MAJ
+MAJx2_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,(!A * C),cell_rise,SIMPLE,MAJ
+MAJx2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,(!A * B),cell_rise,SIMPLE,MAJ
+MAJx3_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,MAJ
+MAJx3_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,(!A * C),cell_fall,SIMPLE,MAJ
+MAJx3_ASAP7_75t,SLVT,TT,Y,B,positive_unate,combinational,(A * !C),cell_fall,SIMPLE,MAJ
+MAJx3_ASAP7_75t,SRAM,FF,Y,C,positive_unate,combinational,(!A * B),cell_fall,SIMPLE,MAJ
+MAJx3_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,(!B * C),cell_rise,SIMPLE,MAJ
+MAJx3_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,(B * !C),cell_rise,SIMPLE,MAJ
+MAJx3_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,(A * !B),cell_rise,SIMPLE,MAJ
+NAND2x1_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2x1_ASAP7_75t,SLVT,FF,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2x1_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2x1_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2x1p5_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND2
+NAND2x1p5_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2x1p5_ASAP7_75t,SLVT,TT,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2x1p5_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND2
+NAND2x2_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND2
+NAND2x2_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND2
+NAND2x2_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND2
+NAND2x2_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2x2_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2xp33_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2xp33_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2xp33_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND2
+NAND2xp33_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2xp5_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND2
+NAND2xp5_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND2
+NAND2xp67_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND2
+NAND2xp67_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND2xp67_ASAP7_75t,SLVT,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND2
+NAND2xp67_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND2
+NAND3x1_ASAP7_75t,LVT,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3x1_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NAND3
+NAND3x1_ASAP7_75t,RVT,FF,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND3
+NAND3x1_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND3
+NAND3x1_ASAP7_75t,SRAM,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND3
+NAND3x1_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND3
+NAND3x2_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND3
+NAND3x2_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3x2_ASAP7_75t,RVT,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3x2_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3x2_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3x2_ASAP7_75t,SRAM,TT,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,RVT,FF,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND3xp33_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND3
+NAND4xp25_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND4xp25_ASAP7_75t,RVT,SS,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND4xp25_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp25_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND4xp25_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp25_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp25_ASAP7_75t,SRAM,SS,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND4xp25_ASAP7_75t,SRAM,SS,Y,D,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp25_ASAP7_75t,SRAM,TT,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,RVT,FF,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,RVT,SS,Y,D,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,RVT,TT,Y,D,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,SLVT,FF,Y,D,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,SLVT,SS,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,SLVT,TT,Y,D,negative_unate,combinational,,cell_rise,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND4xp75_ASAP7_75t,SRAM,SS,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NAND4
+NAND5xp2_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,LVT,FF,Y,D,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,LVT,TT,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,RVT,FF,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,RVT,FF,Y,D,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,RVT,FF,Y,E,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SLVT,FF,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SLVT,SS,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SLVT,TT,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SLVT,TT,Y,D,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SRAM,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SRAM,SS,Y,E,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NAND5xp2_ASAP7_75t,SRAM,TT,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NAND5
+NOR2x1_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2x1_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2x1_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2x1_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2x1_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2x1_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2x1p5_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2x1p5_ASAP7_75t,RVT,FF,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR2
+NOR2x1p5_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR2
+NOR2x1p5_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2x1p5_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR2
+NOR2x1p5_ASAP7_75t,SLVT,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2x2_ASAP7_75t,LVT,FF,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR2
+NOR2x2_ASAP7_75t,SLVT,FF,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR2
+NOR2x2_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2x2_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2xp33_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2xp33_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NOR2
+NOR2xp33_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2xp33_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NOR2
+NOR2xp33_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR2xp67_ASAP7_75t,LVT,TT,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR2
+NOR2xp67_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR2
+NOR3x1_ASAP7_75t,LVT,SS,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3x1_ASAP7_75t,LVT,TT,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR3
+NOR3x1_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR3
+NOR3x1_ASAP7_75t,SRAM,TT,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NOR3
+NOR3x2_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR3
+NOR3x2_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NOR3
+NOR3x2_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3x2_ASAP7_75t,RVT,FF,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3x2_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3x2_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,LVT,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,LVT,SS,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,RVT,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,RVT,SS,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,RVT,TT,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR3xp33_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR3
+NOR4xp25_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp25_ASAP7_75t,RVT,FF,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp25_ASAP7_75t,RVT,SS,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp25_ASAP7_75t,RVT,SS,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp25_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR4
+NOR4xp25_ASAP7_75t,SLVT,FF,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp25_ASAP7_75t,SLVT,FF,Y,D,negative_unate,combinational,,cell_rise,SIMPLE,NOR4
+NOR4xp25_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp25_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR4
+NOR4xp25_ASAP7_75t,SRAM,FF,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,LVT,SS,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,LVT,TT,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,RVT,SS,Y,D,negative_unate,combinational,,cell_rise,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,SRAM,FF,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,SRAM,SS,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR4
+NOR4xp75_ASAP7_75t,SRAM,TT,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NOR4
+NOR5xp2_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,LVT,FF,Y,E,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,LVT,SS,Y,D,negative_unate,combinational,,cell_fall,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,LVT,TT,Y,A,negative_unate,combinational,,cell_fall,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,RVT,FF,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,RVT,FF,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,RVT,SS,Y,E,negative_unate,combinational,,cell_fall,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,RVT,SS,Y,E,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,SLVT,FF,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,,cell_fall,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,SLVT,SS,Y,E,negative_unate,combinational,,cell_fall,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,SLVT,TT,Y,A,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,,cell_fall,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+NOR5xp2_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,,cell_rise,SIMPLE,NOR5
+O2A1O1Ixp33_ASAP7_75t,LVT,SS,Y,C,negative_unate,combinational,,cell_fall,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,(!A1 * A2 * !C),cell_fall,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,RVT,SS,Y,C,negative_unate,combinational,(!A1 * A2 * !B),cell_fall,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,(!A1 * A2 * !C),cell_fall,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,(A1 * !A2 * !C),cell_fall,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,(!A1 * !A2 * B),cell_rise,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,,cell_rise,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,SLVT,TT,Y,A1,negative_unate,combinational,,cell_fall,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,(A1 * !A2 * !C),cell_fall,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,(A1 * A2 * !C),cell_rise,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,SLVT,TT,Y,C,negative_unate,combinational,,cell_fall,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,SRAM,FF,Y,A2,negative_unate,combinational,,cell_fall,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,(!A1 * !A2 * B),cell_rise,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,SRAM,SS,Y,C,negative_unate,combinational,(!A1 * A2 * !B),cell_rise,OA,O2A1O1I
+O2A1O1Ixp33_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,(A1 * A2 * !C),cell_rise,OA,O2A1O1I
+O2A1O1Ixp5_ASAP7_75t,RVT,FF,Y,A1,negative_unate,combinational,,cell_rise,OA,O2A1O1I
+O2A1O1Ixp5_ASAP7_75t,RVT,SS,Y,A1,negative_unate,combinational,,cell_fall,OA,O2A1O1I
+O2A1O1Ixp5_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,,cell_fall,OA,O2A1O1I
+O2A1O1Ixp5_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,(A1 * !A2 * !C),cell_fall,OA,O2A1O1I
+O2A1O1Ixp5_ASAP7_75t,RVT,TT,Y,A2,negative_unate,combinational,,cell_fall,OA,O2A1O1I
+O2A1O1Ixp5_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,(A2 * !B),cell_fall,OA,O2A1O1I
+O2A1O1Ixp5_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,,cell_rise,OA,O2A1O1I
+O2A1O1Ixp5_ASAP7_75t,SLVT,TT,Y,A2,negative_unate,combinational,,cell_rise,OA,O2A1O1I
+OA211x2_ASAP7_75t,LVT,FF,Y,A1,positive_unate,combinational,,cell_fall,OA,OA211
+OA211x2_ASAP7_75t,LVT,FF,Y,C,positive_unate,combinational,,cell_fall,OA,OA211
+OA211x2_ASAP7_75t,LVT,FF,Y,C,positive_unate,combinational,(A1 * A2 * B),cell_fall,OA,OA211
+OA211x2_ASAP7_75t,LVT,SS,Y,A1,positive_unate,combinational,,cell_rise,OA,OA211
+OA211x2_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,(A1 * A2 * C),cell_rise,OA,OA211
+OA211x2_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,(A1 * A2 * C),cell_rise,OA,OA211
+OA211x2_ASAP7_75t,RVT,FF,Y,A1,positive_unate,combinational,,cell_fall,OA,OA211
+OA211x2_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,(A1 * A2 * B),cell_fall,OA,OA211
+OA211x2_ASAP7_75t,RVT,TT,Y,C,positive_unate,combinational,,cell_fall,OA,OA211
+OA211x2_ASAP7_75t,RVT,TT,Y,C,positive_unate,combinational,,cell_rise,OA,OA211
+OA211x2_ASAP7_75t,SLVT,FF,Y,A2,positive_unate,combinational,,cell_fall,OA,OA211
+OA211x2_ASAP7_75t,SLVT,FF,Y,B,positive_unate,combinational,(A1 * !A2 * C),cell_fall,OA,OA211
+OA211x2_ASAP7_75t,SLVT,FF,Y,B,positive_unate,combinational,(A1 * A2 * C),cell_fall,OA,OA211
+OA211x2_ASAP7_75t,SLVT,FF,Y,C,positive_unate,combinational,(A1 * !A2 * B),cell_rise,OA,OA211
+OA211x2_ASAP7_75t,SLVT,SS,Y,A2,positive_unate,combinational,,cell_fall,OA,OA211
+OA211x2_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,(A1 * A2 * C),cell_rise,OA,OA211
+OA211x2_ASAP7_75t,SLVT,SS,Y,C,positive_unate,combinational,,cell_fall,OA,OA211
+OA211x2_ASAP7_75t,SLVT,SS,Y,C,positive_unate,combinational,(A1 * A2 * B),cell_rise,OA,OA211
+OA211x2_ASAP7_75t,SLVT,TT,Y,C,positive_unate,combinational,(A1 * !A2 * B),cell_rise,OA,OA211
+OA211x2_ASAP7_75t,SRAM,FF,Y,B,positive_unate,combinational,(!A1 * A2 * C),cell_fall,OA,OA211
+OA211x2_ASAP7_75t,SRAM,FF,Y,B,positive_unate,combinational,(A1 * A2 * C),cell_fall,OA,OA211
+OA211x2_ASAP7_75t,SRAM,FF,Y,C,positive_unate,combinational,,cell_rise,OA,OA211
+OA211x2_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,(A1 * A2 * C),cell_fall,OA,OA211
+OA21x2_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,(!A1 * A2),cell_rise,OA,OA21
+OA21x2_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,(A1 * A2),cell_fall,OA,OA21
+OA21x2_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,(A1 * !A2),cell_fall,OA,OA21
+OA21x2_ASAP7_75t,RVT,FF,Y,A1,positive_unate,combinational,,cell_fall,OA,OA21
+OA21x2_ASAP7_75t,RVT,FF,Y,A2,positive_unate,combinational,,cell_fall,OA,OA21
+OA21x2_ASAP7_75t,RVT,FF,Y,A2,positive_unate,combinational,,cell_rise,OA,OA21
+OA21x2_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,,cell_fall,OA,OA21
+OA21x2_ASAP7_75t,RVT,SS,Y,A1,positive_unate,combinational,,cell_fall,OA,OA21
+OA21x2_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,(!A1 * A2),cell_fall,OA,OA21
+OA21x2_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,(!A1 * A2),cell_rise,OA,OA21
+OA21x2_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,(A1 * !A2),cell_rise,OA,OA21
+OA21x2_ASAP7_75t,RVT,TT,Y,A1,positive_unate,combinational,,cell_rise,OA,OA21
+OA21x2_ASAP7_75t,RVT,TT,Y,B,positive_unate,combinational,,cell_rise,OA,OA21
+OA21x2_ASAP7_75t,SLVT,FF,Y,A1,positive_unate,combinational,,cell_fall,OA,OA21
+OA21x2_ASAP7_75t,SLVT,SS,Y,A2,positive_unate,combinational,,cell_fall,OA,OA21
+OA21x2_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,(!A1 * A2),cell_rise,OA,OA21
+OA21x2_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,(A1 * !A2),cell_rise,OA,OA21
+OA21x2_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,(A1 * A2),cell_rise,OA,OA21
+OA21x2_ASAP7_75t,SLVT,TT,Y,B,positive_unate,combinational,,cell_rise,OA,OA21
+OA21x2_ASAP7_75t,SLVT,TT,Y,B,positive_unate,combinational,(A1 * !A2),cell_rise,OA,OA21
+OA21x2_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,(A1 * A2),cell_fall,OA,OA21
+OA21x2_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,(A1 * !A2),cell_rise,OA,OA21
+OA21x2_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,(A1 * A2),cell_rise,OA,OA21
+OA221x2_ASAP7_75t,LVT,FF,Y,A1,positive_unate,combinational,(!A2 * B1 * B2 * C),cell_fall,OA,OA221
+OA221x2_ASAP7_75t,LVT,FF,Y,B2,positive_unate,combinational,,cell_fall,OA,OA221
+OA221x2_ASAP7_75t,LVT,FF,Y,C,positive_unate,combinational,(!A1 * A2 * B1 * !B2),cell_rise,OA,OA221
+OA221x2_ASAP7_75t,LVT,FF,Y,C,positive_unate,combinational,(A1 * A2 * B1 * !B2),cell_fall,OA,OA221
+OA221x2_ASAP7_75t,LVT,SS,Y,A2,positive_unate,combinational,(!A1 * B1 * B2 * C),cell_fall,OA,OA221
+OA221x2_ASAP7_75t,LVT,SS,Y,B2,positive_unate,combinational,(!A1 * A2 * !B1 * C),cell_rise,OA,OA221
+OA221x2_ASAP7_75t,RVT,FF,Y,C,positive_unate,combinational,(!A1 * A2 * B1 * !B2),cell_rise,OA,OA221
+OA221x2_ASAP7_75t,RVT,SS,Y,A2,positive_unate,combinational,(!A1 * !B1 * B2 * C),cell_fall,OA,OA221
+OA221x2_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,(A1 * A2 * !B1 * B2) + (!A1 * A2 * B1 * B2),cell_rise,OA,OA221
+OA221x2_ASAP7_75t,RVT,TT,Y,A2,positive_unate,combinational,(!A1 * !B1 * B2 * C),cell_fall,OA,OA221
+OA221x2_ASAP7_75t,RVT,TT,Y,A2,positive_unate,combinational,(!A1 * B1 * B2 * C),cell_rise,OA,OA221
+OA221x2_ASAP7_75t,RVT,TT,Y,C,positive_unate,combinational,,cell_fall,OA,OA221
+OA221x2_ASAP7_75t,SLVT,FF,Y,A1,positive_unate,combinational,(!A2 * !B1 * B2 * C),cell_fall,OA,OA221
+OA221x2_ASAP7_75t,SLVT,SS,Y,B1,positive_unate,combinational,(!A1 * A2 * !B2 * C),cell_rise,OA,OA221
+OA221x2_ASAP7_75t,SLVT,SS,Y,C,positive_unate,combinational,(A1 * !A2 * !B1 * B2),cell_rise,OA,OA221
+OA221x2_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,(!A1 * A2 * !B2 * C),cell_rise,OA,OA221
+OA221x2_ASAP7_75t,SRAM,FF,Y,A1,positive_unate,combinational,,cell_fall,OA,OA221
+OA221x2_ASAP7_75t,SRAM,FF,Y,A2,positive_unate,combinational,(!A1 * B1 * B2 * C),cell_fall,OA,OA221
+OA221x2_ASAP7_75t,SRAM,FF,Y,B1,positive_unate,combinational,(A1 * !A2 * !B2 * C),cell_rise,OA,OA221
+OA221x2_ASAP7_75t,SRAM,TT,Y,A2,positive_unate,combinational,,cell_fall,OA,OA221
+OA221x2_ASAP7_75t,SRAM,TT,Y,B2,positive_unate,combinational,,cell_fall,OA,OA221
+OA221x2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,(A1 * !A2 * B1 * !B2),cell_fall,OA,OA221
+OA221x2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,(A1 * A2 * !B1 * B2) + (!A1 * A2 * B1 * B2),cell_rise,OA,OA221
+OA222x2_ASAP7_75t,LVT,FF,Y,A2,positive_unate,combinational,(!A1 * B1 * B2 * C1 * !C2) + (!A1 * B1 * !B2 * C1 * C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,LVT,SS,Y,A1,positive_unate,combinational,(!A2 * !B1 * B2 * C1 * C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,LVT,TT,Y,A2,positive_unate,combinational,(!A1 * B1 * !B2 * !C1 * C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,LVT,TT,Y,B2,positive_unate,combinational,(A1 * !A2 * !B1 * !C1 * C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,RVT,FF,Y,C1,positive_unate,combinational,(A1 * !A2 * B1 * !B2 * !C2),cell_fall,OA,OA222
+OA222x2_ASAP7_75t,RVT,FF,Y,C2,positive_unate,combinational,(!A1 * A2 * B1 * !B2 * !C1),cell_fall,OA,OA222
+OA222x2_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,(!A1 * A2 * !B2 * !C1 * C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,RVT,SS,Y,B2,positive_unate,combinational,(!A1 * A2 * !B1 * C1 * !C2),cell_fall,OA,OA222
+OA222x2_ASAP7_75t,RVT,TT,Y,A2,positive_unate,combinational,(!A1 * !B1 * B2 * !C1 * C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(A1 * A2 * !B2 * C1 * C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,SLVT,FF,Y,B1,positive_unate,combinational,(A1 * A2 * !B2 * C1 * C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,SLVT,FF,Y,C1,positive_unate,combinational,(A1 * !A2 * B1 * B2 * !C2),cell_fall,OA,OA222
+OA222x2_ASAP7_75t,SLVT,FF,Y,C1,positive_unate,combinational,(A1 * !A2 * B1 * B2 * !C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,SLVT,SS,Y,C1,positive_unate,combinational,(A1 * !A2 * !B1 * B2 * !C2),cell_fall,OA,OA222
+OA222x2_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,(!A1 * A2 * !B2 * C1 * !C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,SLVT,TT,Y,C2,positive_unate,combinational,(!A1 * A2 * B1 * !B2 * !C1),cell_fall,OA,OA222
+OA222x2_ASAP7_75t,SLVT,TT,Y,C2,positive_unate,combinational,(A1 * A2 * !B1 * B2 * !C1),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,SRAM,FF,Y,A1,positive_unate,combinational,(!A2 * !B1 * B2 * C1 * !C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,SRAM,FF,Y,A1,positive_unate,combinational,(!A2 * B1 * B2 * !C1 * C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,SRAM,SS,Y,A2,positive_unate,combinational,(!A1 * !B1 * B2 * C1 * !C2),cell_fall,OA,OA222
+OA222x2_ASAP7_75t,SRAM,SS,Y,C1,positive_unate,combinational,(A1 * !A2 * B1 * B2 * !C2),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,SRAM,SS,Y,C2,positive_unate,combinational,(!A1 * A2 * B1 * !B2 * !C1),cell_rise,OA,OA222
+OA222x2_ASAP7_75t,SRAM,TT,Y,A2,positive_unate,combinational,(!A1 * !B1 * B2 * !C1 * C2),cell_rise,OA,OA222
+OA22x2_ASAP7_75t,LVT,FF,Y,B1,positive_unate,combinational,,cell_fall,OA,OA22
+OA22x2_ASAP7_75t,LVT,FF,Y,B1,positive_unate,combinational,,cell_rise,OA,OA22
+OA22x2_ASAP7_75t,LVT,SS,Y,B2,positive_unate,combinational,(A1 * !A2 * !B1),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,LVT,TT,Y,A2,positive_unate,combinational,(!A1 * B1 * B2),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,RVT,FF,Y,B1,positive_unate,combinational,(A1 * A2 * !B2),cell_rise,OA,OA22
+OA22x2_ASAP7_75t,RVT,SS,Y,A1,positive_unate,combinational,(!A2 * B1 * !B2),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,RVT,SS,Y,A2,positive_unate,combinational,(!A1 * B1 * !B2),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,,cell_rise,OA,OA22
+OA22x2_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(A1 * !A2 * !B2),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,RVT,TT,Y,B2,positive_unate,combinational,(A1 * !A2 * !B1),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,SLVT,SS,Y,A2,positive_unate,combinational,,cell_fall,OA,OA22
+OA22x2_ASAP7_75t,SLVT,SS,Y,A2,positive_unate,combinational,(!A1 * B1 * B2),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,SLVT,TT,Y,A1,positive_unate,combinational,,cell_fall,OA,OA22
+OA22x2_ASAP7_75t,SLVT,TT,Y,A1,positive_unate,combinational,(!A2 * !B1 * B2),cell_rise,OA,OA22
+OA22x2_ASAP7_75t,SLVT,TT,Y,B2,positive_unate,combinational,(A1 * !A2 * !B1),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,SRAM,FF,Y,A1,positive_unate,combinational,(!A2 * B1 * B2),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,SRAM,FF,Y,B1,positive_unate,combinational,(A1 * A2 * !B2),cell_rise,OA,OA22
+OA22x2_ASAP7_75t,SRAM,FF,Y,B2,positive_unate,combinational,,cell_fall,OA,OA22
+OA22x2_ASAP7_75t,SRAM,SS,Y,A1,positive_unate,combinational,(!A2 * B1 * !B2),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,SRAM,SS,Y,B2,positive_unate,combinational,(A1 * A2 * !B1),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,SRAM,TT,Y,A1,positive_unate,combinational,(!A2 * B1 * B2),cell_rise,OA,OA22
+OA22x2_ASAP7_75t,SRAM,TT,Y,B2,positive_unate,combinational,(A1 * !A2 * !B1),cell_fall,OA,OA22
+OA22x2_ASAP7_75t,SRAM,TT,Y,B2,positive_unate,combinational,(A1 * !A2 * !B1),cell_rise,OA,OA22
+OA31x2_ASAP7_75t,LVT,FF,Y,A3,positive_unate,combinational,,cell_fall,OA,OA31
+OA31x2_ASAP7_75t,LVT,FF,Y,B1,positive_unate,combinational,(A1 * A2 * A3),cell_rise,OA,OA31
+OA31x2_ASAP7_75t,LVT,SS,Y,A2,positive_unate,combinational,,cell_rise,OA,OA31
+OA31x2_ASAP7_75t,LVT,SS,Y,A3,positive_unate,combinational,,cell_fall,OA,OA31
+OA31x2_ASAP7_75t,LVT,SS,Y,B1,positive_unate,combinational,(A1 * A2 * !A3),cell_fall,OA,OA31
+OA31x2_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,,cell_fall,OA,OA31
+OA31x2_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,,cell_rise,OA,OA31
+OA31x2_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,(A1 * !A2 * !A3),cell_fall,OA,OA31
+OA31x2_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,(A1 * !A2 * A3) + (!A1 * A2 * A3),cell_fall,OA,OA31
+OA31x2_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(A1 * A2 * A3),cell_rise,OA,OA31
+OA31x2_ASAP7_75t,SLVT,FF,Y,B1,positive_unate,combinational,(!A1 * !A2 * A3),cell_rise,OA,OA31
+OA31x2_ASAP7_75t,SLVT,SS,Y,A3,positive_unate,combinational,,cell_rise,OA,OA31
+OA31x2_ASAP7_75t,SLVT,SS,Y,B1,positive_unate,combinational,(A1 * A2 * !A3),cell_fall,OA,OA31
+OA31x2_ASAP7_75t,SLVT,TT,Y,A3,positive_unate,combinational,,cell_rise,OA,OA31
+OA31x2_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,(A1 * !A2 * A3) + (!A1 * A2 * A3),cell_fall,OA,OA31
+OA31x2_ASAP7_75t,SRAM,FF,Y,A3,positive_unate,combinational,,cell_fall,OA,OA31
+OA31x2_ASAP7_75t,SRAM,SS,Y,A1,positive_unate,combinational,,cell_fall,OA,OA31
+OA31x2_ASAP7_75t,SRAM,SS,Y,B1,positive_unate,combinational,,cell_rise,OA,OA31
+OA31x2_ASAP7_75t,SRAM,SS,Y,B1,positive_unate,combinational,(!A1 * !A2 * A3),cell_rise,OA,OA31
+OA31x2_ASAP7_75t,SRAM,TT,Y,A3,positive_unate,combinational,,cell_fall,OA,OA31
+OA31x2_ASAP7_75t,SRAM,TT,Y,B1,positive_unate,combinational,(!A1 * A2 * !A3),cell_fall,OA,OA31
+OA31x2_ASAP7_75t,SRAM,TT,Y,B1,positive_unate,combinational,(A1 * A2 * !A3),cell_fall,OA,OA31
+OA31x2_ASAP7_75t,SRAM,TT,Y,B1,positive_unate,combinational,(A1 * A2 * A3),cell_rise,OA,OA31
+OA331x1_ASAP7_75t,LVT,FF,Y,A2,positive_unate,combinational,(!A1 * !A3 * !B1 * !B2 * B3 * C1),cell_rise,OA,OA331
+OA331x1_ASAP7_75t,LVT,FF,Y,C1,positive_unate,combinational,(!A1 * A2 * A3 * B1 * B2 * B3),cell_fall,OA,OA331
+OA331x1_ASAP7_75t,LVT,SS,Y,C1,positive_unate,combinational,(A1 * A2 * !A3 * !B1 * B2 * B3) + (A1 * !A2 * A3 * !B1 * B2 * B3),cell_fall,OA,OA331
+OA331x1_ASAP7_75t,LVT,TT,Y,C1,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * B3),cell_rise,OA,OA331
+OA331x1_ASAP7_75t,RVT,FF,Y,C1,positive_unate,combinational,(!A1 * A2 * A3 * B1 * !B2 * !B3) + (!A1 * A2 * !A3 * B1 * B2 * !B3) + (!A1 * A2 * !A3 * B1 * !B2 * B3),cell_fall,OA,OA331
+OA331x1_ASAP7_75t,RVT,TT,Y,B3,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * !B2 * C1),cell_fall,OA,OA331
+OA331x1_ASAP7_75t,RVT,TT,Y,C1,positive_unate,combinational,(A1 * A2 * A3 * !B1 * !B2 * B3),cell_fall,OA,OA331
+OA331x1_ASAP7_75t,SLVT,FF,Y,B2,positive_unate,combinational,,cell_rise,OA,OA331
+OA331x1_ASAP7_75t,SLVT,TT,Y,B2,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * !B3 * C1),cell_rise,OA,OA331
+OA331x1_ASAP7_75t,SLVT,TT,Y,B3,positive_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B2 * C1),cell_rise,OA,OA331
+OA331x1_ASAP7_75t,SRAM,SS,Y,B1,positive_unate,combinational,(!A1 * A2 * !A3 * !B2 * !B3 * C1),cell_rise,OA,OA331
+OA331x1_ASAP7_75t,SRAM,SS,Y,B3,positive_unate,combinational,,cell_rise,OA,OA331
+OA331x2_ASAP7_75t,LVT,SS,Y,A3,positive_unate,combinational,(!A1 * !A2 * !B1 * B2 * !B3 * C1),cell_rise,OA,OA331
+OA331x2_ASAP7_75t,RVT,FF,Y,C1,positive_unate,combinational,,cell_fall,OA,OA331
+OA331x2_ASAP7_75t,RVT,SS,Y,A1,positive_unate,combinational,,cell_fall,OA,OA331
+OA331x2_ASAP7_75t,RVT,TT,Y,A2,positive_unate,combinational,(!A1 * !A3 * B1 * B2 * !B3 * C1) + (!A1 * !A3 * B1 * !B2 * B3 * C1),cell_rise,OA,OA331
+OA331x2_ASAP7_75t,SLVT,FF,Y,A1,positive_unate,combinational,(!A2 * !A3 * B1 * B2 * B3 * C1),cell_rise,OA,OA331
+OA331x2_ASAP7_75t,SLVT,FF,Y,A2,positive_unate,combinational,,cell_rise,OA,OA331
+OA331x2_ASAP7_75t,SLVT,FF,Y,C1,positive_unate,combinational,(A1 * !A2 * !A3 * B1 * !B2 * !B3),cell_fall,OA,OA331
+OA331x2_ASAP7_75t,SLVT,SS,Y,C1,positive_unate,combinational,(!A1 * A2 * !A3 * B1 * B2 * B3),cell_rise,OA,OA331
+OA331x2_ASAP7_75t,SLVT,TT,Y,A3,positive_unate,combinational,,cell_rise,OA,OA331
+OA331x2_ASAP7_75t,SRAM,FF,Y,B3,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * !B2 * C1),cell_fall,OA,OA331
+OA331x2_ASAP7_75t,SRAM,TT,Y,A1,positive_unate,combinational,(!A2 * !A3 * !B1 * B2 * B3 * C1),cell_rise,OA,OA331
+OA332x1_ASAP7_75t,LVT,SS,Y,A2,positive_unate,combinational,(!A1 * !A3 * !B1 * !B2 * B3 * C1 * !C2),cell_fall,OA,OA332
+OA332x1_ASAP7_75t,LVT,SS,Y,C2,positive_unate,combinational,(A1 * A2 * A3 * !B1 * B2 * !B3 * !C1),cell_fall,OA,OA332
+OA332x1_ASAP7_75t,LVT,TT,Y,A1,positive_unate,combinational,(!A2 * !A3 * !B1 * !B2 * B3 * !C1 * C2),cell_fall,OA,OA332
+OA332x1_ASAP7_75t,LVT,TT,Y,A1,positive_unate,combinational,(!A2 * !A3 * B1 * !B2 * !B3 * !C1 * C2),cell_fall,OA,OA332
+OA332x1_ASAP7_75t,LVT,TT,Y,A3,positive_unate,combinational,(!A1 * !A2 * !B1 * B2 * B3 * C1 * C2),cell_fall,OA,OA332
+OA332x1_ASAP7_75t,LVT,TT,Y,B3,positive_unate,combinational,(A1 * A2 * A3 * !B1 * !B2 * C1 * C2),cell_fall,OA,OA332
+OA332x1_ASAP7_75t,RVT,SS,Y,B1,positive_unate,combinational,(!A1 * A2 * !A3 * !B2 * !B3 * C1 * C2),cell_fall,OA,OA332
+OA332x1_ASAP7_75t,RVT,TT,Y,A3,positive_unate,combinational,(!A1 * !A2 * B1 * B2 * B3 * C1 * C2),cell_rise,OA,OA332
+OA332x1_ASAP7_75t,SLVT,FF,Y,A3,positive_unate,combinational,(!A1 * !A2 * B1 * B2 * !B3 * C1 * C2) + (!A1 * !A2 * B1 * !B2 * B3 * C1 * C2),cell_rise,OA,OA332
+OA332x1_ASAP7_75t,SLVT,SS,Y,B3,positive_unate,combinational,(A1 * A2 * A3 * !B1 * !B2 * C1 * !C2),cell_rise,OA,OA332
+OA332x1_ASAP7_75t,SLVT,TT,Y,A3,positive_unate,combinational,(!A1 * !A2 * !B1 * B2 * B3 * !C1 * C2),cell_fall,OA,OA332
+OA332x1_ASAP7_75t,SRAM,FF,Y,C1,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * B3 * !C2),cell_rise,OA,OA332
+OA332x1_ASAP7_75t,SRAM,SS,Y,B2,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * !B3 * !C1 * C2),cell_fall,OA,OA332
+OA332x1_ASAP7_75t,SRAM,TT,Y,A2,positive_unate,combinational,(!A1 * !A3 * B1 * !B2 * !B3 * C1 * C2),cell_rise,OA,OA332
+OA332x1_ASAP7_75t,SRAM,TT,Y,C1,positive_unate,combinational,(!A1 * A2 * A3 * B1 * B2 * !B3 * !C2) + (!A1 * A2 * A3 * B1 * !B2 * B3 * !C2),cell_rise,OA,OA332
+OA332x2_ASAP7_75t,LVT,SS,Y,C1,positive_unate,combinational,(A1 * A2 * !A3 * B1 * B2 * !B3 * !C2) + (A1 * A2 * !A3 * B1 * !B2 * B3 * !C2) + (A1 * !A2 * A3 * B1 * B2 * !B3 * !C2) + (A1 * !A2 * A3 * B1 * !B2 * B3 * !C2),cell_fall,OA,OA332
+OA332x2_ASAP7_75t,RVT,SS,Y,C2,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * !B2 * B3 * !C1),cell_fall,OA,OA332
+OA332x2_ASAP7_75t,RVT,TT,Y,A1,positive_unate,combinational,(!A2 * !A3 * !B1 * !B2 * B3 * C1 * !C2),cell_rise,OA,OA332
+OA332x2_ASAP7_75t,RVT,TT,Y,A3,positive_unate,combinational,(!A1 * !A2 * B1 * !B2 * !B3 * C1 * C2),cell_fall,OA,OA332
+OA332x2_ASAP7_75t,RVT,TT,Y,B2,positive_unate,combinational,(!A1 * !A2 * A3 * !B1 * !B3 * !C1 * C2),cell_fall,OA,OA332
+OA332x2_ASAP7_75t,RVT,TT,Y,C1,positive_unate,combinational,(A1 * A2 * !A3 * B1 * B2 * !B3 * !C2) + (A1 * A2 * !A3 * B1 * !B2 * B3 * !C2) + (A1 * !A2 * A3 * B1 * B2 * !B3 * !C2) + (A1 * !A2 * A3 * B1 * !B2 * B3 * !C2),cell_fall,OA,OA332
+OA332x2_ASAP7_75t,SRAM,SS,Y,A2,positive_unate,combinational,(!A1 * !A3 * !B1 * B2 * B3 * C1 * !C2),cell_fall,OA,OA332
+OA332x2_ASAP7_75t,SRAM,SS,Y,B1,positive_unate,combinational,(A1 * !A2 * !A3 * !B2 * !B3 * C1 * C2),cell_fall,OA,OA332
+OA333x1_ASAP7_75t,LVT,FF,Y,A1,positive_unate,combinational,(!A2 * !A3 * B1 * !B2 * !B3 * C1 * !C2 * !C3),cell_rise,OA,OA333
+OA333x1_ASAP7_75t,LVT,SS,Y,B3,positive_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B2 * !C1 * C2 * !C3),cell_rise,OA,OA333
+OA333x1_ASAP7_75t,LVT,TT,Y,B1,positive_unate,combinational,(!A1 * !A2 * A3 * !B2 * !B3 * !C1 * !C2 * C3),cell_rise,OA,OA333
+OA333x1_ASAP7_75t,LVT,TT,Y,C2,positive_unate,combinational,(A1 * A2 * !A3 * B1 * !B2 * !B3 * !C1 * !C3) + (A1 * !A2 * A3 * B1 * !B2 * !B3 * !C1 * !C3),cell_fall,OA,OA333
+OA333x1_ASAP7_75t,RVT,FF,Y,C1,positive_unate,combinational,(!A1 * !A2 * A3 * B1 * !B2 * !B3 * !C2 * !C3),cell_rise,OA,OA333
+OA333x1_ASAP7_75t,RVT,SS,Y,B2,positive_unate,combinational,(!A1 * !A2 * A3 * !B1 * !B3 * C1 * C2 * C3),cell_fall,OA,OA333
+OA333x1_ASAP7_75t,RVT,TT,Y,B3,positive_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B2 * !C1 * C2 * !C3),cell_fall,OA,OA333
+OA333x1_ASAP7_75t,RVT,TT,Y,C2,positive_unate,combinational,(A1 * A2 * A3 * !B1 * B2 * B3 * !C1 * !C3),cell_rise,OA,OA333
+OA333x1_ASAP7_75t,SLVT,FF,Y,B1,positive_unate,combinational,(A1 * !A2 * !A3 * !B2 * !B3 * !C1 * C2 * C3),cell_fall,OA,OA333
+OA333x1_ASAP7_75t,SLVT,SS,Y,A2,positive_unate,combinational,(!A1 * !A3 * B1 * B2 * B3 * C1 * C2 * !C3) + (!A1 * !A3 * B1 * B2 * B3 * C1 * !C2 * C3) + (!A1 * !A3 * B1 * B2 * !B3 * C1 * C2 * C3) + (!A1 * !A3 * B1 * !B2 * B3 * C1 * C2 * C3),cell_rise,OA,OA333
+OA333x1_ASAP7_75t,SLVT,SS,Y,B2,positive_unate,combinational,(A1 * A2 * !A3 * !B1 * !B3 * C1 * C2 * !C3) + (A1 * A2 * !A3 * !B1 * !B3 * C1 * !C2 * C3) + (A1 * !A2 * A3 * !B1 * !B3 * C1 * C2 * !C3) + (A1 * !A2 * A3 * !B1 * !B3 * C1 * !C2 * C3),cell_fall,OA,OA333
+OA333x1_ASAP7_75t,SLVT,SS,Y,C1,positive_unate,combinational,(A1 * A2 * A3 * B1 * B2 * !B3 * !C2 * !C3) + (A1 * A2 * A3 * B1 * !B2 * B3 * !C2 * !C3),cell_rise,OA,OA333
+OA333x1_ASAP7_75t,SRAM,SS,Y,A1,positive_unate,combinational,(!A2 * !A3 * !B1 * B2 * !B3 * C1 * !C2 * !C3),cell_rise,OA,OA333
+OA333x1_ASAP7_75t,SRAM,SS,Y,A2,positive_unate,combinational,(!A1 * !A3 * !B1 * B2 * B3 * C1 * C2 * !C3) + (!A1 * !A3 * !B1 * B2 * B3 * C1 * !C2 * C3),cell_rise,OA,OA333
+OA333x1_ASAP7_75t,SRAM,SS,Y,B1,positive_unate,combinational,,cell_rise,OA,OA333
+OA333x2_ASAP7_75t,LVT,FF,Y,B1,positive_unate,combinational,(A1 * A2 * !A3 * !B2 * !B3 * C1 * C2 * !C3) + (A1 * A2 * !A3 * !B2 * !B3 * C1 * !C2 * C3) + (A1 * !A2 * A3 * !B2 * !B3 * C1 * C2 * !C3) + (A1 * !A2 * A3 * !B2 * !B3 * C1 * !C2 * C3),cell_rise,OA,OA333
+OA333x2_ASAP7_75t,LVT,FF,Y,C3,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * B2 * B3 * !C1 * !C2),cell_rise,OA,OA333
+OA333x2_ASAP7_75t,RVT,FF,Y,A1,positive_unate,combinational,(!A2 * !A3 * !B1 * B2 * B3 * C1 * !C2 * !C3) + (!A2 * !A3 * !B1 * B2 * !B3 * C1 * C2 * !C3) + (!A2 * !A3 * !B1 * B2 * !B3 * C1 * !C2 * C3),cell_rise,OA,OA333
+OA333x2_ASAP7_75t,RVT,TT,Y,C2,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * B2 * !B3 * !C1 * !C3),cell_fall,OA,OA333
+OA333x2_ASAP7_75t,SLVT,FF,Y,A3,positive_unate,combinational,(!A1 * !A2 * B1 * !B2 * !B3 * C1 * !C2 * !C3),cell_rise,OA,OA333
+OA333x2_ASAP7_75t,SLVT,TT,Y,B1,positive_unate,combinational,(A1 * A2 * A3 * !B2 * !B3 * C1 * !C2 * !C3),cell_rise,OA,OA333
+OA333x2_ASAP7_75t,SLVT,TT,Y,B2,positive_unate,combinational,(!A1 * A2 * A3 * !B1 * !B3 * C1 * C2 * C3),cell_fall,OA,OA333
+OA333x2_ASAP7_75t,SRAM,SS,Y,A2,positive_unate,combinational,(!A1 * !A3 * !B1 * !B2 * B3 * !C1 * C2 * !C3),cell_fall,OA,OA333
+OA33x2_ASAP7_75t,LVT,FF,Y,A1,positive_unate,combinational,(!A2 * !A3 * !B1 * B2 * !B3),cell_rise,OA,OA33
+OA33x2_ASAP7_75t,LVT,SS,Y,A2,positive_unate,combinational,(!A1 * !A3 * !B1 * B2 * !B3),cell_rise,OA,OA33
+OA33x2_ASAP7_75t,LVT,SS,Y,A2,positive_unate,combinational,(!A1 * !A3 * B1 * B2 * B3),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,LVT,SS,Y,B3,positive_unate,combinational,(A1 * !A2 * A3 * !B1 * !B2) + (!A1 * A2 * A3 * !B1 * !B2),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,LVT,TT,Y,A2,positive_unate,combinational,(!A1 * !A3 * B1 * B2 * !B3),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,RVT,SS,Y,A2,positive_unate,combinational,,cell_fall,OA,OA33
+OA33x2_ASAP7_75t,RVT,SS,Y,B2,positive_unate,combinational,(A1 * !A2 * A3 * !B1 * !B3) + (!A1 * A2 * A3 * !B1 * !B3),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,RVT,SS,Y,B2,positive_unate,combinational,(A1 * A2 * A3 * !B1 * !B3),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,RVT,TT,Y,B1,positive_unate,combinational,(A1 * A2 * !A3 * !B2 * !B3),cell_rise,OA,OA33
+OA33x2_ASAP7_75t,RVT,TT,Y,B3,positive_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B2),cell_rise,OA,OA33
+OA33x2_ASAP7_75t,SLVT,FF,Y,A1,positive_unate,combinational,(!A2 * !A3 * B1 * !B2 * B3) + (!A2 * !A3 * !B1 * B2 * B3),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,SLVT,FF,Y,A3,positive_unate,combinational,(!A1 * !A2 * B1 * B2 * !B3),cell_rise,OA,OA33
+OA33x2_ASAP7_75t,SLVT,FF,Y,B1,positive_unate,combinational,(!A1 * !A2 * A3 * !B2 * !B3),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,SLVT,SS,Y,B2,positive_unate,combinational,(!A1 * !A2 * A3 * !B1 * !B3),cell_rise,OA,OA33
+OA33x2_ASAP7_75t,SLVT,SS,Y,B3,positive_unate,combinational,(!A1 * !A2 * A3 * !B1 * !B2),cell_rise,OA,OA33
+OA33x2_ASAP7_75t,SRAM,FF,Y,B1,positive_unate,combinational,(!A1 * A2 * !A3 * !B2 * !B3),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,SRAM,FF,Y,B3,positive_unate,combinational,(!A1 * A2 * !A3 * !B1 * !B2),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,SRAM,SS,Y,A1,positive_unate,combinational,(!A2 * !A3 * B1 * B2 * !B3),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,SRAM,SS,Y,A2,positive_unate,combinational,,cell_fall,OA,OA33
+OA33x2_ASAP7_75t,SRAM,SS,Y,A3,positive_unate,combinational,(!A1 * !A2 * B1 * B2 * B3),cell_fall,OA,OA33
+OA33x2_ASAP7_75t,SRAM,TT,Y,B1,positive_unate,combinational,(!A1 * !A2 * A3 * !B2 * !B3),cell_rise,OA,OA33
+OA33x2_ASAP7_75t,SRAM,TT,Y,B1,positive_unate,combinational,(A1 * !A2 * !A3 * !B2 * !B3),cell_rise,OA,OA33
+OA33x2_ASAP7_75t,SRAM,TT,Y,B3,positive_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B2),cell_rise,OA,OA33
+OAI211xp5_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,(!A1 * A2 * C),cell_fall,OA,OAI211
+OAI211xp5_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,(A1 * A2 * B),cell_fall,OA,OAI211
+OAI211xp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,,cell_fall,OA,OAI211
+OAI211xp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,,cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(!A1 * A2 * C),cell_fall,OA,OAI211
+OAI211xp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(!A1 * A2 * C),cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(A1 * !A2 * C),cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,,cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,RVT,SS,Y,A1,negative_unate,combinational,,cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,RVT,SS,Y,C,negative_unate,combinational,(A1 * A2 * B),cell_fall,OA,OAI211
+OAI211xp5_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,,cell_fall,OA,OAI211
+OAI211xp5_ASAP7_75t,RVT,TT,Y,C,negative_unate,combinational,(A1 * A2 * B),cell_fall,OA,OAI211
+OAI211xp5_ASAP7_75t,SLVT,FF,Y,A2,negative_unate,combinational,,cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,,cell_fall,OA,OAI211
+OAI211xp5_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,,cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,SLVT,FF,Y,C,negative_unate,combinational,(!A1 * A2 * B),cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,,cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,(A1 * A2 * C),cell_fall,OA,OAI211
+OAI211xp5_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,,cell_fall,OA,OAI211
+OAI211xp5_ASAP7_75t,SRAM,SS,Y,C,negative_unate,combinational,(A1 * !A2 * B),cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,(A1 * !A2 * C),cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,SRAM,TT,Y,C,negative_unate,combinational,,cell_rise,OA,OAI211
+OAI211xp5_ASAP7_75t,SRAM,TT,Y,C,negative_unate,combinational,(!A1 * A2 * B),cell_rise,OA,OAI211
+OAI21x1_ASAP7_75t,LVT,FF,Y,A2,negative_unate,combinational,,cell_fall,OA,OAI21
+OAI21x1_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,(!A1 * A2),cell_fall,OA,OAI21
+OAI21x1_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(A1 * A2),cell_fall,OA,OAI21
+OAI21x1_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,(A1 * A2),cell_rise,OA,OAI21
+OAI21x1_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,(A1 * !A2),cell_fall,OA,OAI21
+OAI21xp33_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(A1 * A2),cell_rise,OA,OAI21
+OAI21xp33_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,,cell_rise,OA,OAI21
+OAI21xp33_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,,cell_fall,OA,OAI21
+OAI21xp33_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(A1 * A2),cell_fall,OA,OAI21
+OAI21xp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,,cell_rise,OA,OAI21
+OAI21xp33_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,(A1 * !A2),cell_rise,OA,OAI21
+OAI21xp33_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_fall,OA,OAI21
+OAI21xp5_ASAP7_75t,LVT,FF,Y,A2,negative_unate,combinational,,cell_fall,OA,OAI21
+OAI21xp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(A1 * !A2),cell_rise,OA,OAI21
+OAI21xp5_ASAP7_75t,LVT,TT,Y,A2,negative_unate,combinational,,cell_fall,OA,OAI21
+OAI21xp5_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(A1 * !A2),cell_rise,OA,OAI21
+OAI21xp5_ASAP7_75t,RVT,SS,Y,A1,negative_unate,combinational,,cell_fall,OA,OAI21
+OAI21xp5_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(A1 * !A2),cell_fall,OA,OAI21
+OAI21xp5_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,,cell_rise,OA,OAI21
+OAI21xp5_ASAP7_75t,SRAM,FF,Y,A1,negative_unate,combinational,,cell_fall,OA,OAI21
+OAI21xp5_ASAP7_75t,SRAM,SS,Y,A2,negative_unate,combinational,,cell_fall,OA,OAI21
+OAI21xp5_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,,cell_rise,OA,OAI21
+OAI21xp5_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,(A1 * !A2),cell_rise,OA,OAI21
+OAI221xp5_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,(!A1 * A2 * B1 * !B2),cell_fall,OA,OAI221
+OAI221xp5_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * !B2 * C),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,LVT,SS,Y,B2,negative_unate,combinational,,cell_fall,OA,OAI221
+OAI221xp5_ASAP7_75t,LVT,SS,Y,C,negative_unate,combinational,(!A1 * A2 * B1 * B2),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,LVT,TT,Y,A2,negative_unate,combinational,(!A1 * B1 * B2 * C),cell_fall,OA,OAI221
+OAI221xp5_ASAP7_75t,LVT,TT,Y,B1,negative_unate,combinational,(!A1 * A2 * !B2 * C),cell_fall,OA,OAI221
+OAI221xp5_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,,cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,(A1 * !A2 * B1 * B2),cell_fall,OA,OAI221
+OAI221xp5_ASAP7_75t,RVT,FF,Y,B1,negative_unate,combinational,(!A1 * A2 * !B2 * C),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,RVT,SS,Y,A2,negative_unate,combinational,(!A1 * !B1 * B2 * C),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,RVT,SS,Y,B2,negative_unate,combinational,,cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,RVT,SS,Y,C,negative_unate,combinational,(A1 * !A2 * !B1 * B2),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,RVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * !B1 * C),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,RVT,TT,Y,B2,negative_unate,combinational,(A1 * A2 * !B1 * C),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,SLVT,FF,Y,A1,negative_unate,combinational,,cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,(!A2 * !B1 * B2 * C),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,SLVT,TT,Y,C,negative_unate,combinational,(A1 * !A2 * !B1 * B2),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,SLVT,TT,Y,C,negative_unate,combinational,(A1 * !A2 * B1 * !B2),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,SRAM,FF,Y,B1,negative_unate,combinational,,cell_fall,OA,OAI221
+OAI221xp5_ASAP7_75t,SRAM,FF,Y,B2,negative_unate,combinational,(A1 * !A2 * !B1 * C),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,(A1 * !A2 * B1 * !B2),cell_rise,OA,OAI221
+OAI221xp5_ASAP7_75t,SRAM,FF,Y,C,negative_unate,combinational,(A1 * !A2 * B1 * B2),cell_fall,OA,OAI221
+OAI221xp5_ASAP7_75t,SRAM,TT,Y,A2,negative_unate,combinational,(!A1 * B1 * !B2 * C),cell_rise,OA,OAI221
+OAI222xp33_ASAP7_75t,LVT,FF,Y,B2,negative_unate,combinational,(A1 * !A2 * !B1 * C1 * !C2),cell_fall,OA,OAI222
+OAI222xp33_ASAP7_75t,LVT,SS,Y,A1,negative_unate,combinational,(!A2 * B1 * B2 * C1 * !C2) + (!A2 * B1 * !B2 * C1 * C2),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * !B2 * !C1 * C2),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,LVT,TT,Y,C1,negative_unate,combinational,,cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,RVT,FF,Y,C2,negative_unate,combinational,(A1 * !A2 * !B1 * B2 * !C1),cell_fall,OA,OAI222
+OAI222xp33_ASAP7_75t,RVT,SS,Y,A2,negative_unate,combinational,(!A1 * B1 * !B2 * !C1 * C2),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,RVT,SS,Y,C2,negative_unate,combinational,(!A1 * A2 * B1 * !B2 * !C1),cell_fall,OA,OAI222
+OAI222xp33_ASAP7_75t,RVT,TT,Y,B1,negative_unate,combinational,(A1 * !A2 * !B2 * !C1 * C2),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,RVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * !B1 * C1 * !C2),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,RVT,TT,Y,C2,negative_unate,combinational,(A1 * !A2 * B1 * !B2 * !C1),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,SLVT,FF,Y,A1,negative_unate,combinational,(!A2 * B1 * !B2 * !C1 * C2),cell_fall,OA,OAI222
+OAI222xp33_ASAP7_75t,SLVT,FF,Y,C1,negative_unate,combinational,(A1 * !A2 * !B1 * B2 * !C2),cell_fall,OA,OAI222
+OAI222xp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,(!A2 * B1 * !B2 * C1 * !C2),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,SLVT,SS,Y,B2,negative_unate,combinational,(A1 * A2 * !B1 * !C1 * C2),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,SLVT,TT,Y,B1,negative_unate,combinational,,cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,SLVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * !B1 * C1 * !C2),cell_fall,OA,OAI222
+OAI222xp33_ASAP7_75t,SRAM,FF,Y,A2,negative_unate,combinational,(!A1 * B1 * B2 * C1 * !C2) + (!A1 * B1 * !B2 * C1 * C2),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,SRAM,FF,Y,B1,negative_unate,combinational,(A1 * !A2 * !B2 * !C1 * C2),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,SRAM,SS,Y,C2,negative_unate,combinational,(A1 * A2 * B1 * B2 * !C1),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,SRAM,TT,Y,A1,negative_unate,combinational,(!A2 * !B1 * B2 * !C1 * C2),cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,SRAM,TT,Y,A2,negative_unate,combinational,,cell_rise,OA,OAI222
+OAI222xp33_ASAP7_75t,SRAM,TT,Y,B1,negative_unate,combinational,(A1 * A2 * !B2 * C1 * !C2),cell_fall,OA,OAI222
+OAI222xp33_ASAP7_75t,SRAM,TT,Y,B1,negative_unate,combinational,(A1 * A2 * !B2 * C1 * !C2),cell_rise,OA,OAI222
+OAI22x1_ASAP7_75t,LVT,FF,Y,B2,negative_unate,combinational,(!A1 * A2 * !B1),cell_rise,OA,OAI22
+OAI22x1_ASAP7_75t,LVT,FF,Y,B2,negative_unate,combinational,(A1 * !A2 * !B1),cell_rise,OA,OAI22
+OAI22x1_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,,cell_rise,OA,OAI22
+OAI22x1_ASAP7_75t,RVT,TT,Y,A2,negative_unate,combinational,(!A1 * B1 * !B2),cell_fall,OA,OAI22
+OAI22x1_ASAP7_75t,SLVT,FF,Y,A2,negative_unate,combinational,(!A1 * B1 * !B2),cell_rise,OA,OAI22
+OAI22x1_ASAP7_75t,SLVT,SS,Y,B1,negative_unate,combinational,(A1 * A2 * !B2),cell_rise,OA,OAI22
+OAI22x1_ASAP7_75t,SLVT,TT,Y,B1,negative_unate,combinational,(!A1 * A2 * !B2),cell_rise,OA,OAI22
+OAI22xp33_ASAP7_75t,LVT,FF,Y,A1,negative_unate,combinational,(!A2 * B1 * !B2),cell_rise,OA,OAI22
+OAI22xp33_ASAP7_75t,LVT,FF,Y,B1,negative_unate,combinational,(A1 * A2 * !B2),cell_fall,OA,OAI22
+OAI22xp33_ASAP7_75t,RVT,FF,Y,A2,negative_unate,combinational,(!A1 * !B1 * B2),cell_fall,OA,OAI22
+OAI22xp33_ASAP7_75t,RVT,SS,Y,A2,negative_unate,combinational,(!A1 * !B1 * B2),cell_fall,OA,OAI22
+OAI22xp33_ASAP7_75t,SLVT,FF,Y,A1,negative_unate,combinational,(!A2 * !B1 * B2),cell_fall,OA,OAI22
+OAI22xp33_ASAP7_75t,SLVT,FF,Y,B2,negative_unate,combinational,(A1 * !A2 * !B1),cell_rise,OA,OAI22
+OAI22xp33_ASAP7_75t,SLVT,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * !B2),cell_fall,OA,OAI22
+OAI22xp33_ASAP7_75t,SLVT,TT,Y,B1,negative_unate,combinational,(A1 * A2 * !B2),cell_fall,OA,OAI22
+OAI22xp33_ASAP7_75t,SRAM,FF,Y,B1,negative_unate,combinational,(A1 * !A2 * !B2),cell_rise,OA,OAI22
+OAI22xp5_ASAP7_75t,LVT,FF,Y,A1,negative_unate,combinational,(!A2 * !B1 * B2),cell_rise,OA,OAI22
+OAI22xp5_ASAP7_75t,LVT,FF,Y,A2,negative_unate,combinational,,cell_rise,OA,OAI22
+OAI22xp5_ASAP7_75t,LVT,TT,Y,B1,negative_unate,combinational,,cell_fall,OA,OAI22
+OAI22xp5_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,(!A2 * B1 * !B2),cell_rise,OA,OAI22
+OAI22xp5_ASAP7_75t,RVT,TT,Y,B2,negative_unate,combinational,(A1 * A2 * !B1),cell_rise,OA,OAI22
+OAI22xp5_ASAP7_75t,SLVT,FF,Y,B1,negative_unate,combinational,(A1 * !A2 * !B2),cell_fall,OA,OAI22
+OAI22xp5_ASAP7_75t,SLVT,TT,Y,B2,negative_unate,combinational,(A1 * A2 * !B1),cell_fall,OA,OAI22
+OAI311xp33_ASAP7_75t,LVT,FF,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * C1) + (A1 * !A2 * A3 * C1),cell_fall,OA,OAI311
+OAI311xp33_ASAP7_75t,LVT,FF,Y,C1,negative_unate,combinational,(A1 * A2 * !A3 * B1) + (A1 * !A2 * A3 * B1),cell_fall,OA,OAI311
+OAI311xp33_ASAP7_75t,LVT,FF,Y,C1,negative_unate,combinational,(A1 * A2 * !A3 * B1) + (A1 * !A2 * A3 * B1),cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(!A1 * !A2 * A3 * C1),cell_fall,OA,OAI311
+OAI311xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * C1) + (A1 * !A2 * A3 * C1),cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,LVT,TT,Y,B1,negative_unate,combinational,(!A1 * A2 * !A3 * C1),cell_fall,OA,OAI311
+OAI311xp33_ASAP7_75t,LVT,TT,Y,B1,negative_unate,combinational,(A1 * A2 * A3 * C1),cell_fall,OA,OAI311
+OAI311xp33_ASAP7_75t,LVT,TT,Y,C1,negative_unate,combinational,,cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,LVT,TT,Y,C1,negative_unate,combinational,(!A1 * A2 * !A3 * B1),cell_fall,OA,OAI311
+OAI311xp33_ASAP7_75t,LVT,TT,Y,C1,negative_unate,combinational,(!A1 * A2 * !A3 * B1),cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,RVT,FF,Y,B1,negative_unate,combinational,(A1 * !A2 * !A3 * C1),cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,RVT,SS,Y,C1,negative_unate,combinational,,cell_fall,OA,OAI311
+OAI311xp33_ASAP7_75t,RVT,SS,Y,C1,negative_unate,combinational,(!A1 * A2 * !A3 * B1),cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,RVT,TT,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * C1) + (A1 * !A2 * A3 * C1),cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,SLVT,FF,Y,C1,negative_unate,combinational,(A1 * !A2 * !A3 * B1),cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,SLVT,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * !A3 * C1),cell_fall,OA,OAI311
+OAI311xp33_ASAP7_75t,SLVT,SS,Y,C1,negative_unate,combinational,(!A1 * A2 * !A3 * B1),cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,SLVT,SS,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * B1),cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,SLVT,TT,Y,A1,negative_unate,combinational,,cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,SLVT,TT,Y,C1,negative_unate,combinational,,cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,SRAM,FF,Y,B1,negative_unate,combinational,(!A1 * A2 * A3 * C1),cell_rise,OA,OAI311
+OAI311xp33_ASAP7_75t,SRAM,FF,Y,C1,negative_unate,combinational,(!A1 * A2 * !A3 * B1),cell_fall,OA,OAI311
+OAI311xp33_ASAP7_75t,SRAM,FF,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * B1),cell_fall,OA,OAI311
+OAI31xp33_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(!A1 * A2 * A3),cell_rise,OA,OAI31
+OAI31xp33_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(A1 * !A2 * !A3),cell_fall,OA,OAI31
+OAI31xp33_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(A1 * !A2 * !A3),cell_fall,OA,OAI31
+OAI31xp33_ASAP7_75t,RVT,SS,Y,A3,negative_unate,combinational,,cell_fall,OA,OAI31
+OAI31xp33_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,,cell_fall,OA,OAI31
+OAI31xp33_ASAP7_75t,RVT,TT,Y,A2,negative_unate,combinational,,cell_fall,OA,OAI31
+OAI31xp33_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,(A1 * !A2 * !A3),cell_rise,OA,OAI31
+OAI31xp33_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,(!A1 * !A2 * A3),cell_rise,OA,OAI31
+OAI31xp33_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,(!A1 * A2 * !A3),cell_rise,OA,OAI31
+OAI31xp67_ASAP7_75t,LVT,FF,Y,A1,negative_unate,combinational,,cell_fall,OA,OAI31
+OAI31xp67_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,,cell_fall,OA,OAI31
+OAI31xp67_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,(A1 * A2 * A3),cell_fall,OA,OAI31
+OAI31xp67_ASAP7_75t,LVT,SS,Y,A1,negative_unate,combinational,,cell_rise,OA,OAI31
+OAI31xp67_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,(!A1 * A2 * A3),cell_rise,OA,OAI31
+OAI31xp67_ASAP7_75t,LVT,TT,Y,A2,negative_unate,combinational,,cell_fall,OA,OAI31
+OAI31xp67_ASAP7_75t,LVT,TT,Y,B,negative_unate,combinational,(A1 * A2 * A3),cell_fall,OA,OAI31
+OAI31xp67_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,,cell_rise,OA,OAI31
+OAI31xp67_ASAP7_75t,RVT,FF,Y,B,negative_unate,combinational,(A1 * !A2 * !A3),cell_fall,OA,OAI31
+OAI31xp67_ASAP7_75t,RVT,SS,Y,A1,negative_unate,combinational,,cell_rise,OA,OAI31
+OAI31xp67_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(!A1 * !A2 * A3),cell_fall,OA,OAI31
+OAI31xp67_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,(A1 * A2 * A3),cell_rise,OA,OAI31
+OAI31xp67_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,(A1 * A2 * !A3) + (A1 * !A2 * A3),cell_fall,OA,OAI31
+OAI31xp67_ASAP7_75t,SRAM,TT,Y,B,negative_unate,combinational,(!A1 * A2 * !A3),cell_fall,OA,OAI31
+OAI321xp33_ASAP7_75t,LVT,FF,Y,B2,negative_unate,combinational,(!A1 * A2 * !A3 * !B1 * C),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,(!A1 * A2 * A3 * B1 * !B2),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * B2),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,LVT,FF,Y,C,negative_unate,combinational,(A1 * A2 * A3 * B1 * B2),cell_rise,OA,OAI321
+OAI321xp33_ASAP7_75t,LVT,SS,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * B2 * C),cell_rise,OA,OAI321
+OAI321xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(!A1 * A2 * !A3 * !B2 * C),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,LVT,SS,Y,C,negative_unate,combinational,(!A1 * A2 * A3 * B1 * B2),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,LVT,TT,Y,A1,negative_unate,combinational,(!A2 * !A3 * !B1 * B2 * C),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,LVT,TT,Y,C,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * !B2),cell_rise,OA,OAI321
+OAI321xp33_ASAP7_75t,RVT,FF,Y,C,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * B2),cell_rise,OA,OAI321
+OAI321xp33_ASAP7_75t,RVT,SS,Y,A3,negative_unate,combinational,,cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,RVT,SS,Y,B2,negative_unate,combinational,,cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,RVT,SS,Y,C,negative_unate,combinational,(A1 * A2 * !A3 * B1 * B2) + (A1 * !A2 * A3 * B1 * B2),cell_rise,OA,OAI321
+OAI321xp33_ASAP7_75t,RVT,TT,Y,B1,negative_unate,combinational,,cell_rise,OA,OAI321
+OAI321xp33_ASAP7_75t,SLVT,FF,Y,A1,negative_unate,combinational,(!A2 * !A3 * B1 * B2 * C),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,(!A2 * !A3 * !B1 * B2 * C),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,SLVT,SS,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * !B2 * C) + (A1 * !A2 * A3 * !B2 * C),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,SLVT,SS,Y,C,negative_unate,combinational,(A1 * !A2 * !A3 * B1 * !B2),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,SRAM,SS,Y,C,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * !B2),cell_rise,OA,OAI321
+OAI321xp33_ASAP7_75t,SRAM,TT,Y,A2,negative_unate,combinational,(!A1 * !A3 * !B1 * B2 * C),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,SRAM,TT,Y,B1,negative_unate,combinational,(A1 * A2 * A3 * !B2 * C),cell_fall,OA,OAI321
+OAI321xp33_ASAP7_75t,SRAM,TT,Y,B2,negative_unate,combinational,(A1 * A2 * A3 * !B1 * C),cell_rise,OA,OAI321
+OAI321xp33_ASAP7_75t,SRAM,TT,Y,C,negative_unate,combinational,(!A1 * A2 * A3 * B1 * B2),cell_fall,OA,OAI321
+OAI322xp33_ASAP7_75t,LVT,FF,Y,B2,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * C1 * C2),cell_rise,OA,OAI322
+OAI322xp33_ASAP7_75t,LVT,FF,Y,C1,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * !B2 * !C2),cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,LVT,SS,Y,B2,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * C1 * C2),cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,LVT,SS,Y,C2,negative_unate,combinational,,cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,LVT,TT,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * !B2 * C1 * !C2),cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,RVT,FF,Y,B2,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * C1 * !C2),cell_rise,OA,OAI322
+OAI322xp33_ASAP7_75t,RVT,FF,Y,B2,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * !C1 * C2),cell_rise,OA,OAI322
+OAI322xp33_ASAP7_75t,RVT,FF,Y,C1,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * B2 * !C2),cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,RVT,SS,Y,C2,negative_unate,combinational,(A1 * A2 * A3 * !B1 * B2 * !C1),cell_rise,OA,OAI322
+OAI322xp33_ASAP7_75t,RVT,TT,Y,B2,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * !C1 * C2),cell_rise,OA,OAI322
+OAI322xp33_ASAP7_75t,RVT,TT,Y,C1,negative_unate,combinational,(!A1 * !A2 * A3 * B1 * B2 * !C2),cell_rise,OA,OAI322
+OAI322xp33_ASAP7_75t,RVT,TT,Y,C2,negative_unate,combinational,(!A1 * !A2 * A3 * !B1 * B2 * !C1),cell_rise,OA,OAI322
+OAI322xp33_ASAP7_75t,SLVT,FF,Y,C2,negative_unate,combinational,(A1 * !A2 * !A3 * B1 * !B2 * !C1),cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,,cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,SLVT,SS,Y,A1,negative_unate,combinational,(!A2 * !A3 * B1 * B2 * !C1 * C2),cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,SLVT,SS,Y,A2,negative_unate,combinational,,cell_rise,OA,OAI322
+OAI322xp33_ASAP7_75t,SLVT,SS,Y,C2,negative_unate,combinational,(!A1 * A2 * A3 * B1 * B2 * !C1),cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,SLVT,TT,Y,B1,negative_unate,combinational,(!A1 * A2 * !A3 * !B2 * C1 * !C2),cell_rise,OA,OAI322
+OAI322xp33_ASAP7_75t,SLVT,TT,Y,C1,negative_unate,combinational,,cell_rise,OA,OAI322
+OAI322xp33_ASAP7_75t,SLVT,TT,Y,C2,negative_unate,combinational,(A1 * A2 * !A3 * B1 * B2 * !C1) + (A1 * !A2 * A3 * B1 * B2 * !C1),cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,SRAM,FF,Y,A1,negative_unate,combinational,,cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,SRAM,FF,Y,C2,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * B2 * !C1) + (A1 * !A2 * A3 * !B1 * B2 * !C1),cell_fall,OA,OAI322
+OAI322xp33_ASAP7_75t,SRAM,SS,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * !B2 * !C1 * C2),cell_fall,OA,OAI322
+OAI32xp33_ASAP7_75t,LVT,FF,Y,A3,negative_unate,combinational,,cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,LVT,FF,Y,B1,negative_unate,combinational,(!A1 * A2 * A3 * !B2),cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,LVT,FF,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * !B2) + (A1 * !A2 * A3 * !B2),cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,LVT,FF,Y,B2,negative_unate,combinational,(A1 * A2 * A3 * !B1),cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,LVT,SS,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * !B2),cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * !A3 * !B2),cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,LVT,TT,Y,A2,negative_unate,combinational,(!A1 * !A3 * B1 * B2),cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * A3 * !B1),cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,RVT,FF,Y,A3,negative_unate,combinational,,cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,RVT,SS,Y,A2,negative_unate,combinational,(!A1 * !A3 * B1 * B2),cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,(!A2 * !A3 * B1 * !B2),cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,RVT,TT,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * B2),cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,SLVT,FF,Y,B1,negative_unate,combinational,(!A1 * A2 * !A3 * !B2),cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,SLVT,FF,Y,B2,negative_unate,combinational,(!A1 * A2 * !A3 * !B1),cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,SLVT,TT,Y,A3,negative_unate,combinational,,cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,SLVT,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * A3 * !B1),cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,SRAM,SS,Y,B1,negative_unate,combinational,(!A1 * A2 * A3 * !B2),cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,SRAM,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * !A3 * !B2),cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,SRAM,SS,Y,B2,negative_unate,combinational,,cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,SRAM,TT,Y,A2,negative_unate,combinational,(!A1 * !A3 * !B1 * B2),cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,SRAM,TT,Y,B1,negative_unate,combinational,(A1 * !A2 * !A3 * !B2),cell_rise,OA,OAI32
+OAI32xp33_ASAP7_75t,SRAM,TT,Y,B2,negative_unate,combinational,(!A1 * A2 * A3 * !B1),cell_fall,OA,OAI32
+OAI32xp33_ASAP7_75t,SRAM,TT,Y,B2,negative_unate,combinational,(A1 * A2 * !A3 * !B1) + (A1 * !A2 * A3 * !B1),cell_rise,OA,OAI32
+OAI331xp33_ASAP7_75t,LVT,FF,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * B1 * B2 * B3),cell_rise,OA,OAI331
+OAI331xp33_ASAP7_75t,LVT,SS,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * B1 * B2 * B3),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,LVT,TT,Y,C1,negative_unate,combinational,(!A1 * A2 * !A3 * B1 * !B2 * !B3),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,RVT,FF,Y,A2,negative_unate,combinational,(!A1 * !A3 * B1 * !B2 * !B3 * C1),cell_rise,OA,OAI331
+OAI331xp33_ASAP7_75t,RVT,SS,Y,B1,negative_unate,combinational,(A1 * A2 * A3 * !B2 * !B3 * C1),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,RVT,SS,Y,B2,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B3 * C1),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,RVT,SS,Y,C1,negative_unate,combinational,(!A1 * !A2 * A3 * B1 * B2 * B3),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,RVT,TT,Y,C1,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * B3),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,RVT,TT,Y,C1,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * B2 * !B3) + (A1 * !A2 * A3 * !B1 * B2 * !B3) + (A1 * !A2 * !A3 * !B1 * B2 * B3),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,RVT,TT,Y,C1,negative_unate,combinational,(A1 * A2 * A3 * !B1 * !B2 * B3),cell_rise,OA,OAI331
+OAI331xp33_ASAP7_75t,SLVT,FF,Y,A1,negative_unate,combinational,(!A2 * !A3 * B1 * B2 * B3 * C1),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,SLVT,FF,Y,B1,negative_unate,combinational,(A1 * !A2 * !A3 * !B2 * !B3 * C1),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,SLVT,SS,Y,B3,negative_unate,combinational,(!A1 * !A2 * A3 * !B1 * !B2 * C1),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,SLVT,TT,Y,B1,negative_unate,combinational,(A1 * A2 * A3 * !B2 * !B3 * C1),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,SLVT,TT,Y,B3,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * !B2 * C1) + (A1 * !A2 * A3 * !B1 * !B2 * C1),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,SLVT,TT,Y,C1,negative_unate,combinational,(!A1 * !A2 * A3 * B1 * B2 * !B3) + (!A1 * !A2 * A3 * B1 * !B2 * B3),cell_rise,OA,OAI331
+OAI331xp33_ASAP7_75t,SRAM,FF,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * B2 * !B3 * C1) + (!A1 * !A2 * B1 * !B2 * B3 * C1),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,SRAM,FF,Y,C1,negative_unate,combinational,(!A1 * !A2 * A3 * !B1 * !B2 * B3),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,SRAM,FF,Y,C1,negative_unate,combinational,(!A1 * !A2 * A3 * !B1 * B2 * !B3),cell_rise,OA,OAI331
+OAI331xp33_ASAP7_75t,SRAM,FF,Y,C1,negative_unate,combinational,(!A1 * !A2 * A3 * B1 * B2 * !B3) + (!A1 * !A2 * A3 * B1 * !B2 * B3),cell_rise,OA,OAI331
+OAI331xp33_ASAP7_75t,SRAM,SS,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * !B2 * !B3 * C1) + (A1 * !A2 * A3 * !B2 * !B3 * C1),cell_fall,OA,OAI331
+OAI331xp33_ASAP7_75t,SRAM,SS,Y,C1,negative_unate,combinational,,cell_rise,OA,OAI331
+OAI331xp33_ASAP7_75t,SRAM,SS,Y,C1,negative_unate,combinational,(A1 * A2 * !A3 * B1 * B2 * !B3) + (A1 * A2 * !A3 * B1 * !B2 * B3) + (A1 * !A2 * A3 * B1 * B2 * !B3) + (A1 * !A2 * A3 * B1 * !B2 * B3),cell_fall,OA,OAI331
+OAI332xp33_ASAP7_75t,LVT,FF,Y,C2,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * B3 * !C1),cell_fall,OA,OAI332
+OAI332xp33_ASAP7_75t,LVT,TT,Y,C2,negative_unate,combinational,(!A1 * !A2 * A3 * B1 * !B2 * !B3 * !C1),cell_fall,OA,OAI332
+OAI332xp33_ASAP7_75t,LVT,TT,Y,C2,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * B3 * !C1),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,RVT,FF,Y,A2,negative_unate,combinational,(!A1 * !A3 * !B1 * !B2 * B3 * C1 * C2),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,RVT,SS,Y,B2,negative_unate,combinational,(!A1 * !A2 * A3 * !B1 * !B3 * C1 * C2),cell_fall,OA,OAI332
+OAI332xp33_ASAP7_75t,RVT,SS,Y,C2,negative_unate,combinational,(!A1 * A2 * A3 * B1 * B2 * !B3 * !C1) + (!A1 * A2 * A3 * B1 * !B2 * B3 * !C1),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,RVT,TT,Y,A1,negative_unate,combinational,(!A2 * !A3 * B1 * B2 * B3 * C1 * !C2),cell_fall,OA,OAI332
+OAI332xp33_ASAP7_75t,RVT,TT,Y,A2,negative_unate,combinational,(!A1 * !A3 * B1 * !B2 * !B3 * !C1 * C2),cell_fall,OA,OAI332
+OAI332xp33_ASAP7_75t,RVT,TT,Y,B1,negative_unate,combinational,(!A1 * A2 * !A3 * !B2 * !B3 * !C1 * C2),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,SLVT,FF,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * B2 * B3 * !C1 * C2),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,SLVT,FF,Y,B3,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * !C1 * C2),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,SLVT,FF,Y,C1,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * B2 * B3 * !C2) + (A1 * !A2 * A3 * !B1 * B2 * B3 * !C2),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,SLVT,SS,Y,B1,negative_unate,combinational,(A1 * !A2 * !A3 * !B2 * !B3 * C1 * !C2),cell_fall,OA,OAI332
+OAI332xp33_ASAP7_75t,SLVT,SS,Y,C2,negative_unate,combinational,(A1 * A2 * A3 * B1 * !B2 * !B3 * !C1) + (A1 * !A2 * !A3 * B1 * B2 * B3 * !C1),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,SRAM,FF,Y,A1,negative_unate,combinational,(!A2 * !A3 * B1 * !B2 * !B3 * C1 * !C2),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,SRAM,FF,Y,B2,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * !B3 * C1 * C2),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,SRAM,FF,Y,C1,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * B2 * !B3 * !C2) + (A1 * !A2 * A3 * !B1 * B2 * !B3 * !C2) + (A1 * !A2 * !A3 * !B1 * B2 * B3 * !C2),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,SRAM,FF,Y,C2,negative_unate,combinational,(A1 * A2 * A3 * !B1 * B2 * B3 * !C1),cell_fall,OA,OAI332
+OAI332xp33_ASAP7_75t,SRAM,SS,Y,A1,negative_unate,combinational,(!A2 * !A3 * B1 * B2 * B3 * C1 * !C2),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,SRAM,SS,Y,B2,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * !B3 * C1 * C2),cell_fall,OA,OAI332
+OAI332xp33_ASAP7_75t,SRAM,TT,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * !B2 * !B3 * !C1 * C2),cell_fall,OA,OAI332
+OAI332xp33_ASAP7_75t,SRAM,TT,Y,B1,negative_unate,combinational,(!A1 * A2 * A3 * !B2 * !B3 * C1 * !C2),cell_rise,OA,OAI332
+OAI332xp33_ASAP7_75t,SRAM,TT,Y,C2,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * B2 * !B3 * !C1) + (A1 * !A2 * A3 * !B1 * B2 * !B3 * !C1) + (A1 * !A2 * !A3 * !B1 * B2 * B3 * !C1),cell_fall,OA,OAI332
+OAI333xp33_ASAP7_75t,LVT,FF,Y,C2,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * B2 * !B3 * !C1 * !C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,LVT,SS,Y,A1,negative_unate,combinational,(!A2 * !A3 * !B1 * B2 * B3 * !C1 * C2 * C3),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,LVT,SS,Y,B1,negative_unate,combinational,(!A1 * !A2 * A3 * !B2 * !B3 * C1 * C2 * C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,LVT,SS,Y,C3,negative_unate,combinational,(!A1 * A2 * A3 * B1 * B2 * !B3 * !C1 * !C2) + (!A1 * A2 * A3 * B1 * !B2 * B3 * !C1 * !C2),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,LVT,TT,Y,A1,negative_unate,combinational,(!A2 * !A3 * !B1 * !B2 * B3 * !C1 * C2 * !C3),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,RVT,FF,Y,A2,negative_unate,combinational,(!A1 * !A3 * !B1 * B2 * !B3 * !C1 * C2 * !C3),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,RVT,FF,Y,B2,negative_unate,combinational,(A1 * A2 * A3 * !B1 * !B3 * !C1 * C2 * C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,RVT,TT,Y,C2,negative_unate,combinational,(!A1 * !A2 * A3 * !B1 * B2 * !B3 * !C1 * !C3),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,SLVT,FF,Y,B2,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * !B3 * !C1 * C2 * !C3),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,SLVT,FF,Y,B3,negative_unate,combinational,(!A1 * A2 * !A3 * !B1 * !B2 * !C1 * !C2 * C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,SLVT,FF,Y,B3,negative_unate,combinational,(!A1 * A2 * A3 * !B1 * !B2 * C1 * C2 * C3),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,SLVT,SS,Y,B2,negative_unate,combinational,(A1 * A2 * A3 * !B1 * !B3 * C1 * C2 * !C3) + (A1 * A2 * A3 * !B1 * !B3 * C1 * !C2 * C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,SLVT,SS,Y,B3,negative_unate,combinational,(A1 * A2 * A3 * !B1 * !B2 * !C1 * !C2 * C3),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,SLVT,TT,Y,A1,negative_unate,combinational,(!A2 * !A3 * !B1 * B2 * B3 * C1 * !C2 * !C3) + (!A2 * !A3 * !B1 * B2 * !B3 * C1 * C2 * !C3) + (!A2 * !A3 * !B1 * B2 * !B3 * C1 * !C2 * C3),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,SLVT,TT,Y,A1,negative_unate,combinational,(!A2 * !A3 * B1 * B2 * B3 * C1 * C2 * !C3) + (!A2 * !A3 * B1 * B2 * B3 * C1 * !C2 * C3) + (!A2 * !A3 * B1 * B2 * !B3 * C1 * C2 * C3) + (!A2 * !A3 * B1 * !B2 * B3 * C1 * C2 * C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,SRAM,FF,Y,B2,negative_unate,combinational,(A1 * A2 * A3 * !B1 * !B3 * !C1 * !C2 * C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,SRAM,SS,Y,A2,negative_unate,combinational,(!A1 * !A3 * !B1 * !B2 * B3 * C1 * !C2 * !C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,SRAM,SS,Y,A2,negative_unate,combinational,(!A1 * !A3 * !B1 * !B2 * B3 * C1 * C2 * !C3) + (!A1 * !A3 * !B1 * !B2 * B3 * C1 * !C2 * C3),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,SRAM,SS,Y,C2,negative_unate,combinational,(!A1 * A2 * A3 * B1 * B2 * !B3 * !C1 * !C3) + (!A1 * A2 * A3 * B1 * !B2 * B3 * !C1 * !C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,SRAM,TT,Y,A2,negative_unate,combinational,(!A1 * !A3 * B1 * B2 * !B3 * !C1 * !C2 * C3) + (!A1 * !A3 * B1 * !B2 * B3 * !C1 * !C2 * C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,SRAM,TT,Y,B1,negative_unate,combinational,(A1 * !A2 * !A3 * !B2 * !B3 * C1 * !C2 * !C3),cell_rise,OA,OAI333
+OAI333xp33_ASAP7_75t,SRAM,TT,Y,B1,negative_unate,combinational,(A1 * A2 * !A3 * !B2 * !B3 * C1 * !C2 * !C3) + (A1 * !A2 * A3 * !B2 * !B3 * C1 * !C2 * !C3),cell_fall,OA,OAI333
+OAI333xp33_ASAP7_75t,SRAM,TT,Y,B3,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * !B2 * !C1 * C2 * C3) + (A1 * !A2 * A3 * !B1 * !B2 * !C1 * C2 * C3),cell_fall,OA,OAI333
+OAI33xp33_ASAP7_75t,LVT,FF,Y,A3,negative_unate,combinational,(!A1 * !A2 * !B1 * B2 * B3),cell_rise,OA,OAI33
+OAI33xp33_ASAP7_75t,LVT,FF,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * B2 * !B3) + (!A1 * !A2 * B1 * !B2 * B3),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B3),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,LVT,TT,Y,B2,negative_unate,combinational,(A1 * A2 * A3 * !B1 * !B3),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,RVT,FF,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * B2 * !B3) + (!A1 * !A2 * B1 * !B2 * B3),cell_rise,OA,OAI33
+OAI33xp33_ASAP7_75t,RVT,FF,Y,B1,negative_unate,combinational,(!A1 * !A2 * A3 * !B2 * !B3),cell_rise,OA,OAI33
+OAI33xp33_ASAP7_75t,RVT,FF,Y,B2,negative_unate,combinational,(!A1 * A2 * !A3 * !B1 * !B3),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,RVT,SS,Y,A1,negative_unate,combinational,,cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,RVT,SS,Y,A1,negative_unate,combinational,(!A2 * !A3 * !B1 * B2 * B3),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,RVT,SS,Y,A3,negative_unate,combinational,(!A1 * !A2 * !B1 * B2 * B3),cell_rise,OA,OAI33
+OAI33xp33_ASAP7_75t,RVT,TT,Y,A2,negative_unate,combinational,(!A1 * !A3 * B1 * B2 * B3),cell_rise,OA,OAI33
+OAI33xp33_ASAP7_75t,RVT,TT,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * B2 * !B3) + (!A1 * !A2 * B1 * !B2 * B3),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,RVT,TT,Y,B1,negative_unate,combinational,(!A1 * A2 * !A3 * !B2 * !B3),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,SLVT,FF,Y,A2,negative_unate,combinational,(!A1 * !A3 * !B1 * !B2 * B3),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,SLVT,FF,Y,B2,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B3),cell_rise,OA,OAI33
+OAI33xp33_ASAP7_75t,SLVT,FF,Y,B3,negative_unate,combinational,,cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,SLVT,FF,Y,B3,negative_unate,combinational,(A1 * A2 * !A3 * !B1 * !B2),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,SLVT,TT,Y,B3,negative_unate,combinational,(A1 * !A2 * !A3 * !B1 * !B2),cell_rise,OA,OAI33
+OAI33xp33_ASAP7_75t,SRAM,FF,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * B2 * !B3) + (!A1 * !A2 * B1 * !B2 * B3),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,SRAM,FF,Y,A3,negative_unate,combinational,(!A1 * !A2 * B1 * B2 * !B3) + (!A1 * !A2 * B1 * !B2 * B3),cell_rise,OA,OAI33
+OAI33xp33_ASAP7_75t,SRAM,SS,Y,A3,negative_unate,combinational,(!A1 * !A2 * !B1 * B2 * !B3),cell_rise,OA,OAI33
+OAI33xp33_ASAP7_75t,SRAM,SS,Y,A3,negative_unate,combinational,(!A1 * !A2 * !B1 * B2 * B3),cell_fall,OA,OAI33
+OAI33xp33_ASAP7_75t,SRAM,SS,Y,B2,negative_unate,combinational,,cell_rise,OA,OAI33
+OR2x2_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x2_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR2x2_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR2x2_ASAP7_75t,RVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x2_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR2x2_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x2_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x2_ASAP7_75t,SLVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x4_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR2x4_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x4_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x4_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR2x4_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR2x4_ASAP7_75t,RVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x4_ASAP7_75t,SLVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR2x4_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x4_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR2x4_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x4_ASAP7_75t,SRAM,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR2x4_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x6_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR2x6_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR2
+OR2x6_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR2
+OR3x1_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x1_ASAP7_75t,LVT,FF,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x1_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x1_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR3x1_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR3x1_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x2_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR3x2_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x2_ASAP7_75t,RVT,TT,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x2_ASAP7_75t,SLVT,SS,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR3x2_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR3x2_ASAP7_75t,SRAM,FF,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x2_ASAP7_75t,SRAM,FF,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR3x4_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR3x4_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x4_ASAP7_75t,LVT,SS,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR3x4_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x4_ASAP7_75t,LVT,TT,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR3x4_ASAP7_75t,LVT,TT,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x4_ASAP7_75t,RVT,FF,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x4_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR3x4_ASAP7_75t,SRAM,FF,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR3
+OR3x4_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR3
+OR4x1_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x1_ASAP7_75t,LVT,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x1_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR4
+OR4x1_ASAP7_75t,LVT,SS,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x1_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x1_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x1_ASAP7_75t,RVT,TT,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x1_ASAP7_75t,SLVT,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR4
+OR4x1_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x1_ASAP7_75t,SRAM,FF,Y,D,positive_unate,combinational,,cell_fall,SIMPLE,OR4
+OR4x2_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x2_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR4
+OR4x2_ASAP7_75t,LVT,TT,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x2_ASAP7_75t,RVT,FF,Y,D,positive_unate,combinational,,cell_fall,SIMPLE,OR4
+OR4x2_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x2_ASAP7_75t,SLVT,FF,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x2_ASAP7_75t,SLVT,FF,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,OR4
+OR4x2_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x2_ASAP7_75t,SLVT,TT,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,OR4
+OR4x2_ASAP7_75t,SRAM,FF,Y,D,positive_unate,combinational,,cell_fall,SIMPLE,OR4
+OR4x2_ASAP7_75t,SRAM,SS,Y,C,positive_unate,combinational,,cell_rise,SIMPLE,OR4
+OR4x2_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR4
+OR4x2_ASAP7_75t,SRAM,TT,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,OR4
+OR5x1_ASAP7_75t,LVT,FF,Y,D,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,RVT,FF,Y,E,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,RVT,SS,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,RVT,SS,Y,E,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,SLVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,SLVT,FF,Y,E,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,SLVT,TT,Y,D,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,SLVT,TT,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,OR5
+OR5x1_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR5
+OR5x1_ASAP7_75t,SRAM,FF,Y,B,positive_unate,combinational,,cell_rise,SIMPLE,OR5
+OR5x1_ASAP7_75t,SRAM,FF,Y,D,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,SRAM,FF,Y,E,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x1_ASAP7_75t,SRAM,TT,Y,A,positive_unate,combinational,,cell_rise,SIMPLE,OR5
+OR5x2_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x2_ASAP7_75t,LVT,FF,Y,E,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x2_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x2_ASAP7_75t,RVT,TT,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x2_ASAP7_75t,SLVT,TT,Y,C,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x2_ASAP7_75t,SLVT,TT,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,OR5
+OR5x2_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,,cell_fall,SIMPLE,OR5
+OR5x2_ASAP7_75t,SRAM,SS,Y,D,positive_unate,combinational,,cell_rise,SIMPLE,OR5
+XNOR2x1_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,!A,cell_rise,SIMPLE,XNOR2
+XNOR2x1_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,!A,cell_fall,SIMPLE,XNOR2
+XNOR2x1_ASAP7_75t,SLVT,SS,Y,A,positive_unate,combinational,B,cell_rise,SIMPLE,XNOR2
+XNOR2x1_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,B,cell_rise,SIMPLE,XNOR2
+XNOR2x1_ASAP7_75t,SRAM,TT,Y,A,negative_unate,combinational,!B,cell_rise,SIMPLE,XNOR2
+XNOR2x2_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,!A,cell_rise,SIMPLE,XNOR2
+XNOR2x2_ASAP7_75t,RVT,FF,Y,A,negative_unate,combinational,!B,cell_rise,SIMPLE,XNOR2
+XNOR2x2_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,B,cell_rise,SIMPLE,XNOR2
+XNOR2x2_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,A,cell_rise,SIMPLE,XNOR2
+XNOR2x2_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,!A,cell_rise,SIMPLE,XNOR2
+XNOR2x2_ASAP7_75t,RVT,SS,Y,B,positive_unate,combinational,A,cell_rise,SIMPLE,XNOR2
+XNOR2x2_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,!A,cell_fall,SIMPLE,XNOR2
+XNOR2x2_ASAP7_75t,SLVT,TT,Y,A,negative_unate,combinational,!B,cell_rise,SIMPLE,XNOR2
+XNOR2x2_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,B,cell_rise,SIMPLE,XNOR2
+XNOR2x2_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,A,cell_rise,SIMPLE,XNOR2
+XNOR2xp5_ASAP7_75t,LVT,FF,Y,B,positive_unate,combinational,A,cell_rise,SIMPLE,XNOR2
+XNOR2xp5_ASAP7_75t,LVT,SS,Y,B,negative_unate,combinational,!A,cell_fall,SIMPLE,XNOR2
+XNOR2xp5_ASAP7_75t,LVT,TT,Y,A,positive_unate,combinational,B,cell_fall,SIMPLE,XNOR2
+XNOR2xp5_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,!A,cell_fall,SIMPLE,XNOR2
+XNOR2xp5_ASAP7_75t,RVT,SS,Y,B,negative_unate,combinational,!A,cell_rise,SIMPLE,XNOR2
+XNOR2xp5_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,B,cell_fall,SIMPLE,XNOR2
+XNOR2xp5_ASAP7_75t,SLVT,SS,Y,B,negative_unate,combinational,!A,cell_fall,SIMPLE,XNOR2
+XNOR2xp5_ASAP7_75t,SRAM,SS,Y,B,negative_unate,combinational,!A,cell_fall,SIMPLE,XNOR2
+XOR2x1_ASAP7_75t,LVT,FF,Y,A,positive_unate,combinational,!B,cell_fall,SIMPLE,XOR2
+XOR2x1_ASAP7_75t,LVT,SS,Y,A,negative_unate,combinational,B,cell_rise,SIMPLE,XOR2
+XOR2x1_ASAP7_75t,RVT,SS,Y,A,positive_unate,combinational,!B,cell_fall,SIMPLE,XOR2
+XOR2x1_ASAP7_75t,RVT,TT,Y,B,positive_unate,combinational,!A,cell_rise,SIMPLE,XOR2
+XOR2x2_ASAP7_75t,LVT,SS,Y,B,positive_unate,combinational,!A,cell_rise,SIMPLE,XOR2
+XOR2x2_ASAP7_75t,RVT,FF,Y,B,positive_unate,combinational,!A,cell_rise,SIMPLE,XOR2
+XOR2x2_ASAP7_75t,SLVT,TT,Y,A,positive_unate,combinational,!B,cell_rise,SIMPLE,XOR2
+XOR2x2_ASAP7_75t,SLVT,TT,Y,B,negative_unate,combinational,A,cell_fall,SIMPLE,XOR2
+XOR2x2_ASAP7_75t,SRAM,FF,Y,A,positive_unate,combinational,!B,cell_rise,SIMPLE,XOR2
+XOR2x2_ASAP7_75t,SRAM,SS,Y,A,positive_unate,combinational,!B,cell_rise,SIMPLE,XOR2
+XOR2x2_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,!A,cell_fall,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,LVT,FF,Y,B,negative_unate,combinational,A,cell_rise,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,RVT,FF,Y,A,negative_unate,combinational,B,cell_rise,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,RVT,FF,Y,A,positive_unate,combinational,!B,cell_fall,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,RVT,TT,Y,A,positive_unate,combinational,!B,cell_rise,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,RVT,TT,Y,B,negative_unate,combinational,A,cell_rise,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,SLVT,FF,Y,B,negative_unate,combinational,A,cell_fall,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,SLVT,FF,Y,B,positive_unate,combinational,!A,cell_rise,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,SRAM,FF,Y,A,negative_unate,combinational,B,cell_fall,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,SRAM,FF,Y,B,negative_unate,combinational,A,cell_fall,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,SRAM,FF,Y,B,positive_unate,combinational,!A,cell_rise,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,SRAM,SS,Y,B,positive_unate,combinational,!A,cell_fall,SIMPLE,XOR2
+XOR2xp5_ASAP7_75t,SRAM,TT,Y,B,positive_unate,combinational,!A,cell_rise,SIMPLE,XOR2
