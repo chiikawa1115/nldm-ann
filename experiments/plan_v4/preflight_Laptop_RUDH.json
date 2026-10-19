@@ -1,0 +1,37 @@
+{
+  "cache": {
+    "matches_other_machine": true,
+    "matrix_sha256": "95ddc895a6a044dc485848fefb019d112be23bd8e23e0f96b7e75030e3f6bc88",
+    "shape": [
+      5978980,
+      69
+    ],
+    "stem": "features_79ae211cec38_903d6560cd8b"
+  },
+  "cuda": {
+    "compute_test": "skipped (--allow-cpu)",
+    "cuda_available": false,
+    "cuda_build": null,
+    "torch": "2.13.0+cpu"
+  },
+  "dataset": {
+    "local_parquet_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+    "parquet_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
+    "rows": 12073208,
+    "verified_by": "file_sha256"
+  },
+  "host": "Laptop_RUDH",
+  "manifests": {
+    "by_experiment": {
+      "E1": 10,
+      "E2": 4,
+      "E3": 120,
+      "E4": 3
+    },
+    "count": 137
+  },
+  "numpy": "2.5.2",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10",
+  "status": "PASS"
+}
