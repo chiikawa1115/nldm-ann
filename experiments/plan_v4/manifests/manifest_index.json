@@ -572,12 +572,12 @@
     "dataset": "asap7_nldm.parquet",
     "dataset_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
     "dataset_verified_by": "file_sha256",
-    "git_commit": "30572a9d38888241d414ede57c887ab813c1f1ae",
+    "git_commit": "0032cdfeb1457bda850ff5752d1f1bf00ad3dd62",
     "git_dirty_src": false,
     "local_parquet_sha256": "79ae211cec386a170455f6fdf0d38c1043d835786408d5aa93c94a1bec855ba5",
     "numpy": "2.5.2",
     "pandas": "3.0.5",
-    "python": "3.12.10",
+    "python": "3.12.15",
     "source_commit": "da37dce1cef69bb75efbc2dc18ed95a29651295b"
   },
   "schema_version": 1

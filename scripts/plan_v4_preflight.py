@@ -100,13 +100,14 @@ def check_cuda(allow_cpu: bool) -> dict:
         model = torch.nn.Sequential(torch.nn.Linear(69, 64), torch.nn.ReLU(),
                                     torch.nn.Linear(64, 1)).to(device)
         opt = torch.optim.Adam(model.parameters(), lr=1e-3)
-        x, y = torch.randn(4096, 69, device=device), torch.randn(4096, 1, device=device)
+        x = torch.randn(4096, 69).to(device)
+        y = torch.randn(4096, 1).to(device)
         for _ in range(5):
             opt.zero_grad()
-            loss = torch.nn.functional.mse_loss(model(x.to(device)), y)
+            loss = torch.nn.functional.mse_loss(model(x), y)
             loss.backward()
             opt.step()
-        return float(loss)
+        return float(loss.detach())
 
     gpu_loss, cpu_loss = train_step("cuda"), train_step("cpu")
     if not np.isfinite(gpu_loss) or abs(gpu_loss - cpu_loss) > 1e-3 * max(1.0, abs(cpu_loss)):
