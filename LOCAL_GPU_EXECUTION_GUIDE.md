@@ -16,7 +16,7 @@
 - [x] **Step 4: 驗證資料集內容指紋** (`dataset_fingerprint.py check` -> `status: PASS`, `verified_by: file_sha256`)
 - [x] **Step 5: 產生特徵快取** (`scripts/plan_v4_w2.py` -> 69 個特徵 `.npy`, `matches_other_machine: true`)
 - [x] **Step 6: 執行正式 Preflight 驗證** (`scripts/plan_v4_preflight.py` -> `status: PASS`, 產出 `preflight_DESKTOP-0P2BF8K.json`)
-- [進行中] **Step 7: 全局泛化全量訓練 (40 Runs, 50 Epochs)** (`src/run_generalization.py` 正在背景全速執行)
+- [x] **Step 7: 全局泛化全量訓練 (40 Runs, 50 Epochs)** (全部 40 Runs 訓練與匯總評估已 100% 完成，產出 `summary_by_mode.csv` 等報表)
 
 ---
 

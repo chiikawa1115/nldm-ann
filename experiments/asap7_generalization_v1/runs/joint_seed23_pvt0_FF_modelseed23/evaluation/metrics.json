@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "mode": "joint_unseen",
+  "seed": 23,
+  "micro": {
+    "n": 598976,
+    "MAE": 22.744774753147738,
+    "RMSE": 30.023966986141286,
+    "sMAPE_pct": 74.06887073779093,
+    "P50RE_pct": 34.51639915317938,
+    "P90RE_pct": 154.45665054804314,
+    "P99RE_pct": 368.27231176130476,
+    "R2": 0.8324280497342315
+  },
+  "macro": {
+    "n_groups": 40,
+    "MAE": 32.2936856604022,
+    "RMSE": 41.52180708718423,
+    "sMAPE_pct": 80.73568256286819,
+    "P50RE_pct": 49.63282767799434,
+    "P90RE_pct": 190.17723860586722,
+    "P99RE_pct": 435.960619271584,
+    "R2": 0.5454530801102497
+  },
+  "heldout_pvt": {
+    "corner": "FF",
+    "nom_process": 1.0,
+    "nom_temperature_c": 0.0,
+    "nom_voltage_v": 0.77
+  },
+  "fold": null,
+  "n_negative_targets": 565,
+  "checkpoint": "experiments\\asap7_generalization_v1\\runs\\joint_seed23_pvt0_FF_modelseed23\\model.pt",
+  "manifest": "experiments\\asap7_generalization_v1\\manifests\\joint_seed23_pvt0_FF.json"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "mode": "unseen_cell",
+  "seed": 11,
+  "micro": {
+    "n": 2693824,
+    "MAE": 10.2125706083487,
+    "RMSE": 39.02970188387259,
+    "sMAPE_pct": 17.358475316776083,
+    "P50RE_pct": 9.2799316121995,
+    "P90RE_pct": 34.47022932169175,
+    "P99RE_pct": 82.61874778890824,
+    "R2": 0.929033863934442
+  },
+  "macro": {
+    "n_groups": 40,
+    "MAE": 24.56424808505316,
+    "RMSE": 46.62409677947575,
+    "sMAPE_pct": 33.28236471118422,
+    "P50RE_pct": 19.500317186395733,
+    "P90RE_pct": 58.586033291778335,
+    "P99RE_pct": 153.16593154053544,
+    "R2": 0.9023661838367361
+  },
+  "heldout_pvt": null,
+  "fold": null,
+  "n_negative_targets": 758,
+  "checkpoint": "experiments\\asap7_generalization_v1\\runs\\unseen_cell_seed11_modelseed11\\model.pt",
+  "manifest": "experiments\\asap7_generalization_v1\\manifests\\unseen_cell_seed11.json"
+}

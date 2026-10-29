@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "mode": "random_point",
+  "seed": 23,
+  "micro": {
+    "n": 2463920,
+    "MAE": 10.210808200411169,
+    "RMSE": 18.88144705439042,
+    "sMAPE_pct": 14.936466517246105,
+    "P50RE_pct": 9.352002237505932,
+    "P90RE_pct": 29.259578871252156,
+    "P99RE_pct": 78.91353542491804,
+    "R2": 0.9802738120384505
+  },
+  "macro": {
+    "n_groups": 200,
+    "MAE": 13.64855649662005,
+    "RMSE": 20.725964985228128,
+    "sMAPE_pct": 21.35686124332455,
+    "P50RE_pct": 14.525773028236166,
+    "P90RE_pct": 43.96506924378018,
+    "P99RE_pct": 115.14821203646386,
+    "R2": 0.9619302982437737
+  },
+  "heldout_pvt": null,
+  "fold": null,
+  "n_negative_targets": 839,
+  "checkpoint": "experiments\\asap7_generalization_v1\\runs\\random_point_seed23_modelseed23\\model.pt",
+  "manifest": "experiments\\asap7_generalization_v1\\manifests\\random_point_seed23.json"
+}

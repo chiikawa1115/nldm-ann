@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "mode": "unseen_corner",
+  "seed": 11,
+  "micro": {
+    "n": 4023488,
+    "MAE": 31.15195585030446,
+    "RMSE": 66.97403731043975,
+    "sMAPE_pct": 23.36823721454929,
+    "P50RE_pct": 17.428481286244388,
+    "P90RE_pct": 45.7603505053197,
+    "P99RE_pct": 90.95542179020902,
+    "R2": 0.8601456316876561
+  },
+  "macro": {
+    "n_groups": 200,
+    "MAE": 32.32288049772431,
+    "RMSE": 55.95322655023096,
+    "sMAPE_pct": 25.177746302640788,
+    "P50RE_pct": 21.950052669433536,
+    "P90RE_pct": 50.02960632409398,
+    "P99RE_pct": 97.94263575085661,
+    "R2": 0.8785738237495272
+  },
+  "heldout_pvt": {
+    "corner": "SS",
+    "nom_process": 1.0,
+    "nom_temperature_c": 100.0,
+    "nom_voltage_v": 0.63
+  },
+  "fold": 1,
+  "n_negative_targets": 350,
+  "checkpoint": "experiments\\asap7_generalization_v1\\runs\\unseen_corner_pvt1_SS_modelseed11\\model.pt",
+  "manifest": "experiments\\asap7_generalization_v1\\manifests\\unseen_corner_pvt1_SS.json"
+}
