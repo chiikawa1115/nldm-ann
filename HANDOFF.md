@@ -1,5 +1,24 @@
 # NLDM-ANN 專案接力指南 (AGY Handoff)
 
+## 目前接續點：Global ANN / Ridge 精度比較（2026-11-01）
+
+- 使用者已確認研究問題：**在相同輸入資訊與測試資料下，global ANN 相較 global Ridge，是否降低預測誤差，以及改善幅度多少？**
+- 本輪以精度為主；硬體不同的執行時間僅記錄，不作模型加速比較。
+- 完整計畫：[PLAN_GLOBAL_ANN_RIDGE_COMPARISON.md](docs/PLAN_GLOBAL_ANN_RIDGE_COMPARISON.md)。可機讀規格：[global_ann_ridge_v1.json](experiments/configs/global_ann_ridge_v1.json)。
+- 第一階段：`random_point`、`unseen_cell` × seeds `11,23,37,53,71`，新增 **10 個 Ridge runs**，逐一對照既有 ANN 結果。
+- 固定原 42 維特徵、200 個 cell_base 的來源範圍、delay + transition、原 manifest / validation 規則；不在此輪改 L1、v4 arc 特徵或 delay-only。
+- **目前狀態：計畫保存階段，Ridge 尚未啟動。** 計畫與接續紀錄須先 commit / push；實作及驗證狀態以實際程式與下方清單為準。
+- 執行主機選目前 Ryzen 7 PRO 8840U 筆電（8C/16T、系統可用總 RAM 約 14.7 GiB）；使用 CPU 串流處理，不一次載入全矩陣。
+- 1–3 小時是全部 10 runs 的初估，不是單 seed，也不含實作；第一個完整 run 才能校正估算。
+- ANN 40 份 `metrics.json` 與彙總已核對一致；模型權重、history、per-cell 檔未隨該次 push 帶回。實際訓練設定需從原主機 checkpoint 匯出小型 metadata，缺少時保留 `ann_provenance_pending`，不得宣稱已完全重現。
+- 原 40-run 實驗是每 run 一個 global model，**沒有按 type 做 L1，也沒有挑少量 cells 縮減來源資料**。以下歷史紀錄的 MAE/R2 混合 delay 與 transition，並非 v4 delay-only 主實驗。
+
+接續順序：保存／推送計畫 → 實作與小型測試 → 首個完整 run → 其餘九組 → 配對分析。不要直接呼叫舊 ANN orchestrator，避免在沒有本機 checkpoint 時意外重訓 ANN。
+
+---
+
+## 歷史紀錄：2026-10-29 GPU 主機 ANN 基準
+
 > **更新時間**：2026-10-29 19:20  
 > **專案位置**：`C:\Users\User\claude_project\nldm-ann`  
 > **Git 分支**：`plan-v4`  
