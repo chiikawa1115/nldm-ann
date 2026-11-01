@@ -141,7 +141,7 @@ JSON 語意 hash 用於跨平台內容核對（UTF-8、sort_keys、緊湊 separa
 
 - [x] 確認 RQ、比較範圍、固定 seeds、主要指標與時間比較邊界。
 - [x] 保存本計畫及可機讀輸入鎖定清單。
-- [ ] Commit / push 計畫至 `plan-v4`，並核對遠端 commit。
+- [x] Commit / push 計畫至 `plan-v4`：`d0e1aa1` 已推送，且以 `git ls-remote` 核對遠端一致。
 - [ ] 核對或補匯出 ANN checkpoint metadata，保留 pending 與 mismatch 狀態。
 - [ ] 實作串流 Ridge、選參數、評估、配對統計與可續跑的單一入口。
 - [ ] 完成小型數值／切分／統計測試與 preflight；提供正式命令。

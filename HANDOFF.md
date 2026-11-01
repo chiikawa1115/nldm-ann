@@ -7,7 +7,7 @@
 - 完整計畫：[PLAN_GLOBAL_ANN_RIDGE_COMPARISON.md](docs/PLAN_GLOBAL_ANN_RIDGE_COMPARISON.md)。可機讀規格：[global_ann_ridge_v1.json](experiments/configs/global_ann_ridge_v1.json)。
 - 第一階段：`random_point`、`unseen_cell` × seeds `11,23,37,53,71`，新增 **10 個 Ridge runs**，逐一對照既有 ANN 結果。
 - 固定原 42 維特徵、200 個 cell_base 的來源範圍、delay + transition、原 manifest / validation 規則；不在此輪改 L1、v4 arc 特徵或 delay-only。
-- **目前狀態：計畫保存階段，Ridge 尚未啟動。** 計畫與接續紀錄須先 commit / push；實作及驗證狀態以實際程式與下方清單為準。
+- **目前狀態：計畫與輸入鎖定清單已由 `d0e1aa1` 推送至 `plan-v4`，遠端已核對。Ridge CLI 尚未實作，正式訓練尚未啟動。** 計畫 JSON 的十個配對、42 維特徵、輸入 hash 與參照原始碼 hash 已驗證通過。
 - 執行主機選目前 Ryzen 7 PRO 8840U 筆電（8C/16T、系統可用總 RAM 約 14.7 GiB）；使用 CPU 串流處理，不一次載入全矩陣。
 - 1–3 小時是全部 10 runs 的初估，不是單 seed，也不含實作；第一個完整 run 才能校正估算。
 - ANN 40 份 `metrics.json` 與彙總已核對一致；模型權重、history、per-cell 檔未隨該次 push 帶回。實際訓練設定需從原主機 checkpoint 匯出小型 metadata，缺少時保留 `ann_provenance_pending`，不得宣稱已完全重現。
