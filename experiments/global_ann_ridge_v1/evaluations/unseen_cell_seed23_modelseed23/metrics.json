@@ -1,0 +1,44 @@
+{
+  "micro": {
+    "n": 1796928,
+    "MAE": 56.91839932235795,
+    "RMSE": 83.23310218914901,
+    "sMAPE_pct": 73.17510349228822,
+    "P50RE_pct": 61.76258467063129,
+    "P90RE_pct": 243.3291318374347,
+    "P99RE_pct": 870.3941450094479,
+    "R2": 0.560738191516208
+  },
+  "macro": {
+    "n_groups": 40,
+    "MAE": 81.47579084359188,
+    "RMSE": 101.7700340284416,
+    "sMAPE_pct": 90.57926680530947,
+    "P50RE_pct": 103.99818952769479,
+    "P90RE_pct": 446.3225581550335,
+    "P99RE_pct": 1267.0567040111346,
+    "R2": 0.009146193641999156
+  },
+  "n_negative_targets": 906,
+  "macro_undefined_groups": {
+    "MAE": 0,
+    "RMSE": 0,
+    "sMAPE_pct": 0,
+    "P50RE_pct": 0,
+    "P90RE_pct": 0,
+    "P99RE_pct": 0,
+    "R2": 0
+  },
+  "schema_version": 1,
+  "mode": "unseen_cell",
+  "seed": 23,
+  "run_id": "unseen_cell_seed23_modelseed23",
+  "signature": "8139fdeda42d69795875d7fc1935114f0c2ee3c8ef064d80fd2d8d609c60863d",
+  "ann_provenance": {
+    "status": "ann_provenance_pending",
+    "pending": [
+      "checkpoint metadata absent"
+    ],
+    "errors": []
+  }
+}

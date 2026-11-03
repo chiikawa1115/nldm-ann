@@ -5,9 +5,9 @@
 - Origin Skill / Mode: academic-research-suite / experiment-agent / plan
 - Origin Date: 2026-11-01
 - Version Label: global_ann_ridge_v1
-- Verification Status: UNVERIFIED（比較尚未執行；既有 ANN 報表已做一致性核對）
+- Verification Status: PROVISIONAL（2026-11-03 Ridge 10/10 完成；輸入與產物已核對，ANN checkpoint metadata 仍 pending）
 - 使用者決策：以預測精度與改善幅度為主；耗時僅作執行紀錄，不作主要比較結論。
-- 本次工作邊界：計畫已保存並推送；依後續授權完成實作、小型測試與正式資料 preflight，停在長時間訓練之前。正式 Ridge 訓練尚未啟動。
+- 工作邊界更新：先完成並推送計畫與實作，經使用者後續授權，2026-11-03 已完成正式 Ridge 十組訓練、評估與配對摘要；沒有重跑 ANN。結果見 [中文結果報告](RESULTS_GLOBAL_ANN_RIDGE_COMPARISON.md)。
 - 本計畫在已閱讀 ANN 結果、尚未取得 Ridge 結果後訂定，不宣稱盲態事前註冊。
 
 ## 1. 研究問題與主張範圍
@@ -147,7 +147,7 @@ JSON 語意 hash 用於跨平台內容核對（UTF-8、sort_keys、緊湊 separa
 - [ ] 核對或補匯出 ANN checkpoint metadata，保留 pending 與 mismatch 狀態。
 - [x] 實作串流 Ridge、選參數、評估、配對統計與可續跑的單一入口。
 - [x] 完成小型數值／切分／統計測試與 preflight；提供正式命令。2026-11-03：46 項相關測試通過，正式資料 preflight PASS；十組 ANN metadata 仍 pending。
-- [ ] 首個完整 Ridge run、記憶體與筆數驗證。
-- [ ] 其餘九個 runs、配對摘要、圖與報告。
+- [x] 首個完整 Ridge run、記憶體與筆數驗證。248.50 秒，peak working set 1.06 GiB，筆數與負值數吻合。
+- [x] 其餘九個 runs、配對摘要、圖與報告。10/10 成功；全部計算合計 31.23 分鐘，峰值記憶體 1.13 GiB；來源資格仍為 pending，未輸出正式 p-value。
 
 接續時先讀本文件、`HANDOFF.md` 與 config；不要將「計畫已保存」或「小型測試通過」改寫為「Ridge 已訓練完成」。

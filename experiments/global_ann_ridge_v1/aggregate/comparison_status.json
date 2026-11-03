@@ -1,0 +1,59 @@
+{
+  "expected_runs": 10,
+  "completed_runs": 10,
+  "all_runs_complete": true,
+  "all_ann_provenance_matched": false,
+  "figures_updated": true,
+  "runs": [
+    {
+      "run_id": "random_point_seed11_modelseed11",
+      "status": "complete",
+      "ann_provenance_status": "ann_provenance_pending"
+    },
+    {
+      "run_id": "random_point_seed23_modelseed23",
+      "status": "complete",
+      "ann_provenance_status": "ann_provenance_pending"
+    },
+    {
+      "run_id": "random_point_seed37_modelseed37",
+      "status": "complete",
+      "ann_provenance_status": "ann_provenance_pending"
+    },
+    {
+      "run_id": "random_point_seed53_modelseed53",
+      "status": "complete",
+      "ann_provenance_status": "ann_provenance_pending"
+    },
+    {
+      "run_id": "random_point_seed71_modelseed71",
+      "status": "complete",
+      "ann_provenance_status": "ann_provenance_pending"
+    },
+    {
+      "run_id": "unseen_cell_seed11_modelseed11",
+      "status": "complete",
+      "ann_provenance_status": "ann_provenance_pending"
+    },
+    {
+      "run_id": "unseen_cell_seed23_modelseed23",
+      "status": "complete",
+      "ann_provenance_status": "ann_provenance_pending"
+    },
+    {
+      "run_id": "unseen_cell_seed37_modelseed37",
+      "status": "complete",
+      "ann_provenance_status": "ann_provenance_pending"
+    },
+    {
+      "run_id": "unseen_cell_seed53_modelseed53",
+      "status": "complete",
+      "ann_provenance_status": "ann_provenance_pending"
+    },
+    {
+      "run_id": "unseen_cell_seed71_modelseed71",
+      "status": "complete",
+      "ann_provenance_status": "ann_provenance_pending"
+    }
+  ]
+}

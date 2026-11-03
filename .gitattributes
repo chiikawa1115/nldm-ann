@@ -1,4 +1,5 @@
 # Hash-checked artifacts must keep identical bytes on every OS (no CRLF conversion).
 experiments/plan_v4/** -text
+experiments/global_ann_ridge_v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 data/asap7_nldm.reference.json -text
 data/asap7_sources.json -text

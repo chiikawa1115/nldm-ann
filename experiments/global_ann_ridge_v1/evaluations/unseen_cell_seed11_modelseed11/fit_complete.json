@@ -1,0 +1,7 @@
+{
+  "signature": "288304999c390dd3ff8bbf9b1fbfcc216401790d118c836508490cdf20ba2530",
+  "artifacts": {
+    "models/unseen_cell_seed11_modelseed11.npz": "f1b15848ed9a1869f603c050054883a116704d832f08d1edafd809c2c215d62b",
+    "evaluations/unseen_cell_seed11_modelseed11/training_metadata.json": "61782d5671244cc2be9f829b79d09cf1eeda06191150dc912e0ad888959c2878"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "random_point_seed23_modelseed23",
+  "status": "complete",
+  "signature": "3bd94ca065434415dfccd20f5704c5ee44e04f1112d933dacbec1739e14b5658",
+  "started_at": "2026-11-03T07:00:05.859977+00:00",
+  "stage": "complete",
+  "finished_at": "2026-11-03T07:03:26.008999+00:00",
+  "evaluation_seconds": 65.24513280019164,
+  "invocation_seconds": 200.14890490006655,
+  "process_peak_memory_bytes": 1164738560,
+  "artifacts": {
+    "models/random_point_seed23_modelseed23.npz": "992ab7d426eb451a06c25dc7135a0fe8e717b5784322dc131125b448a869bbe4",
+    "evaluations/random_point_seed23_modelseed23/training_metadata.json": "4e4036ce53f8617cfd91ef9192ba038355d465825940bc24bc4330457048427d",
+    "evaluations/random_point_seed23_modelseed23/fit_complete.json": "f87636ed1d6eef55df7c90880d53a9d4fd5404e9df0d7e9171c651f57a144ce4",
+    "evaluations/random_point_seed23_modelseed23/metrics.json": "0b498dcd557aa73cc956aa0877664ef346cf07cf115fdd29cf2d61e65caca114",
+    "evaluations/random_point_seed23_modelseed23/per_cell_metrics.csv": "4254804e88152f7aab72c6a04e34b5d7866df1282f7133222f962999ef118536"
+  }
+}

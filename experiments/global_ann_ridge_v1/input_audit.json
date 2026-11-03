@@ -49,8 +49,8 @@
     "torch": "2.13.0"
   },
   "git": {
-    "commit": "90c1a7a78b2e0b6b55002f7a8cb0a0f74ac66f25",
-    "working_tree_status": "M .gitignore\n?? scripts/export_ann_ridge_metadata.py\n?? src/ridge_audit.py\n?? src/ridge_compare.py\n?? src/ridge_core.py\n?? src/run_ridge_comparison.py\n?? tests/test_ridge_comparison.py"
+    "commit": "af9e137cad096feb9e589c9b38148526c74d59a6",
+    "working_tree_status": "M HANDOFF.md\n M docs/GLOBAL_ANN_RIDGE_RUNBOOK.md\n M experiments/global_ann_ridge_v1/input_audit.json\n?? experiments/global_ann_ridge_v1/aggregate/\n?? experiments/global_ann_ridge_v1/evaluations/\n?? experiments/global_ann_ridge_v1/figures/\n?? experiments/global_ann_ridge_v1/report.md"
   },
   "pairs": [
     {

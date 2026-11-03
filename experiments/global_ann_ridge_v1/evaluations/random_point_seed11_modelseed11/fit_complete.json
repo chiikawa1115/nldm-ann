@@ -1,0 +1,7 @@
+{
+  "signature": "6b12b347be37c14eefa475529365b73d7431548ef7899fc5d62455d4ca89392a",
+  "artifacts": {
+    "models/random_point_seed11_modelseed11.npz": "b0f78159d268450df1c55576ab5ee7f7c3dc3ab76da853be2bddd1734505e504",
+    "evaluations/random_point_seed11_modelseed11/training_metadata.json": "5bbdb5556325a5c501ec8661f53b782125f9b70a5c5fcb837006771bd7644668"
+  }
+}

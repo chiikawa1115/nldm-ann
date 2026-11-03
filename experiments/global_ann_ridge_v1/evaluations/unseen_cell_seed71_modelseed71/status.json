@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "unseen_cell_seed71_modelseed71",
+  "status": "complete",
+  "signature": "c96d124ffb48a80f9e6a8021fd6279b6f57cc76ddc8525e8a9214617f13b72a9",
+  "started_at": "2026-11-03T07:23:14.330737+00:00",
+  "stage": "complete",
+  "finished_at": "2026-11-03T07:27:11.232529+00:00",
+  "evaluation_seconds": 75.70381280011497,
+  "invocation_seconds": 236.9017850998789,
+  "process_peak_memory_bytes": 1214738432,
+  "artifacts": {
+    "models/unseen_cell_seed71_modelseed71.npz": "5aed2b7ad0686ef4503cc661cea3d4fc36c3c45cac58afc566d84b3c2ae24a9e",
+    "evaluations/unseen_cell_seed71_modelseed71/training_metadata.json": "41fd539ded73a9134db8d8bf59652a217a059c038c0f52a8d45e01fbab7300ce",
+    "evaluations/unseen_cell_seed71_modelseed71/fit_complete.json": "e15dd85d729108b1655f142eb0fd5acecbf7e27084c84843b765515ccfdb3724",
+    "evaluations/unseen_cell_seed71_modelseed71/metrics.json": "742f63edc82423126ac94466e2d1d201183bda58b8d3305a9e0eda82438fe875",
+    "evaluations/unseen_cell_seed71_modelseed71/per_cell_metrics.csv": "396dc4d6dab79d66452d0ceb3c2a7dabf70ae97ea7d7b424797b8f0d887a50fd"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "signature": "b1c54286f0c0df4d87b91103b073f1602d0ce308e649265e22ccfbc71aae7d63",
+  "artifacts": {
+    "models/random_point_seed53_modelseed53.npz": "1f24d9f24ccba08e9e3ceeac2232da4178c4ce8f8d81c9e72c9354e317756fab",
+    "evaluations/random_point_seed53_modelseed53/training_metadata.json": "e291277629378c8d0a91f6c7af2da79c36b35100c30cec8e7b5d40481260d69e"
+  }
+}

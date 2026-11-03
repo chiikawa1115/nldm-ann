@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "random_point_seed53_modelseed53",
+  "status": "complete",
+  "signature": "b1c54286f0c0df4d87b91103b073f1602d0ce308e649265e22ccfbc71aae7d63",
+  "started_at": "2026-11-03T07:06:41.716329+00:00",
+  "stage": "complete",
+  "finished_at": "2026-11-03T07:10:21.669803+00:00",
+  "evaluation_seconds": 79.26231679995544,
+  "invocation_seconds": 219.95317020011134,
+  "process_peak_memory_bytes": 1214738432,
+  "artifacts": {
+    "models/random_point_seed53_modelseed53.npz": "1f24d9f24ccba08e9e3ceeac2232da4178c4ce8f8d81c9e72c9354e317756fab",
+    "evaluations/random_point_seed53_modelseed53/training_metadata.json": "e291277629378c8d0a91f6c7af2da79c36b35100c30cec8e7b5d40481260d69e",
+    "evaluations/random_point_seed53_modelseed53/fit_complete.json": "e71937ea5382302201a1329c9ffb25d08310efdbf86eece3dc2d3c6849fc3dad",
+    "evaluations/random_point_seed53_modelseed53/metrics.json": "8d85282c688921811a4ef6653dbab142358518432d232bb11c2db04faee9cc38",
+    "evaluations/random_point_seed53_modelseed53/per_cell_metrics.csv": "d1d95e74264d83b34da5fd48f8a61b286f16c0db5ace2fd085667d83c887090b"
+  }
+}

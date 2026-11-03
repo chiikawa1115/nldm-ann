@@ -2,9 +2,13 @@
 
 更新：2026-11-03。研究規格見 [比較計畫](PLAN_GLOBAL_ANN_RIDGE_COMPARISON.md)，鎖定設定見 [config](../experiments/configs/global_ann_ridge_v1.json)。
 
-## 目前停止位置
+## 目前執行狀態
 
-實作與小型驗證已完成，**正式 Ridge 訓練 0/10**。使用者要求停在長時間執行前，因此以下 `run` 命令尚未對正式資料執行。沒有重訓或重跑 ANN 推論，目前也沒有 Ridge 優劣結論。
+2026-11-03 使用者授權後，**十組 Ridge 全部完成，重新執行 aggregate 的輸入與產物 checksum 核對也已通過。** 沒有重訓或重跑 ANN 推論；十組 ANN checkpoint metadata 仍 pending。結果見 [中文結果報告](RESULTS_GLOBAL_ANN_RIDGE_COMPARISON.md)。以下保留操作命令；接續只需補 metadata 後重新聚合，不需重訓。
+
+十組訓練加評估合計 1,873.73 秒（31.23 分鐘），單組 124.69–248.50 秒，程序峰值記憶體 1,214,738,432 bytes（約 1.13 GiB）。時間不包含開發、等待核准、額外聚合及報告整理。此為本機 Ridge 執行紀錄，不用來宣稱相對於另一台電腦 ANN 的加速比。
+
+首個完整 run 實測 248.50 秒（fit 134.42 秒、evaluate 114.07 秒）、peak working set 1.06 GiB，test n=2,463,920、groups=200、negative targets=872 均核對通過。這是完整訓練加評估的耗時，不包含程式開發或等待核准時間。
 
 - 46 項測試通過（17.30 秒）：Ridge 新增 27 項，既有特徵／切分／指標相關 19 項。
 - 合成資料為 432 rows、4 cells、3 corners、4 table types。結果只留在忽略的 `tests/runtime/`，不混入正式實驗。
@@ -26,7 +30,7 @@
 
 從 `nldm-ann` 根目錄執行。使用現有 `.venv`，所需 numpy、pandas、scipy、pyarrow、torch、matplotlib 已存在；求解器不依賴 scikit-learn。Torch 僅因沿用原 ANN helper 而載入，不會啟動 ANN 訓練。
 
-先跑一個完整 seed（需使用者後續要求啟動長時間工作）：
+先跑一個完整 seed（已獲授權並完成）：
 
 ```powershell
 .\.venv\Scripts\python.exe src/run_ridge_comparison.py run --run-id random_point_seed11_modelseed11
@@ -40,7 +44,7 @@
 - `training_metadata.json`：fit/validation/test 筆數、六個 validation losses、lambda/alpha、fit 耗時與環境版本。
 - `metrics.json`：test n = 2,463,920、cell groups = 200、negative targets = 872；程式會自動核對，差異即失敗。
 
-峰值記憶體是本程序啟動至今的 peak working set/RSS；同一程序連跑多個 seeds 時不是每個 run 的獨立峰值。前次 1–3 小時指全 10 runs 的初估，仍未以完整 seed 實測。
+峰值記憶體是本程序啟動至今的 peak working set/RSS；同一程序連跑多個 seeds 時不是每個 run 的獨立峰值。前次 1–3 小時是全 10 runs 的初估，本次已取得上述實測值。凍結 config 的 `planned_not_run` / `formal_training_started=false` 保留為執行前快照，實際完成狀態請讀各 run 的 `status.json` 與 `aggregate/comparison_status.json`，不要修改 config 使既有 signature 失效。
 
 首個 run 確認後：
 
