@@ -7,7 +7,7 @@
 - Version Label: global_ann_ridge_v1
 - Verification Status: UNVERIFIED（比較尚未執行；既有 ANN 報表已做一致性核對）
 - 使用者決策：以預測精度與改善幅度為主；耗時僅作執行紀錄，不作主要比較結論。
-- 本次工作邊界：先保存並推送計畫與交接紀錄；正式 Ridge 訓練尚未啟動。
+- 本次工作邊界：計畫已保存並推送；依後續授權完成實作、小型測試與正式資料 preflight，停在長時間訓練之前。正式 Ridge 訓練尚未啟動。
 - 本計畫在已閱讀 ANN 結果、尚未取得 Ridge 結果後訂定，不宣稱盲態事前註冊。
 
 ## 1. 研究問題與主張範圍
@@ -39,7 +39,7 @@
 | Split modes | `random_point`, `unseen_cell` |
 | Split / model seeds | `11, 23, 37, 53, 71`，逐 seed 配對 |
 | 新增 Ridge runs | 10；第一個完整 run 為 `random_point_seed11_modelseed11` |
-| 可機讀計畫 | `experiments/configs/global_ann_ridge_v1.json`（計畫規格，尚非已實作 CLI） |
+| 可機讀計畫 | `experiments/configs/global_ann_ridge_v1.json`（由 `src/run_ridge_comparison.py` 執行） |
 
 `random_point` 保留每張完整 table 的 round(n × 0.2) 個點作 test（49 點表格為 10 點）。`unseen_cell` 沿用各 manifest 指定的 40 個 held-out cell_base，其餘 160 個進入 train partition。保留 cell_base 的全部 VT variants 分組規則。
 
@@ -96,7 +96,7 @@ JSON 語意 hash 用於跨平台內容核對（UTF-8、sort_keys、緊湊 separa
 - 首個完整 seed 記錄峰值記憶體與各階段耗時，核對 test n、cell groups、負 target 數後，才執行其餘九組。
 - 每階段記錄進度；失敗 run 留下原因，不靜默跳過或將部分結果標為 10/10。
 - 先前 1–3 小時估計指全部 10 runs，不含程式實作；只是局部計時推估。預估不是 hard timeout，不依它自動終止或刪除產物。
-- 實作後才能提供正式 entry command；此版本計畫不宣稱已有可執行 Ridge CLI。
+- 已實作正式入口，命令與續跑方式見 [執行指南](GLOBAL_ANN_RIDGE_RUNBOOK.md)；`preflight` 不會擬合模型，`run` 必須明確指定 run ID 或 `--all`。
 
 ## 7. 指標與統計分析
 
@@ -114,6 +114,8 @@ JSON 語意 hash 用於跨平台內容核對（UTF-8、sort_keys、緊湊 separa
 各 mode 分開以五個 seeds 報 mean、sample SD、配對 delta 的 95% Student-t CI（df=4）與五筆原始差值。不同 mode 不合成 n=10；數百萬 test rows 也不當作獨立重複。
 
 主要呈現效應大小與不確定性。若提出正式顯著性結論，對兩個 mode 的 macro MAE 配對雙尾 t-test 做 Holm 校正（family alpha=0.05）；次要指標僅作描述性／探索性分析。n=5 且不同 seed 的資料有重疊，CI 與 p-value 的假設及限制須揭露，不能推廣為跨 library 的保證。
+
+實作補充（正式 Ridge 結果產生前）：兩個 mode 均須有五組完整且來源相符的配對、差值樣本變異有限且大於零，才輸出正式 p-value 與 Holm 校正；零變異或不完整時僅作描述性摘要。正規化核對容差為 `rtol=1e-6, atol=1e-8`，`n_fit` 必須完全相等；lambda 選擇的 loss tie 容差為 `rtol=1e-10, atol=1e-12`。
 
 不事後設定最低改善百分比。ANN 較差、CI 跨 0、MAE 改善但 P99 惡化都照實報告。只有資料匹配且證據支持時才描述 ANN 優勢；CI 跨 0 表示此比較未明確區分，不代表等效。
 
@@ -143,8 +145,8 @@ JSON 語意 hash 用於跨平台內容核對（UTF-8、sort_keys、緊湊 separa
 - [x] 保存本計畫及可機讀輸入鎖定清單。
 - [x] Commit / push 計畫至 `plan-v4`：`d0e1aa1` 已推送，且以 `git ls-remote` 核對遠端一致。
 - [ ] 核對或補匯出 ANN checkpoint metadata，保留 pending 與 mismatch 狀態。
-- [ ] 實作串流 Ridge、選參數、評估、配對統計與可續跑的單一入口。
-- [ ] 完成小型數值／切分／統計測試與 preflight；提供正式命令。
+- [x] 實作串流 Ridge、選參數、評估、配對統計與可續跑的單一入口。
+- [x] 完成小型數值／切分／統計測試與 preflight；提供正式命令。2026-11-03：46 項相關測試通過，正式資料 preflight PASS；十組 ANN metadata 仍 pending。
 - [ ] 首個完整 Ridge run、記憶體與筆數驗證。
 - [ ] 其餘九個 runs、配對摘要、圖與報告。
 

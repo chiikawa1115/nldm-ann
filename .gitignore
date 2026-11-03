@@ -85,6 +85,7 @@ data/cache/
 *.split.csv.json
 experiments/expA_v2/holdout_*/
 .mplconfig/
+experiments/global_ann_ridge*/.scratch/
 experiments/smoke/
 
 # ========================================
