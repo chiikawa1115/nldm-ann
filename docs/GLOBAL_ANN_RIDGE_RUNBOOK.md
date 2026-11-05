@@ -58,6 +58,8 @@
 
 ## 補齊 ANN 訓練來源
 
+交給原訓練電腦上的 AI 執行時，請先讀 [ANN metadata 匯出交接](ANN_METADATA_EXPORT_HANDOFF.md)，其中列出十個 run、核對欄位、Git 交付方式與缺失處理。
+
 在持有原十個 `model.pt` 的訓練電腦先取得本次程式，再用該電腦的 Python 環境執行：
 
 ```powershell

@@ -1,6 +1,6 @@
 # NLDM-ANN 專案接力指南 (AGY Handoff)
 
-## 目前接續點：Global ANN / Ridge 精度比較（2026-11-03）
+## 目前接續點：Global ANN / Ridge 精度比較（2026-11-05）
 
 - 使用者已確認研究問題：**在相同輸入資訊與測試資料下，global ANN 相較 global Ridge，是否降低預測誤差，以及改善幅度多少？**
 - 本輪以精度為主；硬體不同的執行時間僅記錄，不作模型加速比較。
@@ -10,6 +10,7 @@
 - **目前狀態：2026-11-03 Ridge 正式訓練與評估 10/10 完成，重新聚合核對通過；十組 ANN metadata 仍 pending，結論屬暫定比較。** 實作版本 `af9e137`，原有 46 項相關測試通過。詳細結果見 [中文結果報告](docs/RESULTS_GLOBAL_ANN_RIDGE_COMPARISON.md) 與 `experiments/global_ann_ridge_v1/`。
 - 主要結果（五 seeds 的 per-cell macro MAE 均值）：random-point ANN 13.06 / Ridge 67.82 ps，逐 seed 平均改善 80.75%；unseen-cell ANN 22.33 / Ridge 77.12 ps，改善 71.33%。十組主要差值均支持 ANN 誤差較低；沒有輸出正式 p-value。
 - 入口：`src/run_ridge_comparison.py`；[執行指南](docs/GLOBAL_ANN_RIDGE_RUNBOOK.md) 記錄補 metadata、聚合與續跑命令。十組已完成，接續先補 ANN metadata，再重新 aggregate，不需重訓。
+- **給原 ANN 訓練電腦上的 AI：先讀 [ANN metadata 匯出交接](docs/ANN_METADATA_EXPORT_HANDOFF.md)**，依十組清單匯出小型 JSON、檢查缺失並推送 `plan-v4`；不重跑模型。文件包含所需欄位、操作命令、交付位置與完成條件。
 - 實作包含 float64 串流統計、fit-only 正規化、validation 選 lambda、精確 percentile、逐 cell 指標、配對 CI / Holm、進度與產物 checksum；原 ANN 六個凍結來源檔未修改。
 - 執行主機選目前 Ryzen 7 PRO 8840U 筆電（8C/16T、系統可用總 RAM 約 14.7 GiB）；使用 CPU 串流處理，不一次載入全矩陣。
 - 十組訓練加評估合計 1,873.73 秒（31.23 分鐘），單組 124.69–248.50 秒，程序峰值記憶體 1.13 GiB；不含開發、等待核准與報告整理。所有 test n、groups、negative targets 均與對應 ANN 吻合。
