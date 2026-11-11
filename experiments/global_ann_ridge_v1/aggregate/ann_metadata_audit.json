@@ -1,0 +1,648 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-11",
+  "verification_status": "ANALYZED",
+  "scope": "metadata, recorded metrics and history consistency; no ANN training or inference rerun",
+  "metadata_delivery_commit": "17a3bdc",
+  "training_executed": false,
+  "expected_runs": 10,
+  "matched_runs": 10,
+  "paired_numeric_metrics_unchanged_from_delivery_commit": true,
+  "independent_scipy_paired_t_and_holm_check": true,
+  "primary_statistics": [
+    {
+      "mode": "random_point",
+      "scope": "macro",
+      "metric": "MAE",
+      "n_pairs": 5,
+      "expected_pairs": 5,
+      "n_matched": 5,
+      "n_provenance_pending": 0,
+      "n_undefined": 0,
+      "delta_mean": 54.76485719468048,
+      "delta_sd": 0.5575886089600472,
+      "delta_ci95_low": 54.072519493126265,
+      "delta_ci95_high": 55.45719489623468,
+      "improvement_pct_mean": 80.74999611284119,
+      "improvement_pct_n": 5,
+      "inference_status": "paired_t_holm",
+      "p_two_sided": 2.578688898777344e-09,
+      "p_holm": 5.157377797554688e-09,
+      "formal_inference_eligible": true,
+      "ann_mean": 13.056326334691466,
+      "ann_sd": 0.6544413145670925,
+      "ridge_mean": 67.82118352937194,
+      "ridge_sd": 0.1208928398470172
+    },
+    {
+      "mode": "unseen_cell",
+      "scope": "macro",
+      "metric": "MAE",
+      "n_pairs": 5,
+      "expected_pairs": 5,
+      "n_matched": 5,
+      "n_provenance_pending": 0,
+      "n_undefined": 0,
+      "delta_mean": 54.78389312220575,
+      "delta_sd": 4.472036704778744,
+      "delta_ci95_low": 49.23112614723618,
+      "delta_ci95_high": 60.33666009717531,
+      "improvement_pct_mean": 71.33480530118757,
+      "improvement_pct_n": 5,
+      "inference_status": "paired_t_holm",
+      "p_two_sided": 1.0562636918189644e-05,
+      "p_holm": 1.0562636918189644e-05,
+      "formal_inference_eligible": true,
+      "ann_mean": 22.33398905420122,
+      "ann_sd": 6.962221729127126,
+      "ridge_mean": 77.11788217640697,
+      "ridge_sd": 5.895177205530825
+    }
+  ],
+  "committed_training_source_hashes_verified": {
+    "0032cdfeb1457bda850ff5752d1f1bf00ad3dd62": {
+      "src/features.py": "9cfc6c353133b78791a3555746dc101a3ca49d91fd409c00c05c9a8c4614b0ed",
+      "src/global_engine.py": "f8c4292dfde8b5d891500f81e7984256c18188b0554fdd11f9619440925361b9",
+      "src/metrics.py": "508dc7e3d4c6335312fb5a686b4879f88ba0e8c577cb5ebe606a187bb459f6dc",
+      "src/train_global.py": "2145d3ed42cd4c499ea557f444b83cb3535558818f843c13b0a8d933b652c9b8",
+      "src/evaluate_global.py": "9423c5ec9191a86ac209368bd864f3542aff7eaf23505ad93c8973ed0fb4e129",
+      "src/run_generalization.py": "b044fdf95de870348da60173c1a65396e5cb15b39d6e1fef2b5a4aa1677b8ce3"
+    },
+    "b13d5e8bda9b85813193dc1c7fe80273d19bee11": {
+      "src/features.py": "9cfc6c353133b78791a3555746dc101a3ca49d91fd409c00c05c9a8c4614b0ed",
+      "src/global_engine.py": "f8c4292dfde8b5d891500f81e7984256c18188b0554fdd11f9619440925361b9",
+      "src/metrics.py": "508dc7e3d4c6335312fb5a686b4879f88ba0e8c577cb5ebe606a187bb459f6dc",
+      "src/train_global.py": "2145d3ed42cd4c499ea557f444b83cb3535558818f843c13b0a8d933b652c9b8",
+      "src/evaluate_global.py": "9423c5ec9191a86ac209368bd864f3542aff7eaf23505ad93c8973ed0fb4e129",
+      "src/run_generalization.py": "b044fdf95de870348da60173c1a65396e5cb15b39d6e1fef2b5a4aa1677b8ce3"
+    }
+  },
+  "limitations": [
+    "ANN checkpoint bytes are not present locally; recorded checkpoint hashes were not independently recomputed.",
+    "Committed source hashes do not attest absence of uncommitted changes during original training.",
+    "Five seeds share a source library and overlapping splits; t-test independence and distribution assumptions are not established by provenance matching.",
+    "Per-cell supplemental checks do not reconstruct micro percentiles or micro R2 without point-level data.",
+    "Cell comparisons count cell/run observations; repeated cells are not independent samples."
+  ],
+  "runs": [
+    {
+      "run_id": "random_point_seed11_modelseed11",
+      "mode": "random_point",
+      "seed": 11,
+      "qualification": {
+        "status": "matched",
+        "pending": [],
+        "errors": [],
+        "metadata_sha256": "8382c06f350ab4f216d240b5be390de88b1aa37cf1ec60ef2eef2cfa587c3441",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
+      },
+      "n_fit": 8646807,
+      "normalization_max_abs_diff": {
+        "x_mean": 7.105427357601002e-15,
+        "x_std": 3.552713678800501e-15,
+        "y_mean": 1.5631940186722204e-13,
+        "y_std": 2.842170943040401e-14
+      },
+      "git_commit": "0032cdfeb1457bda850ff5752d1f1bf00ad3dd62",
+      "checkpoint_sha256_recorded": "1f84fdc863f3f33e8db4672d9889569bff6a543e14889097eb9a6e85ba21665f",
+      "supplemental_input_sha256_lf_normalized": {
+        "per_cell_metrics.csv": "26ce59f72aa47080c04db6362abf2cd88bbf1099b769e54eb2f5ad001d5b3e21",
+        "model.history.json": "775a4e50295d178320c67d980e5aa7cae93c82124337cf3b1090955c5d805cbe"
+      },
+      "macro_metrics_reconciled": [
+        "MAE",
+        "RMSE",
+        "sMAPE_pct",
+        "P50RE_pct",
+        "P90RE_pct",
+        "P99RE_pct",
+        "R2"
+      ],
+      "micro_metrics_reconciled": [
+        "n",
+        "MAE",
+        "RMSE",
+        "sMAPE_pct"
+      ],
+      "cell_id_and_point_counts_match_ridge": true,
+      "n_cells": 200,
+      "cells_ann_lower_mae": 200,
+      "cells_equal_mae": 0,
+      "cells_ann_higher_mae": 0,
+      "largest_ann_mae_regressions": [],
+      "completed_epochs": 34,
+      "best_epoch": 26,
+      "best_validation_mse_norm": 0.022241415302972977,
+      "stopped_before_epoch_limit": true,
+      "early_stop_consistent_with_patience": true
+    },
+    {
+      "run_id": "random_point_seed23_modelseed23",
+      "mode": "random_point",
+      "seed": 23,
+      "qualification": {
+        "status": "matched",
+        "pending": [],
+        "errors": [],
+        "metadata_sha256": "21daa346f58eaff0a6b0b9097857cfe056844ecc5e46a87565cd95e66324b110",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
+      },
+      "n_fit": 8648947,
+      "normalization_max_abs_diff": {
+        "x_mean": 7.105427357601002e-15,
+        "x_std": 1.4210854715202004e-14,
+        "y_mean": 7.105427357601002e-14,
+        "y_std": 2.842170943040401e-14
+      },
+      "git_commit": "b13d5e8bda9b85813193dc1c7fe80273d19bee11",
+      "checkpoint_sha256_recorded": "d023eb8c9e5b221afa6862c0ed29e402ea6414e288ddfcf7fdaa81211716c6b5",
+      "supplemental_input_sha256_lf_normalized": {
+        "per_cell_metrics.csv": "9e99657a4ea2c2622da7763cd3d057a894bef0719f10d265c51ee11f8fad93b4",
+        "model.history.json": "93c06b48c666dffba44e7232e2eb67e3166fadc436e145b6ce076689df3a99fd"
+      },
+      "macro_metrics_reconciled": [
+        "MAE",
+        "RMSE",
+        "sMAPE_pct",
+        "P50RE_pct",
+        "P90RE_pct",
+        "P99RE_pct",
+        "R2"
+      ],
+      "micro_metrics_reconciled": [
+        "n",
+        "MAE",
+        "RMSE",
+        "sMAPE_pct"
+      ],
+      "cell_id_and_point_counts_match_ridge": true,
+      "n_cells": 200,
+      "cells_ann_lower_mae": 200,
+      "cells_equal_mae": 0,
+      "cells_ann_higher_mae": 0,
+      "largest_ann_mae_regressions": [],
+      "completed_epochs": 50,
+      "best_epoch": 46,
+      "best_validation_mse_norm": 0.019840904388235395,
+      "stopped_before_epoch_limit": false,
+      "early_stop_consistent_with_patience": null
+    },
+    {
+      "run_id": "random_point_seed37_modelseed37",
+      "mode": "random_point",
+      "seed": 37,
+      "qualification": {
+        "status": "matched",
+        "pending": [],
+        "errors": [],
+        "metadata_sha256": "049601a7d34115536fa22de93ab8dd0171aa82639195c7b33402b682b2679a5d",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
+      },
+      "n_fit": 8646608,
+      "normalization_max_abs_diff": {
+        "x_mean": 7.105427357601002e-15,
+        "x_std": 7.105427357601002e-15,
+        "y_mean": 1.4210854715202004e-14,
+        "y_std": 5.684341886080802e-14
+      },
+      "git_commit": "b13d5e8bda9b85813193dc1c7fe80273d19bee11",
+      "checkpoint_sha256_recorded": "4be3c63a5e2ecc85fdba2b72bc89b1c38b4e5a8f9c1af4fefe6018dc68bdcb29",
+      "supplemental_input_sha256_lf_normalized": {
+        "per_cell_metrics.csv": "dc8ede1f5495812054258e2d1df6204a551c5cc6ec5f638725d9acd93209591f",
+        "model.history.json": "4fb958541dbab796bdc750b6445d289e272bd5c89f518a0cd5cc194a048c1d8d"
+      },
+      "macro_metrics_reconciled": [
+        "MAE",
+        "RMSE",
+        "sMAPE_pct",
+        "P50RE_pct",
+        "P90RE_pct",
+        "P99RE_pct",
+        "R2"
+      ],
+      "micro_metrics_reconciled": [
+        "n",
+        "MAE",
+        "RMSE",
+        "sMAPE_pct"
+      ],
+      "cell_id_and_point_counts_match_ridge": true,
+      "n_cells": 200,
+      "cells_ann_lower_mae": 200,
+      "cells_equal_mae": 0,
+      "cells_ann_higher_mae": 0,
+      "largest_ann_mae_regressions": [],
+      "completed_epochs": 50,
+      "best_epoch": 43,
+      "best_validation_mse_norm": 0.019558950276487377,
+      "stopped_before_epoch_limit": false,
+      "early_stop_consistent_with_patience": null
+    },
+    {
+      "run_id": "random_point_seed53_modelseed53",
+      "mode": "random_point",
+      "seed": 53,
+      "qualification": {
+        "status": "matched",
+        "pending": [],
+        "errors": [],
+        "metadata_sha256": "6c9d26ee6d1aa88b2842af210d08e3bbd68c7a53ea08a98ba0071e745be55ef2",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
+      },
+      "n_fit": 8649508,
+      "normalization_max_abs_diff": {
+        "x_mean": 1.2434497875801753e-14,
+        "x_std": 3.552713678800501e-15,
+        "y_mean": 5.684341886080802e-14,
+        "y_std": 2.842170943040401e-14
+      },
+      "git_commit": "b13d5e8bda9b85813193dc1c7fe80273d19bee11",
+      "checkpoint_sha256_recorded": "0e6805789248aaf3dc1f6fb48225ca0e8532cbcd4c5f1e757881b0f8629aa0c0",
+      "supplemental_input_sha256_lf_normalized": {
+        "per_cell_metrics.csv": "1f496c94961cbd4af6117afaf0b7178397bbdf920106ed5d338e8aa9079746dd",
+        "model.history.json": "7db1bff9f845ed4d1bd038678cdde085148446237f9412b97521376eba6ad354"
+      },
+      "macro_metrics_reconciled": [
+        "MAE",
+        "RMSE",
+        "sMAPE_pct",
+        "P50RE_pct",
+        "P90RE_pct",
+        "P99RE_pct",
+        "R2"
+      ],
+      "micro_metrics_reconciled": [
+        "n",
+        "MAE",
+        "RMSE",
+        "sMAPE_pct"
+      ],
+      "cell_id_and_point_counts_match_ridge": true,
+      "n_cells": 200,
+      "cells_ann_lower_mae": 200,
+      "cells_equal_mae": 0,
+      "cells_ann_higher_mae": 0,
+      "largest_ann_mae_regressions": [],
+      "completed_epochs": 47,
+      "best_epoch": 39,
+      "best_validation_mse_norm": 0.01891727509266676,
+      "stopped_before_epoch_limit": true,
+      "early_stop_consistent_with_patience": true
+    },
+    {
+      "run_id": "random_point_seed71_modelseed71",
+      "mode": "random_point",
+      "seed": 71,
+      "qualification": {
+        "status": "matched",
+        "pending": [],
+        "errors": [],
+        "metadata_sha256": "95a296c7ba4b55603274b2f6076181c6b2be8265b6111385d83b93c43b095c0f",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
+      },
+      "n_fit": 8648591,
+      "normalization_max_abs_diff": {
+        "x_mean": 1.0658141036401503e-14,
+        "x_std": 7.105427357601002e-15,
+        "y_mean": 1.1368683772161603e-13,
+        "y_std": 0.0
+      },
+      "git_commit": "b13d5e8bda9b85813193dc1c7fe80273d19bee11",
+      "checkpoint_sha256_recorded": "5c5a5e197567a099ebf543a74a7b272e86997b74f25786dd5aed950665e0f315",
+      "supplemental_input_sha256_lf_normalized": {
+        "per_cell_metrics.csv": "23deb45d8ebd370b08f756ce0dfdc1a8a731d74d68e9c6ae6c2bf21b38b09f98",
+        "model.history.json": "5eede1002fa0bc94512f0824665eb955da5f8ffe2c6db8b0c7b740acccb58201"
+      },
+      "macro_metrics_reconciled": [
+        "MAE",
+        "RMSE",
+        "sMAPE_pct",
+        "P50RE_pct",
+        "P90RE_pct",
+        "P99RE_pct",
+        "R2"
+      ],
+      "micro_metrics_reconciled": [
+        "n",
+        "MAE",
+        "RMSE",
+        "sMAPE_pct"
+      ],
+      "cell_id_and_point_counts_match_ridge": true,
+      "n_cells": 200,
+      "cells_ann_lower_mae": 200,
+      "cells_equal_mae": 0,
+      "cells_ann_higher_mae": 0,
+      "largest_ann_mae_regressions": [],
+      "completed_epochs": 42,
+      "best_epoch": 34,
+      "best_validation_mse_norm": 0.020059752691339652,
+      "stopped_before_epoch_limit": true,
+      "early_stop_consistent_with_patience": true
+    },
+    {
+      "run_id": "unseen_cell_seed11_modelseed11",
+      "mode": "unseen_cell",
+      "seed": 11,
+      "qualification": {
+        "status": "matched",
+        "pending": [],
+        "errors": [],
+        "metadata_sha256": "47c60ebaad7642fce96585a89338e60afea38a60f18b5becc627f9a6024797c8",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
+      },
+      "n_fit": 8439994,
+      "normalization_max_abs_diff": {
+        "x_mean": 1.0658141036401503e-14,
+        "x_std": 7.105427357601002e-15,
+        "y_mean": 1.8474111129762605e-13,
+        "y_std": 2.842170943040401e-14
+      },
+      "git_commit": "b13d5e8bda9b85813193dc1c7fe80273d19bee11",
+      "checkpoint_sha256_recorded": "6aac6277acac4e2a9ef9ccdb9429fdffb5552b8b5d897539ac4db89db99a2638",
+      "supplemental_input_sha256_lf_normalized": {
+        "per_cell_metrics.csv": "9df1d569604964ad1c8bf4f83fb2bab2dbad9ee11635a6ea0f9f763d00e7e026",
+        "model.history.json": "a07bcae31db568e5a24dc0526c9867bbfc018311a179374e31489f96e735cf4b"
+      },
+      "macro_metrics_reconciled": [
+        "MAE",
+        "RMSE",
+        "sMAPE_pct",
+        "P50RE_pct",
+        "P90RE_pct",
+        "P99RE_pct",
+        "R2"
+      ],
+      "micro_metrics_reconciled": [
+        "n",
+        "MAE",
+        "RMSE",
+        "sMAPE_pct"
+      ],
+      "cell_id_and_point_counts_match_ridge": true,
+      "n_cells": 40,
+      "cells_ann_lower_mae": 40,
+      "cells_equal_mae": 0,
+      "cells_ann_higher_mae": 0,
+      "largest_ann_mae_regressions": [],
+      "completed_epochs": 38,
+      "best_epoch": 30,
+      "best_validation_mse_norm": 0.02163130454686945,
+      "stopped_before_epoch_limit": true,
+      "early_stop_consistent_with_patience": true
+    },
+    {
+      "run_id": "unseen_cell_seed23_modelseed23",
+      "mode": "unseen_cell",
+      "seed": 23,
+      "qualification": {
+        "status": "matched",
+        "pending": [],
+        "errors": [],
+        "metadata_sha256": "2b44d1112166bab9a42f33ac54e56579326f1f87e33c0273d0de4f35a63f186f",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
+      },
+      "n_fit": 9248611,
+      "normalization_max_abs_diff": {
+        "x_mean": 1.0658141036401503e-14,
+        "x_std": 7.105427357601002e-15,
+        "y_mean": 9.947598300641403e-14,
+        "y_std": 2.842170943040401e-14
+      },
+      "git_commit": "b13d5e8bda9b85813193dc1c7fe80273d19bee11",
+      "checkpoint_sha256_recorded": "6db0956864140eaa6183038722b5041cd9066a740793249b918cf5cc522c3c6a",
+      "supplemental_input_sha256_lf_normalized": {
+        "per_cell_metrics.csv": "4c671a06e5fbcea346c8a770e28e54587dd97e84543a80df86ee0c2d6b2fa33e",
+        "model.history.json": "056411368d78a55ddecc0133f0de261420199854526f676a5604f8740068650b"
+      },
+      "macro_metrics_reconciled": [
+        "MAE",
+        "RMSE",
+        "sMAPE_pct",
+        "P50RE_pct",
+        "P90RE_pct",
+        "P99RE_pct",
+        "R2"
+      ],
+      "micro_metrics_reconciled": [
+        "n",
+        "MAE",
+        "RMSE",
+        "sMAPE_pct"
+      ],
+      "cell_id_and_point_counts_match_ridge": true,
+      "n_cells": 40,
+      "cells_ann_lower_mae": 37,
+      "cells_equal_mae": 0,
+      "cells_ann_higher_mae": 3,
+      "largest_ann_mae_regressions": [
+        {
+          "cell_base": "BUFx4_ASAP7_75t",
+          "MAE_ann": 88.2939410049947,
+          "MAE_ridge": 78.7170707641296,
+          "ann_minus_ridge_ps": 9.576870240865105
+        },
+        {
+          "cell_base": "DFFLQNx3_ASAP7_75t",
+          "MAE_ann": 58.1881386742832,
+          "MAE_ridge": 54.37717072406348,
+          "ann_minus_ridge_ps": 3.8109679502197196
+        },
+        {
+          "cell_base": "DFFLQNx2_ASAP7_75t",
+          "MAE_ann": 57.40644866212859,
+          "MAE_ridge": 55.50637473714069,
+          "ann_minus_ridge_ps": 1.9000739249879004
+        }
+      ],
+      "completed_epochs": 12,
+      "best_epoch": 4,
+      "best_validation_mse_norm": 0.05261193743628948,
+      "stopped_before_epoch_limit": true,
+      "early_stop_consistent_with_patience": true
+    },
+    {
+      "run_id": "unseen_cell_seed37_modelseed37",
+      "mode": "unseen_cell",
+      "seed": 37,
+      "qualification": {
+        "status": "matched",
+        "pending": [],
+        "errors": [],
+        "metadata_sha256": "1d42cae933dc99439b6d3518cbe6fdc64358be9792d7353c4d66ff1f988e357e",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
+      },
+      "n_fit": 9233192,
+      "normalization_max_abs_diff": {
+        "x_mean": 7.105427357601002e-15,
+        "x_std": 1.4210854715202004e-14,
+        "y_mean": 2.842170943040401e-14,
+        "y_std": 0.0
+      },
+      "git_commit": "b13d5e8bda9b85813193dc1c7fe80273d19bee11",
+      "checkpoint_sha256_recorded": "6a6eba06ca8a897f6348fc4cf1c126f809485b864b78169572e347cc1c8ecb8e",
+      "supplemental_input_sha256_lf_normalized": {
+        "per_cell_metrics.csv": "8058f85657a01da0aee07e415637481145db5b4bb14230a56a07dc998f90ec8b",
+        "model.history.json": "cdd1eea3772cebbb04a16f677eab2c1bc99137b3ba52d749e2940d9742d27260"
+      },
+      "macro_metrics_reconciled": [
+        "MAE",
+        "RMSE",
+        "sMAPE_pct",
+        "P50RE_pct",
+        "P90RE_pct",
+        "P99RE_pct",
+        "R2"
+      ],
+      "micro_metrics_reconciled": [
+        "n",
+        "MAE",
+        "RMSE",
+        "sMAPE_pct"
+      ],
+      "cell_id_and_point_counts_match_ridge": true,
+      "n_cells": 40,
+      "cells_ann_lower_mae": 40,
+      "cells_equal_mae": 0,
+      "cells_ann_higher_mae": 0,
+      "largest_ann_mae_regressions": [],
+      "completed_epochs": 24,
+      "best_epoch": 16,
+      "best_validation_mse_norm": 0.022452552203052027,
+      "stopped_before_epoch_limit": true,
+      "early_stop_consistent_with_patience": true
+    },
+    {
+      "run_id": "unseen_cell_seed53_modelseed53",
+      "mode": "unseen_cell",
+      "seed": 53,
+      "qualification": {
+        "status": "matched",
+        "pending": [],
+        "errors": [],
+        "metadata_sha256": "52dcc621202f0d2a71ae69455a73e55baa9b46877a21371efbed1ca0af6a1f32",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
+      },
+      "n_fit": 9928287,
+      "normalization_max_abs_diff": {
+        "x_mean": 8.881784197001252e-15,
+        "x_std": 7.105427357601002e-15,
+        "y_mean": 4.263256414560601e-14,
+        "y_std": 0.0
+      },
+      "git_commit": "b13d5e8bda9b85813193dc1c7fe80273d19bee11",
+      "checkpoint_sha256_recorded": "049e95906eb04fc384129e581e3d68e36badd8fcfbdca4ac11ff84bb6945580b",
+      "supplemental_input_sha256_lf_normalized": {
+        "per_cell_metrics.csv": "b2b0cd166273eccb590ac304eba9fd1784df1f66b4477b7b7729a18b91ee490f",
+        "model.history.json": "08e0e70c3c77d3d89cfcc30a0ec79689f027ade9f5a5153ef6a4222de9b41f0b"
+      },
+      "macro_metrics_reconciled": [
+        "MAE",
+        "RMSE",
+        "sMAPE_pct",
+        "P50RE_pct",
+        "P90RE_pct",
+        "P99RE_pct",
+        "R2"
+      ],
+      "micro_metrics_reconciled": [
+        "n",
+        "MAE",
+        "RMSE",
+        "sMAPE_pct"
+      ],
+      "cell_id_and_point_counts_match_ridge": true,
+      "n_cells": 40,
+      "cells_ann_lower_mae": 40,
+      "cells_equal_mae": 0,
+      "cells_ann_higher_mae": 0,
+      "largest_ann_mae_regressions": [],
+      "completed_epochs": 31,
+      "best_epoch": 23,
+      "best_validation_mse_norm": 0.020371332176898654,
+      "stopped_before_epoch_limit": true,
+      "early_stop_consistent_with_patience": true
+    },
+    {
+      "run_id": "unseen_cell_seed71_modelseed71",
+      "mode": "unseen_cell",
+      "seed": 71,
+      "qualification": {
+        "status": "matched",
+        "pending": [],
+        "errors": [],
+        "metadata_sha256": "a77fbf91d04f27a458bd33ca000802a8fc8930d0dcb7395707f19377c1ba160f",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
+      },
+      "n_fit": 8259583,
+      "normalization_max_abs_diff": {
+        "x_mean": 2.1316282072803006e-14,
+        "x_std": 7.105427357601002e-15,
+        "y_mean": 8.526512829121202e-14,
+        "y_std": 2.842170943040401e-14
+      },
+      "git_commit": "b13d5e8bda9b85813193dc1c7fe80273d19bee11",
+      "checkpoint_sha256_recorded": "ad9c066deba1d601684fa67e3addb0577261aa046c45ee44c0af591bdcd05206",
+      "supplemental_input_sha256_lf_normalized": {
+        "per_cell_metrics.csv": "04680dd56e7f5b6ef0020fd75cf2e2b616c6b6df33eddc1e93d69ddca9e9dc97",
+        "model.history.json": "df35174dbbdccdd36ddafe5f7a0a50668de7396d0f54b0789f0965a2739252e8"
+      },
+      "macro_metrics_reconciled": [
+        "MAE",
+        "RMSE",
+        "sMAPE_pct",
+        "P50RE_pct",
+        "P90RE_pct",
+        "P99RE_pct",
+        "R2"
+      ],
+      "micro_metrics_reconciled": [
+        "n",
+        "MAE",
+        "RMSE",
+        "sMAPE_pct"
+      ],
+      "cell_id_and_point_counts_match_ridge": true,
+      "n_cells": 40,
+      "cells_ann_lower_mae": 40,
+      "cells_equal_mae": 0,
+      "cells_ann_higher_mae": 0,
+      "largest_ann_mae_regressions": [],
+      "completed_epochs": 17,
+      "best_epoch": 9,
+      "best_validation_mse_norm": 0.03878548684560481,
+      "stopped_before_epoch_limit": true,
+      "early_stop_consistent_with_patience": true
+    }
+  ]
+}

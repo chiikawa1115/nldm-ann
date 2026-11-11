@@ -1,12 +1,12 @@
 # Global ANN / Global Ridge 配對比較結果
 
-日期：2026-11-03。狀態：**十組 Ridge 訓練、評估完成；ANN 來源核對仍 pending，以下為暫定比較。**
+初次結果：2026-11-03；來源核對更新：2026-11-11。狀態：**十組 Ridge 訓練、評估完成；十組 ANN metadata 均通過既定來源與 normalization 核對（matched）。** 本次只重新聚合與分析保存資料，未重訓或重跑 ANN 推論。
 
 ## 研究問題與主要結果
 
 > 在相同輸入資訊與測試資料下，global ANN 相較 global Ridge，是否降低預測誤差，以及改善幅度多少？
 
-依已凍結的資料、42 個特徵及測試 manifests，十組配對的主要指標皆為 ANN 誤差較低。Random-point 的 per-cell macro MAE 平均改善 **80.75%**，unseen-cell 平均改善 **71.33%**。這支持本輪預期的比較方向；仍需原 ANN checkpoint metadata 核對實際訓練設定與 normalization，才能完成來源資格確認。
+依已凍結的資料、42 個特徵及測試 manifests，十組配對的主要指標皆為 ANN 誤差較低。Random-point 的 per-cell macro MAE 平均改善 **80.75%**，unseen-cell 平均改善 **71.33%**。2026-11-11 取得提交 `17a3bdc` 的原 ANN checkpoint metadata 後，十組比較資格均為 matched；140 列配對指標的數值與更新前完全相同。這支持本輪預期的比較方向，適用範圍仍限於本次資料、模型及切分設定。
 
 | 情境 | Seeds | ANN macro MAE，mean ± sample SD（ps） | Ridge macro MAE，mean ± sample SD（ps） | Ridge − ANN（ps） | 差值的描述性 95% t CI（ps） | 平均相對改善 |
 |---|---:|---:|---:|---:|---:|---:|
@@ -33,6 +33,17 @@ Macro 先對每個 `cell_base` 算誤差，再等權平均。改善率先逐 see
 | Unseen-cell | 71 | 20.60 | 75.01 | 72.54% |
 
 Unseen-cell 的改善率約 59.19–77.26%，變動明顯大於 random-point；報告時應保留五組結果，不能只以平均值代表所有 held-out cell 組合。這些是每 run 的 macro 指標，不能據此推論每個 individual cell 都有改善。
+
+### 新增的逐 cell 與訓練歷史證據
+
+十份 ANN `per_cell_metrics.csv` 的全部七項 macro 指標均能還原既有 ANN 結果，micro 的 n、MAE、RMSE、sMAPE 也一致。ANN 與 Ridge 的 cell ID 及各 cell 測試筆數逐一相符。
+
+- Random-point：五組各 200 個 cell 的 MAE 皆為 ANN 較低，共 1,000/1,000 個 cell/run 觀測。
+- Unseen-cell：五組各 40 個測試 cell，共 197/200 個 cell/run 觀測的 MAE 為 ANN 較低。這些觀測可能重複包含相同 cell，不當作 200 個獨立樣本。
+- 三個 ANN 較差的 cell 全部來自 seed 23：`BUFx4_ASAP7_75t`（ANN 88.29 / Ridge 78.72 ps）、`DFFLQNx3_ASAP7_75t`（58.19 / 54.38 ps）、`DFFLQNx2_ASAP7_75t`（57.41 / 55.51 ps）。
+- 十組 history 的長度、最佳 validation loss 與 metadata 一致。八組在 50 epochs 上限前停止，均符合 patience=8；兩組 random-point 跑滿 50 epochs。Unseen-cell seed 23 的最佳 epoch 為 4，第 12 epoch 結束，符合 early stopping 規則；不能僅依此判定欠擬合、訓練故障或較高誤差的原因。
+
+完整核對與逐 seed epoch 紀錄見 [ANN metadata 核對報告](ANN_METADATA_VALIDATION_20261111.md)。
 
 ## 次要指標與尾端誤差
 
@@ -67,15 +78,25 @@ ANN 的 macro P90RE/P99RE 在十組配對皆較低。相對誤差沿用既有近
 
 目前可以描述「在鎖定資料與比較規格下，ANN 的主要誤差與尾端相對誤差均低於本次 global Ridge baseline」。不能把結果推廣為所有模型、所有製程或每個 cell 的保證，也不能據此判斷 L1 merge 是否更好。
 
-十組 ANN metadata 均為 `ann_provenance_pending`，尚未核對 checkpoint 實際 normalization、`max_rows` 與訓練來源。因此不宣稱完整重現 ANN，**沒有輸出正式 p-value 或 Holm 顯著性結論**。五 seeds 共享來源資料，描述性 t CI 也依賴假設，並非跨 library 不確定性的估計。
+十組 ANN metadata 均為 `matched`：dataset/manifest、42 維特徵順序、fit normalization 與筆數、`max_rows=null`、訓練設定及六份核心來源 hash 通過既定核對。checkpoint 記錄訓練 commit 為 `0032cdfeb1457bda850ff5752d1f1bf00ad3dd62`，其六份 Git blob 也已在本機獨立核對。Normalization 最大絕對差約 `1.85e-13`，遠低於原定容差，未放寬核對規則。
 
-下一步在原 ANN 訓練電腦匯出 `scripts/export_ann_ridge_metadata.py`，帶回十組 JSON，再依 [執行指南](GLOBAL_ANN_RIDGE_RUNBOOK.md) 重新 aggregate。來源比對若有 mismatch，先解決差異；不為維持有利結果而調整資格。Git commit 的來源 hash 也不能獨立證明當年訓練不存在未提交修改。
+符合計畫中的來源與完整性條件後，聚合程式輸出兩項主要 macro MAE 的雙尾配對 t 檢定及 Holm 校正；另以 SciPy `ttest_rel` 獨立核對計算一致：
+
+| Mode | 雙尾 p | Holm 校正 p |
+|---|---:|---:|
+| random_point | 2.5786888988e-9 | 5.1573777976e-9 |
+| unseen_cell | 1.0562636918e-5 | 1.0562636918e-5 |
+
+**以上是依預定公式得到、受假設限制的推論。** 每 mode 僅五個 seed，來源 library 相同且切分重疊；來源 matched 並未驗證差值的獨立性或分布假設。不能單靠小 p 值宣稱跨 library 普遍有效；主要解讀仍以改善幅度、逐 seed 結果與尾端誤差為主，其他指標維持描述性分析。
+
+本機沒有 ANN 權重，未重跑 ANN 推論，也未獨立重算 checkpoint 檔案 hash；因此本次為 metadata 與保存結果的一致性核對，不宣稱完整重現 ANN。Git commit 的來源 hash 也不能獨立證明當年訓練不存在未提交修改。本輪資料交接與核對已完成，後續可利用已提供的 history／per-cell 資料分析 seed 23 與尾端誤差；L1 或資料縮減實驗需另訂規格。
 
 可追溯資料：
 
 - [逐 seed 配對表](../experiments/global_ann_ridge_v1/aggregate/paired_metrics.csv)
 - [分 mode 的 mean / SD / CI](../experiments/global_ann_ridge_v1/aggregate/summary_by_mode.csv)
 - [十組完成與來源資格狀態](../experiments/global_ann_ridge_v1/aggregate/comparison_status.json)
+- [逐組 metadata、補充資料與獨立統計核對](../experiments/global_ann_ridge_v1/aggregate/ann_metadata_audit.json)
 - [自動產生的報告](../experiments/global_ann_ridge_v1/report.md)
 - [輸入核對](../experiments/global_ann_ridge_v1/input_audit.json) 與 `evaluations/<run>/` 的訓練 metadata、指標及逐 cell CSV。
 

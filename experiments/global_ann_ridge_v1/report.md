@@ -15,7 +15,7 @@ Positive error delta (Ridge - ANN) means lower ANN error. R2 uses ANN - Ridge.
 
 ## Coverage and limitations
 
-- Completed pairs with ANN provenance pending: 10. Pending comparisons are provisional, not fully verified reproduction.
+- Completed pairs with ANN provenance pending: 0. Pending comparisons are provisional, not fully verified reproduction.
 - Missing, failed, or mismatched runs remain listed in comparison_status.json.
 - Modes are summarized separately; repeated seeds have overlapping source data.
 - Five-seed t intervals are descriptive and rely on assumptions; they do not establish cross-library generalization.

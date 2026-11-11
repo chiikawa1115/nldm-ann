@@ -2,6 +2,8 @@
 
 更新：2026-11-05。目標 repo：`https://github.com/chiikawa1115/nldm-ann.git`，分支：`plan-v4`。
 
+**完成註記（2026-11-11）：**原主機已於提交 `17a3bdc` 提供十份 metadata 及十組 supplemental history／per-cell 檔案；Ridge 主機接回後十組均 matched。結果見 [核對報告](ANN_METADATA_VALIDATION_20261111.md)。以下保留原交接需求與命令，無需再次匯出或訓練。
+
 ## 任務與目前狀態
 
 請在**保存原 ANN checkpoint 的訓練電腦**上，匯出下列十組既有模型的 metadata，檢查完整性後 commit / push 到 `plan-v4`，供 Ridge 執行主機 pull 回核對。

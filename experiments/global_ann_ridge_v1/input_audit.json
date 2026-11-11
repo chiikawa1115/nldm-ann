@@ -49,8 +49,8 @@
     "torch": "2.13.0"
   },
   "git": {
-    "commit": "af9e137cad096feb9e589c9b38148526c74d59a6",
-    "working_tree_status": "M HANDOFF.md\n M docs/GLOBAL_ANN_RIDGE_RUNBOOK.md\n M experiments/global_ann_ridge_v1/input_audit.json\n?? experiments/global_ann_ridge_v1/aggregate/\n?? experiments/global_ann_ridge_v1/evaluations/\n?? experiments/global_ann_ridge_v1/figures/\n?? experiments/global_ann_ridge_v1/report.md"
+    "commit": "17a3bdcd11731cadeb1a2bd72aa3acf6ace0b9c5",
+    "working_tree_status": ""
   },
   "pairs": [
     {
@@ -60,9 +60,14 @@
       "ann_provenance": {
         "status": "ann_provenance_pending",
         "pending": [
-          "checkpoint metadata absent"
+          "fit normalization has not yet been compared"
         ],
-        "errors": []
+        "errors": [],
+        "metadata_sha256": "8382c06f350ab4f216d240b5be390de88b1aa37cf1ec60ef2eef2cfa587c3441",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
       }
     },
     {
@@ -72,9 +77,14 @@
       "ann_provenance": {
         "status": "ann_provenance_pending",
         "pending": [
-          "checkpoint metadata absent"
+          "fit normalization has not yet been compared"
         ],
-        "errors": []
+        "errors": [],
+        "metadata_sha256": "21daa346f58eaff0a6b0b9097857cfe056844ecc5e46a87565cd95e66324b110",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
       }
     },
     {
@@ -84,9 +94,14 @@
       "ann_provenance": {
         "status": "ann_provenance_pending",
         "pending": [
-          "checkpoint metadata absent"
+          "fit normalization has not yet been compared"
         ],
-        "errors": []
+        "errors": [],
+        "metadata_sha256": "049601a7d34115536fa22de93ab8dd0171aa82639195c7b33402b682b2679a5d",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
       }
     },
     {
@@ -96,9 +111,14 @@
       "ann_provenance": {
         "status": "ann_provenance_pending",
         "pending": [
-          "checkpoint metadata absent"
+          "fit normalization has not yet been compared"
         ],
-        "errors": []
+        "errors": [],
+        "metadata_sha256": "6c9d26ee6d1aa88b2842af210d08e3bbd68c7a53ea08a98ba0071e745be55ef2",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
       }
     },
     {
@@ -108,9 +128,14 @@
       "ann_provenance": {
         "status": "ann_provenance_pending",
         "pending": [
-          "checkpoint metadata absent"
+          "fit normalization has not yet been compared"
         ],
-        "errors": []
+        "errors": [],
+        "metadata_sha256": "95a296c7ba4b55603274b2f6076181c6b2be8265b6111385d83b93c43b095c0f",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
       }
     },
     {
@@ -120,9 +145,14 @@
       "ann_provenance": {
         "status": "ann_provenance_pending",
         "pending": [
-          "checkpoint metadata absent"
+          "fit normalization has not yet been compared"
         ],
-        "errors": []
+        "errors": [],
+        "metadata_sha256": "47c60ebaad7642fce96585a89338e60afea38a60f18b5becc627f9a6024797c8",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
       }
     },
     {
@@ -132,9 +162,14 @@
       "ann_provenance": {
         "status": "ann_provenance_pending",
         "pending": [
-          "checkpoint metadata absent"
+          "fit normalization has not yet been compared"
         ],
-        "errors": []
+        "errors": [],
+        "metadata_sha256": "2b44d1112166bab9a42f33ac54e56579326f1f87e33c0273d0de4f35a63f186f",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
       }
     },
     {
@@ -144,9 +179,14 @@
       "ann_provenance": {
         "status": "ann_provenance_pending",
         "pending": [
-          "checkpoint metadata absent"
+          "fit normalization has not yet been compared"
         ],
-        "errors": []
+        "errors": [],
+        "metadata_sha256": "1d42cae933dc99439b6d3518cbe6fdc64358be9792d7353c4d66ff1f988e357e",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
       }
     },
     {
@@ -156,9 +196,14 @@
       "ann_provenance": {
         "status": "ann_provenance_pending",
         "pending": [
-          "checkpoint metadata absent"
+          "fit normalization has not yet been compared"
         ],
-        "errors": []
+        "errors": [],
+        "metadata_sha256": "52dcc621202f0d2a71ae69455a73e55baa9b46877a21371efbed1ca0af6a1f32",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
       }
     },
     {
@@ -168,9 +213,14 @@
       "ann_provenance": {
         "status": "ann_provenance_pending",
         "pending": [
-          "checkpoint metadata absent"
+          "fit normalization has not yet been compared"
         ],
-        "errors": []
+        "errors": [],
+        "metadata_sha256": "a77fbf91d04f27a458bd33ca000802a8fc8930d0dcb7395707f19377c1ba160f",
+        "normalization_tolerance": {
+          "rtol": 1e-06,
+          "atol": 1e-08
+        }
       }
     }
   ]

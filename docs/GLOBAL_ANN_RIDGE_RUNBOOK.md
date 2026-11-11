@@ -1,10 +1,10 @@
 # Global ANN / Ridge 執行指南
 
-更新：2026-11-03。研究規格見 [比較計畫](PLAN_GLOBAL_ANN_RIDGE_COMPARISON.md)，鎖定設定見 [config](../experiments/configs/global_ann_ridge_v1.json)。
+更新：2026-11-11。研究規格見 [比較計畫](PLAN_GLOBAL_ANN_RIDGE_COMPARISON.md)，鎖定設定見 [config](../experiments/configs/global_ann_ridge_v1.json)。
 
 ## 目前執行狀態
 
-2026-11-03 使用者授權後，**十組 Ridge 全部完成，重新執行 aggregate 的輸入與產物 checksum 核對也已通過。** 沒有重訓或重跑 ANN 推論；十組 ANN checkpoint metadata 仍 pending。結果見 [中文結果報告](RESULTS_GLOBAL_ANN_RIDGE_COMPARISON.md)。以下保留操作命令；接續只需補 metadata 後重新聚合，不需重訓。
+2026-11-03 使用者授權後，**十組 Ridge 全部完成。2026-11-11 取得提交 `17a3bdc` 的 ANN metadata，重新 aggregate 後，輸入與產物 checksum 核對通過，十組 ANN 來源資格均為 matched。** 沒有重訓或重跑 ANN 推論；配對誤差數值未改變。結果見 [中文結果報告](RESULTS_GLOBAL_ANN_RIDGE_COMPARISON.md)，補充核對見 [metadata 核對報告](ANN_METADATA_VALIDATION_20261111.md)。以下保留操作命令，這十組不需重訓。
 
 十組訓練加評估合計 1,873.73 秒（31.23 分鐘），單組 124.69–248.50 秒，程序峰值記憶體 1,214,738,432 bytes（約 1.13 GiB）。時間不包含開發、等待核准、額外聚合及報告整理。此為本機 Ridge 執行紀錄，不用來宣稱相對於另一台電腦 ANN 的加速比。
 
@@ -15,7 +15,7 @@
 - 以獨立的 augmented least squares 驗算六個 lambda、截距、validation MSE；包含共線、常數欄位、常數及負 target。
 - 驗證跨 table 的 batch 邊界、fit-only 正規化、原 ANN normalization、精確 micro/macro percentile、近零值與 undefined groups。
 - 驗證來源與產物變更攔截、pending/matched/mismatch、完成結果重用、中斷後重用模型、配對差值與 CI / Holm。
-- 正式資料 preflight PASS：12,073,208 rows、42 features、10 組固定配對、來源檔與輸入 hash 相符；**10 組 ANN metadata 仍 pending**。preflight 只讀 Parquet metadata 與檔案 hash，不掃描全部 row 以擬合模型。
+- 原執行前正式資料 preflight PASS：12,073,208 rows、42 features、10 組固定配對、來源檔與輸入 hash 相符；當時十組 ANN metadata 尚未提供。preflight 只讀 Parquet metadata 與檔案 hash，不掃描全部 row 以擬合模型。
 
 驗證命令（專案根目錄，PowerShell）：
 
@@ -57,6 +57,8 @@
 正式輸出根目錄為 `experiments/global_ann_ridge_v1/`。只用一個程序寫同一個輸出目錄。
 
 ## 補齊 ANN 訓練來源
+
+本次交接已完成，以下為重現操作紀錄。最新資格以 `aggregate/comparison_status.json` 與 `aggregate/ann_metadata_audit.json` 為準；原訓練 status/metadata 保留執行當時的 pending 紀錄。`input_audit.json` 是聚合前的輸入檢查，其 normalization 尚未比較的 pending 不代表最終聚合失敗。
 
 交給原訓練電腦上的 AI 執行時，請先讀 [ANN metadata 匯出交接](ANN_METADATA_EXPORT_HANDOFF.md)，其中列出十個 run、核對欄位、Git 交付方式與缺失處理。
 
