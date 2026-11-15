@@ -5,7 +5,7 @@
 ## 資料與結果
 
 - 資料提交：`17a3bdc`，分支 `plan-v4`。收到預定十份 metadata JSON、十份 history、十份 per-cell CSV 及 `EXPORT_NOTES.md`，沒有缺少或多出的 metadata run ID。
-- 原訓練 checkpoint 記錄版本：`0032cdfeb1457bda850ff5752d1f1bf00ad3dd62`；六個凍結來源檔的 Git blob SHA-256 在本機另行計算，與 metadata 及凍結設定一致。
+- 原訓練 checkpoint 記錄版本：`random_point_seed11` 為 `0032cdfeb1457bda850ff5752d1f1bf00ad3dd62`，其餘九組為 `b13d5e8bda9b85813193dc1c7fe80273d19bee11`（`0032cdf` 的後代，未改動六份核心來源；2026-11-15 更正，原文誤寫為單一 commit）；六個凍結來源檔的 Git blob SHA-256 在本機另行計算，與 metadata 及凍結設定一致。
 - 執行 `python src/run_ridge_comparison.py aggregate --ann-metadata-dir experiments/global_ann_ridge_metadata` 成功，10/10 complete，10/10 matched，沒有 pending/mismatch。
 - Dataset、manifest（容許 LF/CRLF 差異）、42 維 feature 順序、`max_rows=null`、fit 筆數及 normalization 均相符。Normalization 各欄位跨十組的最大絕對差：x_mean `2.13e-14`、x_std `1.42e-14`、y_mean `1.85e-13`、y_std `5.68e-14`，符合原容差 `rtol=1e-6, atol=1e-8`；n_fit 完全相等。
 - 全部 Ridge 保存產物通過既定 signature/checksum。與提交 `17a3bdc` 所含的原配對表相比，140 列指標所有數值完全相同，只有來源資格更新。

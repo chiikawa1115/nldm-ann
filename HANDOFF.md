@@ -10,7 +10,7 @@
 - **目前狀態：Ridge 正式訓練與評估 10/10 完成；2026-11-11 接回提交 `17a3bdc` 的 ANN metadata 並重新 aggregate，十組來源資格全部 matched。** 本次沒有重訓或重跑 ANN 推論。實作版本 `af9e137`，原有 46 項相關測試通過。詳細結果見 [中文結果報告](docs/RESULTS_GLOBAL_ANN_RIDGE_COMPARISON.md) 與 [metadata 核對報告](docs/ANN_METADATA_VALIDATION_20261111.md)。
 - 主要結果（五 seeds 的 per-cell macro MAE 均值）保持不變：random-point ANN 13.06 / Ridge 67.82 ps，逐 seed 平均改善 80.75%；unseen-cell ANN 22.33 / Ridge 77.12 ps，改善 71.33%。十組主要差值均支持 ANN 誤差較低。預定雙尾配對 t／Holm 已輸出，校正 p 分別為 5.1574e-9、1.0563e-5；n=5 且切分重疊，推論仍受獨立性與分布假設限制。
 - 入口：`src/run_ridge_comparison.py`；[執行指南](docs/GLOBAL_ANN_RIDGE_RUNBOOK.md) 保留聚合命令。已完成來源核對，不需重訓；再次聚合必須提供 `--ann-metadata-dir experiments/global_ann_ridge_metadata`，以免退回 pending。
-- **ANN 主機交接已完成：**十份 metadata、十份 history 與十份 per-cell CSV 均已帶回。原 [匯出交接](docs/ANN_METADATA_EXPORT_HANDOFF.md) 保留為操作紀錄；原訓練 commit 為 `0032cdfeb1457bda850ff5752d1f1bf00ad3dd62`，六份核心 source hashes 與既定來源相符。
+- **ANN 主機交接已完成：**十份 metadata、十份 history 與十份 per-cell CSV 均已帶回。原 [匯出交接](docs/ANN_METADATA_EXPORT_HANDOFF.md) 保留為操作紀錄；原訓練 commit 為 `0032cdf`（random_point seed 11）與 `b13d5e8`（其餘九組，未改動核心來源），六份核心 source hashes 與既定來源相符。
 - 實作包含 float64 串流統計、fit-only 正規化、validation 選 lambda、精確 percentile、逐 cell 指標、配對 CI / Holm、進度與產物 checksum；原 ANN 六個凍結來源檔未修改。
 - 執行主機選目前 Ryzen 7 PRO 8840U 筆電（8C/16T、系統可用總 RAM 約 14.7 GiB）；使用 CPU 串流處理，不一次載入全矩陣。
 - 十組訓練加評估合計 1,873.73 秒（31.23 分鐘），單組 124.69–248.50 秒，程序峰值記憶體 1.13 GiB；不含開發、等待核准與報告整理。所有 test n、groups、negative targets 均與對應 ANN 吻合。

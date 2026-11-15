@@ -78,7 +78,7 @@ ANN 的 macro P90RE/P99RE 在十組配對皆較低。相對誤差沿用既有近
 
 目前可以描述「在鎖定資料與比較規格下，ANN 的主要誤差與尾端相對誤差均低於本次 global Ridge baseline」。不能把結果推廣為所有模型、所有製程或每個 cell 的保證，也不能據此判斷 L1 merge 是否更好。
 
-十組 ANN metadata 均為 `matched`：dataset/manifest、42 維特徵順序、fit normalization 與筆數、`max_rows=null`、訓練設定及六份核心來源 hash 通過既定核對。checkpoint 記錄訓練 commit 為 `0032cdfeb1457bda850ff5752d1f1bf00ad3dd62`，其六份 Git blob 也已在本機獨立核對。Normalization 最大絕對差約 `1.85e-13`，遠低於原定容差，未放寬核對規則。
+十組 ANN metadata 均為 `matched`：dataset/manifest、42 維特徵順序、fit normalization 與筆數、`max_rows=null`、訓練設定及六份核心來源 hash 通過既定核對。checkpoint 記錄的訓練 commit 有兩個：`random_point_seed11` 為 `0032cdfeb1457bda850ff5752d1f1bf00ad3dd62`，其餘九組為 `b13d5e8bda9b85813193dc1c7fe80273d19bee11`（`0032cdf` 的後代，差異只有 GPU 執行指南、plan_v4 preflight 與其 manifest index，不含六份核心訓練來源）；兩者的六份 Git blob 均已在本機獨立核對。（2026-11-15 更正：原文誤寫為十組皆為 `0032cdf`。）Normalization 最大絕對差約 `1.85e-13`，遠低於原定容差，未放寬核對規則。
 
 符合計畫中的來源與完整性條件後，聚合程式輸出兩項主要 macro MAE 的雙尾配對 t 檢定及 Holm 校正；另以 SciPy `ttest_rel` 獨立核對計算一致：
 
